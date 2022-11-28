@@ -14,3 +14,5 @@ you'll see multiple txt.txt files. That's just because git didn't want to commit
 - src/pages - self explanatory
 - src/utils - some functions that we might need that are not a component or a hook. Like for example making an image black and white. -_O_-
 - __tests__ - test folders are gonna be for testing (I have no idea how to test in react but it will be great if we could (and I guess we should because of scrum))
+
+btw: I got inspired by this video https://www.youtube.com/watch?v=UUga4-z7b6s
