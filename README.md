@@ -1,46 +1,14 @@
-# Getting Started with Create React App
+# Folder Structure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- src/assets - self explanatory
+- src/api - everything related to the api mainly the interfaces and calls
+- src/components - this is for components than will be used throughout the whole project
+- src/data - this could be used for storing some hard coded values maybe in a json format
+- src/features/Event - as I understood it, here is where you would have everything specific to an event or events. You can have it in one place unlike if you would have things for events in events page and things for event in event page. I think it could be great to use it
+- src/features/Event/components - this will contain every component that is related only to event
+- src/features/Event/index.ts - you import everything regarding event from here (encaptulation)
+- src/hooks - contain hooks that are gonna be used throughout the whole project
+- src/lib - everything to do with setting up libraries and stuff like I did with axios.config.ts file
+- src/pages - self explanatory
+- src/utils - some functions that we might need that are not a component or a hook. Like for example making an image black and white. -_O_-
+- __tests__ - test folders are gonna be for testing (I have no idea how to test in react but it will be great if we could (and I guess we should because of scrum))
