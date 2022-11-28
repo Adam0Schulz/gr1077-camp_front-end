@@ -1,5 +1,7 @@
 # Folder Structure
 
+you'll see multiple txt.txt files. That's just because git didn't want to commit folders that are empty.
+
 - src/assets - self explanatory
 - src/api - everything related to the api mainly the interfaces and calls
 - src/components - this is for components than will be used throughout the whole project
