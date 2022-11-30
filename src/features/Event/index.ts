@@ -1,5 +1,7 @@
-// this import is here just so it doesn't show an error (bc there has to be an import or export present in any ts file)
-import React from "react"; 
+import EventPreview from "./components/EventPreview";
+
+
+export { EventPreview }
 
 
 // features/Event folder will contain every component and every hook that's connected to Event

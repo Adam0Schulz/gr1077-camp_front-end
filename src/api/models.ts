@@ -1,5 +1,5 @@
 interface DBObject {
-    id?: number,
+    id: number,
 }
 
 export interface Page{
@@ -67,17 +67,20 @@ export interface Room extends DBObject {
 
 
 export interface Section extends DBObject {
-
+    seq: number,
 }
 
 export interface ImageSection extends Section, DBObject {
-
+    image: Image,
+    altText: string,
 }
 
 export interface ParagraphSection extends Section, DBObject {
-
+    heading: string,
+    text: string,
 }
 
 export interface LinkSection extends Section, DBObject {
-
+    text: string,
+    link: string,
 }
