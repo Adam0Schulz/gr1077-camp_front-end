@@ -44,17 +44,9 @@ function App() {
                 <Route  path="/researchers" element={<><Footer/></>}/>
                 <Route  path="/contact" element={<><Footer/></>}/>
                 <Route  path="/blog" element={<><Footer/></>}/>
-
           </Routes>
 
-
-
-
-
           <ToastContainer/>
-
-
-
       </BrowserRouter>
   );
 }

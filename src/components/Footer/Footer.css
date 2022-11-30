@@ -1,9 +1,46 @@
 .footerCamp {
-  background-color: #000;
+  background-color: #646464;
   color: #fff;
   padding: 20px;
   text-align: center;
 }
-.text-uppercase {
+.text {
   color: #fff;
+}
+.bg-dark {
+  background-color: #646464 !important;
+}
+.row {
+  BACKGROUND-COLOR: #646464;
+  padding: 100px;
+
+    margin: 0;
+
+}
+.paragraph2{
+  color: #fff;
+    font-size: 12px;
+}
+.watermark{
+  position: absolute;
+left: -24px;
+top: 530px;
+  z-index: 0;
+}
+.fa {
+  color: #ff5900;
+
+}
+.text{
+  padding-bottom: 50px;
+}
+.textJoin{
+  color: #fff;
+}
+.privacy{
+  color: #fff;
+  padding-left: 850px;
+ padding-top: 125px;
+  font-size: 12px;
+
 }
