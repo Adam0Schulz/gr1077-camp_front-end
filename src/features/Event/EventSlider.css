@@ -1,0 +1,22 @@
+.event-card {
+    height: 300px;
+    background-color: cornflowerblue;
+    width: 200px;
+}
+
+.splide__arrow {
+    background: none !important;
+}
+
+.splide__arrow svg {
+    height: 3em !important;
+    width: 3em !important;
+}
+
+.splide__arrow--prev {
+    left: -4em !important;
+}
+
+.splide__arrow--next {
+    right: -4em !important;
+}
