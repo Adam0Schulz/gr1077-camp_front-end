@@ -47,7 +47,7 @@ function App() {
                 <Route  path="/blog" element={<><Footer/></>}/>
           </Routes>
 
-          <ArrowButton/>
+          <ArrowButton text={"all events"}/>
           <ToastContainer/>
       </BrowserRouter>
   );

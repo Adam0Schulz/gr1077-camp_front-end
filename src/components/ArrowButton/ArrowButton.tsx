@@ -3,9 +3,12 @@ import './ArrowButton.css';
 import {motion} from 'framer-motion';
 
 
-function ArrowButton(text:string, link:string) {
+// need to add prop link so we can add it to Link, doesn't allow me to use string
+
+
+function ArrowButton(text:string) {
     return (
-        <Link to={'/' + link} className='arrow'>
+        <Link to={'/'} className='arrow'>
             <motion.div
                 className='arrow-circle'
                 whileTap={{scale: 0.9, transition: {duration: 0.1}}}
