@@ -1,0 +1,16 @@
+img {
+    transition: filter 0.25s ease-in-out;
+}
+
+.past {
+    filter: grayscale(100%);
+    
+}
+
+.past:hover {
+    filter: grayscale(0%);
+}
+
+.upcoming {
+    filter: grayscale(0%);
+}

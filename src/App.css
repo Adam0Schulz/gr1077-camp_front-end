@@ -1,60 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
-/*this about navbar line under text */
-.navbar .navbar-nav .nav-link {
-    color: #000;
-    font-size: 1.1em;
-}
-
-.navbar .navbar-nav .nav-link:hover {
-    color: #000;
-}
-@media only screen and (min-width: 992px) {
-    .navbar {
-        padding: 0;
-    }
-
-    .navbar .navbar-brand {
-        padding: 0 0.7em;
-    }
-.navbar .navbar-nav .nav-item {
-    position: relative;
-
-}
-.navbar .navbar-nav .nav-item::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #901a1e;
-    width: 0%;
-    content: "";
-
-    height: 2px;
-
-    transition: all 0.5s;
-
-}
-
-.navbar .navbar-nav .nav-item:hover::after {
-    width: 100%;
-}
-/*//one black line in middle of navbar*/
-
-}
-
-.navbar-brand{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #901a1e;
-}
-.HorizontalLine{
-    border-bottom: 1px solid #737477;
-    width: 100%;
+*,
+root {
     margin: 0;
-    padding: 0px;
+    box-sizing: border-box;
 
+    font-family: 'Open Sans', sans-serif;
+
+    /******* Variables *******/
+    --color-primary: #901A1E;
+    --color-bg: #EFEFEF;
+    --color-black: #262526;
+    --color-gray-light: #CCCBCC;
+    --color-gray-dark: #747681;
+    --color-white: #ffffff;
+    /* the last one's maybe redundant but you never know */
 
 }
 
+h1 {
+    font-size: 96px;
+    /* font-size: 6rem*/
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: .7%;
+}
 
+h2 {
+    font-size: 48px;
+    /* font-size: 3rem*/
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 37;
+    /* font-size: 2.3125rem */
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-size: 28px;
+    /* font-size: 1.75rem*/
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .3%;
+}
+
+h5 {
+    font-size: 21px;
+    /* font-size: 1.3125rem*/
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .3%;
+}
+
+p {
+    font-size: 18;
+    /* font-size: 1.125rem*/
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: .3%;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.extrabold {
+    font-weight: 800;
+}

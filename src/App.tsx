@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import Events from 'pages/Events';
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
           <Routes>
               <Route  path="/" element={<><Footer/></>}/>
               <Route  path="/home" element={<><Footer/></>}/>
-                <Route  path="/events" element={<><Footer/></>}/>
+                <Route  path="/events" element={<><Events /><Footer/></>}/>
                 <Route  path="/about" element={<><Footer/></>}/>
                 <Route  path="/researchers" element={<><Footer/></>}/>
                 <Route  path="/contact" element={<><Footer/></>}/>

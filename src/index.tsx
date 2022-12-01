@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <QueryClientProvider client={queryClient}>
-    <App />
+        <App />
           <ReactQueryDevtools initialIsOpen/>
       </QueryClientProvider>
   </React.StrictMode>
