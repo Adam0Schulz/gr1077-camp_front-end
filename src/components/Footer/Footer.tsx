@@ -7,6 +7,9 @@ const Footer = () => {
     //make afooter component
     return (
             <div className="row d-flex justify-content-start"  >
+                <div className="watermark">
+                    <img src= {window.location.origin+/Photos/+"watermark.svg"} alt="footer" className="footer"/>
+                </div>
                 <div className=" col-lg-4 col-md-4 " >
                             <p className="textJoin">Join Our newsletter to stay up to date with our blog</p>
                             <div className="input-group form-outline form-white mb-3 ">
@@ -22,9 +25,7 @@ const Footer = () => {
                                 <p className="paragraph2">
                                     By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.
                                 </p>
-                                <div className="watermark">
-                                <img src= {window.location.origin+/Photos/+"watermark.svg"} alt="footer" className="footer"/>
-                                </div>
+                                
                             </ul>
                         </div>
 

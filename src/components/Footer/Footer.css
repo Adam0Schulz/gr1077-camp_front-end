@@ -21,10 +21,16 @@
   color: #fff;
     font-size: 12px;
 }
+
+.list-unstyled {
+  position: relative;
+}
+
+
 .watermark{
   position: absolute;
-left: -24px;
-top: 730px;
+  left: -24px;
+  bottom: -200px;
   z-index: 0;
 }
 .fa {
@@ -40,7 +46,7 @@ top: 730px;
 .privacy{
   color: #fff;
   padding-left: 850px;
- padding-top: 125px;
+  padding-top: 125px;
   font-size: 12px;
 
 }

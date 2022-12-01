@@ -53,3 +53,10 @@
     margin: 0;
     padding: 0px;
 }
+
+.HorizontalLine1 {
+    position: absolute;
+    top: 25%;
+    /* left: -3%; */
+    transform: translateX(-36%);
+}
