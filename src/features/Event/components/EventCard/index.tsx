@@ -6,19 +6,19 @@ import { Link } from 'react-router-dom'
 interface Props {
   size: 'large' | 'small',
   event: Event,
-  state: 'past' | 'upcoming',
+  state?: 'past' | 'upcoming',
 }
 
-const EventCard = (props: Props) => {
+const EventCard = ({size, event, state = 'upcoming'}: Props) => {
 
   /* Getting the paragraph preview */
   /* potencial use of useMemo */
   let paragraphPreview
-  if (props.event.paragraphSectionSet.length != 0) {
+  if (event.paragraphSectionSet.length != 0) {
 
-    const paragraphsSeq = props.event.paragraphSectionSet.map(paragraph => paragraph.id)
-    const paragraph: ParagraphSection = props
-      .event
+    const paragraphsSeq = event.paragraphSectionSet.map(paragraph => paragraph.id)
+    const paragraph: ParagraphSection = 
+      event
       .paragraphSectionSet
       .filter(
         item =>
@@ -31,41 +31,49 @@ const EventCard = (props: Props) => {
   return (
     <>
 
-      {props.size == 'small' &&
-      <Link to={'/home'}>
-        <div className='event-card event-card--small'>
-          <div className='event-card__datetime'>
-            <h4 className='event-card__date'>{props.event.date.toString()}</h4>
-            <h5 className='event-card__time'>{props.event.startTime + ' - ' + props.event.endTime}</h5>
+      {size == 'small' &&
+        <Link to={'/home'}>
+          <div className='event-card event-card--small'>
+            <div className='event-card__datetime'>
+              <h4 className='event-card__date'>{event.date.toString()}</h4>
+              <h5 className='event-card__time'>{event.startTime + ' - ' + event.endTime}</h5>
+            </div>
+            <div>
+              <img className='event-card__icon' src={calendarIcon} />
+            </div>
+            <div className='event-card__body'>
+              {/* Maybe we should limit the number of characters displayed in here like we did with the paragraph preview in large card */}
+              <h4 className='event-card__heading'>{event.name}</h4>
+              <img className='event-card__image' src={event.image.url} alt={event.image.caption} />
+            </div>
           </div>
-          <div>
-            <img className='event-card__icon' src={calendarIcon} />
-          </div>
-          <div className='event-card__body'>
-            <h4 className='event-card__heading'>{props.event.name}</h4>
-            <img className='event-card__image' src={props.event.image.url} alt={props.event.image.caption} />
-          </div>
-        </div>
         </Link>
       }
 
 
-      {props.size == 'large' &&
-        <div className={'event_card large' + (props.event.id % 2 == 0) ? 'even' : 'odd'}>
-          <div>
-            {/* there should be something to make the heading black if it's a past event*/}
-            <h2>{props.event.date.toString()}</h2>
-            <h4>{props.event.startTime + ' - ' + props.event.endTime}</h4>
-          </div>
-          <div>
-            <img className={props.state} src={props.event.image.url} alt={props.event.image.caption} />
-            <div>
-              <h3>{props.event.name}</h3>
-              <p>{paragraphPreview}</p>
-              {/* <MoreBtn link={something/something}/> */}
+      {size == 'large' &&
+        
+          <>
+            <Link to={'/home'}>
+            <div className={'event-card__datetime event-card__datetime--' + state + ' event-card__datetime--' + (event.id % 2 == 0 ? 'even' : 'odd')}>
+              {/* there should be something to make the heading black if it's a past event*/}
+              <h2 className='event-card__date'>{event.date.toString()}</h2>
+              <h4 className='event-card__time'>{event.startTime.substring(0,5) + ' - ' + event.endTime.substring(0,5)}</h4>
             </div>
-          </div>
-        </div>
+            </Link>
+            <Link to={'/home'}>
+            <img className='event-card__icon' src={calendarIcon} />
+            <div className={'event-card__body ' + 'event-card__body--' + state + 'event-card__body--' + (event.id %2 == 0 ? 'even' : 'odd')}>
+              <img className={ 'event-card__image ' + state} src={event.image.url} alt={event.image.caption} />
+              <div className='event-card__text'>
+                <h3 className='event-card__heading'>{event.name}</h3>
+                <p className='event-card__paragraph'>{paragraphPreview}</p>
+                {/* <MoreBtn link={something/something}/> */}
+              </div>
+            </div>
+            </Link>
+          </>
+        
       }
     </>
   )

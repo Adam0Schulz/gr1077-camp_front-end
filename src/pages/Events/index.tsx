@@ -22,11 +22,17 @@ const Events = () => {
             </div>
             <div className="splidetrack">
                 { events && events.map(event => 
-                <EventCard key={event.id} size='small' event={event} state='past' /> 
+                <EventCard key={event.id} size='small' event={event} /> 
                 )}
+            </div>
+            <div className="grid">
+                { events && events.map(event => 
+                <EventCard key={event.id} size='large' event={event} /> 
+                )}
+            </div>
                             
                 
-            </div>
+            
             
         </>
     )
