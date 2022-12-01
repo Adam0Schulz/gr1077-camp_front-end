@@ -56,7 +56,8 @@
 
 .HorizontalLine1 {
     position: absolute;
-    top: 25%;
+    /* top: 25%; */
     /* left: -3%; */
-    transform: translateX(-36%);
+    transform: translate(-36%, 9%);
+
 }
