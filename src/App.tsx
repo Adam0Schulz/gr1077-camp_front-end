@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import Events from 'pages/Events';
+import Events from 'pages/Events/Events';
 
 function App() {
   return (

@@ -3,6 +3,7 @@ import { get } from "api/calls/Events";
 import { Event } from "api/models";
 import { EventCard } from "features/Event";
 import { useEffect, useState } from "react";
+import './style.css'
 
 const Events = () => {
     const [ events, setEvents ] = useState<Event[] | null>(null)
@@ -19,9 +20,9 @@ const Events = () => {
                 <h2>Events</h2>
                 {/* input component here */}
             </div>
-            <div>
+            <div className="splidetrack">
                 { events && events.map(event => 
-                <EventCard key={event.id} size='large' event={event} state='past' /> 
+                <EventCard key={event.id} size='small' event={event} state='past' /> 
                 )}
                             
                 

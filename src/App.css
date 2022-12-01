@@ -73,3 +73,8 @@ p {
 .extrabold {
     font-weight: 800;
 }
+
+/* important (cannot override it anywhere else) */
+a:-webkit-any-link {
+    text-decoration: none;
+}

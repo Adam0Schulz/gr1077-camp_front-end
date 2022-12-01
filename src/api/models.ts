@@ -2,7 +2,7 @@ interface DBObject {
     id: number,
 }
 
-export interface Page{
+export interface Page {
     paragraphSectionSet: ParagraphSection[],
     imageSectionSet: ImageSection[],
     linkSectionSet: LinkSection[],
