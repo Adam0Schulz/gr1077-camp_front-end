@@ -6,12 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Footer = () => {
     //make afooter component
     return (
-            <div className="row d-flex justify-content-start"  >
-                <div className="watermark">
-                    <img src= {window.location.origin+/Photos/+"watermark.svg"} alt="footer" className="footer"/>
-                </div>
+            <section className="row d-flex justify-content-start"  >
+
                 <div className=" col-lg-4 col-md-4 " >
+
                             <p className="textJoin">Join Our newsletter to stay up to date with our blog</p>
+
                             <div className="input-group form-outline form-white mb-3 ">
                                 <input type="email" id="form5Example21" className="form-control mb-6 m-2"/>
                                 <div className="col-auto">
@@ -27,6 +27,7 @@ const Footer = () => {
                                 </p>
                                 
                             </ul>
+
                         </div>
 
                 </div>
@@ -151,11 +152,18 @@ const Footer = () => {
 
 
                         </div>
-                <div className="privacy mb-6 ">
-                    <a href="" className="text-light d-inline-block m-4 mb-6 "><p>Privacy Policy</p></a>
-                    <a href="" className="text-light d-inline-block m-4 mb-6"><p>Terms of service</p></a>
-                    <a href="" className="text-light d-inline-block m-4 mb-6"><p>Cookies settings</p></a>
+
+                <section className="mb-4">
+                <div className="watermark">
+                    <img src= {window.location.origin+/Photos/+"watermark.svg"} alt="footer" className="footer"/>
+
+                    <a href="" className="text-light d-inline-block text-center m-4 mb-6 "><p className="privacy" >Privacy Policy</p></a>
+                    <a href="" className="text-light d-inline-block text-center m-4 mb-6"><p className="privacy">Terms of service</p></a>
+                    <a href="" className="text-light d-inline-block text-center m-4 mb-6"><p className="privacy">Cookies settings</p></a>
+
                 </div>
+                    </section>
+            </section>
 
 
 
@@ -164,7 +172,7 @@ const Footer = () => {
 
 
 
-            </div>
+
 
 
 
