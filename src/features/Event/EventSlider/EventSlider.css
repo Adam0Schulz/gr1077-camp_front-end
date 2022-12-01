@@ -1,7 +1,6 @@
 .event-card {
-    height: 300px;
-    background-color: cornflowerblue;
-    width: 200px;
+    height: 400px;
+    background-color: lightblue;
 }
 
 .splide__arrow {
@@ -19,4 +18,12 @@
 
 .splide__arrow--next {
     right: -4em !important;
+}
+
+.background-rectangle {
+    width: 1000px;
+    height: 200px;
+    background: darkgray;
+    z-index: -100;
+    position: absolute;
 }

@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import ArrowButton from "./components/ArrowButton/ArrowButton";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
                 <Route  path="/blog" element={<><Footer/></>}/>
           </Routes>
 
+          <ArrowButton/>
           <ToastContainer/>
       </BrowserRouter>
   );
