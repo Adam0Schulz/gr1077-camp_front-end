@@ -9,12 +9,12 @@
 }
 .researchersTitle {
   color: #901A1E;
-  font-size: 16px;
+  font-size: 18px;
 
 }
 .externalTitle{
   color: #901A1E;
-  font-size: 16px;
+  font-size: 18px;
 
 }
 .line{
@@ -48,21 +48,56 @@
 
 .imgResearch{
   float: right;
-  width: 30%;
-  height: 30%;
-  margin-left: 0%;
-  margin-right: 0%;
-  margin-top: -5%;
-  margin-bottom: 0%;
-  outline: 1px solid #747681;
+  width: 70%;
+  height: 70%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  outline: 1px solid #f1f1f1;
+
 }
 .externalResearch{
   float: right;
-  width: 30%;
-  height: 30%;
-  margin-left: 0%;
-  margin-right: 0%;
-  margin-top: -5%;
-  margin-bottom: 0%;
-    outline: 1px solid #747681;
+  width: 70%;
+  height: 70%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+    outline: 1px solid #f1f1f1;
+}
+
+.Researchers{
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 5%;
+  padding: 5%;
+}
+.externalResearchers{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 5%;
+  padding: 5%;
+}
+.tableResercher{
+  width: 25%;
+  height: 25%;
+  margin-left: 60%;
+  margin-bottom: -15%;
+  margin-top: 0;
+  padding: 10%;
+}
+.resercherName{
+  color: #000;
+  font-size: 21px;
+  margin-top: 0;
+}
+.externalresercherName{
+  color: #000;
+  font-size: 21px;
+  margin-top: 0;
 }

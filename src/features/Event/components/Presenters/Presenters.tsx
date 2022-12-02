@@ -24,68 +24,74 @@ import {Select} from "react-query/types/devtools/styledComponents";
                 {isLoading && <div>Loading...</div>}
                 {error && <div>Error: {error.message}</div>}
                 {event && (
-                    <section className="line p-4">
+                    <section className="line ">
                     <div>
                         <div key={event.id}>
                             <h6 className="text-center when">WHEN</h6>
                             <p className="text-center">{event.date.toString()}, {event.startTime.toString().slice(0,5)}-{event.endTime.toString().slice(0,5)}</p>
                             <h6 className="text-center wear">WEAR</h6>
                             <p className="text-center">{event.room.name}</p>
-                            <div className="text-center mb-4">
-                            <h6 className="text-center who ">WHO</h6>
+                            <div className="text-center who">
+                            <h6 className="text-center  ">WHO</h6>
                                 {/*//show only if researcher or external-researcher exists and show each one by one*/}
-
-
-
-                                <section className="text-start pb-4 " >{event.researcherSet.length > 0 && (
+                                <section className="text-start" >{event.researcherSet.length > 0 && (
                                     <div>
                                         {event.researcherSet.map((researcher) => (
-                                            <h5 key={researcher.id}>
+                                            <div className="Researchers" key={researcher.id}>
+                                                <table className= "tableResercher">
+                                                    <thead>
+                                                    <tr>
+                                                <th >
+                                                    <img className=" imgResearch img-fluid-right rounded-circle " src={researcher.profileImage.url} alt=""/>
+                                                </th>
+                                                </tr>
+                                                </thead>
+                                                </table>
                                                 {/*//make color of each first name different*/}
-                                                {researcher.firstName} {researcher.lastName}
+                                                <span className="resercherName"> {researcher.firstName} {researcher.lastName}</span>
                                                 {/*//next line*/}
                                                 <br/>
                                                 {/*// @ts-ignore*/}
-                                                <img className=" imgResearch img-fluid-right rounded-circle w-10  " src={researcher.profileImage.url} alt=""/>
-                                                <br/>
                                                 <span className="researchersTitle"> {researcher.title}</span>
                                             <br/>
                                                 <span className="researchersTell"> {researcher.telephone}</span>
                                             <br/>
                                                 <span className="researchersEmail">{researcher.email}</span>
-
-                                            </h5>
-
+                                            </div>
                                         ))}
                                     </div>
                                 )
                                 }
                                 </section>
 
-                                <section className="text-start pb-4  " >{event.externalResearcherSet.length > 0 && (
+                                <section className="text-start" >{event.externalResearcherSet.length > 0 && (
                                     <div>
                                         {event.externalResearcherSet.map((externalresearcher) => (
-                                            <h5 key={externalresearcher.id}>
+                                            <div className="Researchers" key={externalresearcher.id}>
+                                                <table className= "tableResercher">
+                                                    <thead>
+                                                    <tr>
+                                                        <th >
+                                                            <img className=" imgResearch img-fluid-right rounded-circle " src={externalresearcher.profileImage.url} alt=""/>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                </table>
                                                 {/*//make color of each first name different*/}
-                                                {externalresearcher.firstName} {externalresearcher.lastName}
+                                                <span className="externalresercherName"> {externalresearcher.firstName} {externalresearcher.lastName}</span>
                                                 {/*//next line*/}
                                                 <br/>
                                                 {/*// @ts-ignore*/}
-                                                <img className=" imgResearch img-fluid-right rounded-circle w-10  " src={externalresearcher.profileImage.url} alt=""/>
+                                                <span className="externalTitle"> {externalresearcher.title}</span>
                                                 <br/>
-                                                <span className="researchersTitle"> {externalresearcher.title}</span>
-                                                <br/>
-                                                <span className="researchersEmail">{externalresearcher.email}</span>
-
-                                            </h5>
-
+                                                <span className="externalEmail">{externalresearcher.email}</span>
+                                            </div>
                                         ))}
                                     </div>
                                 )
                                 }
                                 </section>
-
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </section>
