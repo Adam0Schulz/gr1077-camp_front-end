@@ -3,6 +3,7 @@ import "./Presenters.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEventById} from "features/Event/hooks/UseAllEvents";
 import {text} from "stream/consumers";
+import {Select} from "react-query/types/devtools/styledComponents";
 
 //get all reserchers and reserachers by id
  const Presenters = () => {
@@ -32,33 +33,67 @@ import {text} from "stream/consumers";
                             <p className="text-center">{event.room.name}</p>
                             <div className="text-center mb-4">
                             <h6 className="text-center who ">WHO</h6>
-                                {/*// @ts-ignore*/}
-
-                                <img className=" imgResearch img-fluid-right rounded-circle w-10 " src={event.researcherSet?.map((researcher) => researcher.profileImage.url)} alt=""/>
-                                </div>
+                                {/*//show only if researcher or external-researcher exists and show each one by one*/}
 
 
 
-                            <section className="">
+                                <section className="text-start pb-4 " >{event.researcherSet.length > 0 && (
+                                    <div>
+                                        {event.researcherSet.map((researcher) => (
+                                            <h5 key={researcher.id}>
+                                                {/*//make color of each first name different*/}
+                                                {researcher.firstName} {researcher.lastName}
+                                                {/*//next line*/}
+                                                <br/>
+                                                {/*// @ts-ignore*/}
+                                                <img className=" imgResearch img-fluid-right rounded-circle w-10  " src={researcher.profileImage.url} alt=""/>
+                                                <br/>
+                                                <span className="researchersTitle"> {researcher.title}</span>
+                                            <br/>
+                                                <span className="researchersTell"> {researcher.telephone}</span>
+                                            <br/>
+                                                <span className="researchersEmail">{researcher.email}</span>
 
-                            <h6>{event.researcherSet?.map((researcher) => researcher.firstName)}   {event.researcherSet?.map((researcher) => researcher.lastName)}</h6>
+                                            </h5>
 
+                                        ))}
+                                    </div>
+                                )
+                                }
+                                </section>
 
+                                <section className="text-start pb-4  " >{event.externalResearcherSet.length > 0 && (
+                                    <div>
+                                        {event.externalResearcherSet.map((externalresearcher) => (
+                                            <h5 key={externalresearcher.id}>
+                                                {/*//make color of each first name different*/}
+                                                {externalresearcher.firstName} {externalresearcher.lastName}
+                                                {/*//next line*/}
+                                                <br/>
+                                                {/*// @ts-ignore*/}
+                                                <img className=" imgResearch img-fluid-right rounded-circle w-10  " src={externalresearcher.profileImage.url} alt=""/>
+                                                <br/>
+                                                <span className="researchersTitle"> {externalresearcher.title}</span>
+                                                <br/>
+                                                <span className="researchersEmail">{externalresearcher.email}</span>
 
+                                            </h5>
 
-                            <h6 className="researchersTitle">{event.researcherSet?.map((researcher) => researcher.title)}</h6>
-                            <h6 className="researchersTell">{event.researcherSet?.map((researcher) => researcher.telephone)}</h6>
-                            <h6 className="researchersEmail">{event.researcherSet?.map((researcher) => researcher.email)}</h6>
-                            <h6>{event.externalResearcherSet?.map((externalResearcher) => externalResearcher.firstName)}{event.externalResearcherSet?.map((externalResearcher) => externalResearcher.lastName)}</h6>
-                            <h6 className="externalTitle">{event.externalResearcherSet?.map((externalResearcher) => externalResearcher.title)}</h6>
-                            <h6 className="externalEmail">{event.externalResearcherSet?.map((externalResearcher) => externalResearcher.email)}</h6>
-                            </section>
+                                        ))}
+                                    </div>
+                                )
+                                }
+                                </section>
+
+                            </div>
                         </div>
                     </div>
-                    </section>
+                </section>
                 )}
             </div>
         </div>
-    )
-}
-export {Presenters};
+    );
+};
+
+
+export {Presenters}

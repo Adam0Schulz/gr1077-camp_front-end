@@ -9,10 +9,12 @@
 }
 .researchersTitle {
   color: #901A1E;
+  font-size: 16px;
 
 }
 .externalTitle{
   color: #901A1E;
+  font-size: 16px;
 
 }
 .line{
@@ -24,15 +26,18 @@
 .researchersTell{
   color: #747681;
   padding-top: 10%;
+  font-size: 14px;
 
 }
 .externalEmail{
   color: #747681;
   padding-top: 10%;
+  font-size: 14px;
 
 }
 .researchersEmail{
   color: #747681;
+  font-size: 14px;
 
 }
 .imgResearcher{
@@ -47,6 +52,17 @@
   height: 30%;
   margin-left: 0%;
   margin-right: 0%;
-  margin-top: 5%;
+  margin-top: -5%;
   margin-bottom: 0%;
+  outline: 1px solid #747681;
+}
+.externalResearch{
+  float: right;
+  width: 30%;
+  height: 30%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: -5%;
+  margin-bottom: 0%;
+    outline: 1px solid #747681;
 }
