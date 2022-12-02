@@ -18,6 +18,10 @@ root {
 
 }
 
+body {
+    background-color: var(--color-bg)
+}
+
 h1 {
     font-size: 96px;
     /* font-size: 6rem*/
@@ -77,4 +81,18 @@ p {
 /* important (cannot override it anywhere else) */
 a:-webkit-any-link {
     text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-black);
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 5.6rem 0 5.6rem 15vw;
+}
+
+.page-cont {
+    margin: 0 5vw;
 }

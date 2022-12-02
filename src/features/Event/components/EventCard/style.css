@@ -1,27 +1,104 @@
 .event-card {
     position: relative;
-    color: var(--color-black);
 }
 
-.event-card--large {
-    --row: 1
+.event-card__datetime,
+.event-card__body {
+    color: var(--color-black)
 }
 
-.event-card__datetime--odd {
+.event-card__datetime--odd,
+.event-card__body--even {
     grid-column: 1;
 }
 
-.event-card__datetime--even {
-    grid-column: 2;
-}
-
+.event-card__datetime--even,
 .event-card__body--odd {
     grid-column: 2;
 }
 
-.event-card__body--even {
-    grid-column: 1;
+.event-card__body--large {
+    position: relative;
 }
+
+.event-card__datetime--large,
+.event-card__body--large {
+
+    --padding: 3em;
+    padding: var(--padding);
+}
+
+.event-card__body--odd {
+    padding-right: 0;
+}
+
+.event-card__body--even {
+    padding-left: 0;
+}
+
+.event-card__body--large .event-card__icon {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+}
+
+.event-card__body--even .event-card__icon {
+    transform: translate(50%, -50%);
+    right: 0;
+}
+
+.event-card__body--odd .event-card__icon {
+    transform: translate(calc(-50% - var(--padding)), -50%);
+}
+
+.event-card__textarea {
+
+    display: grid;
+    gap: 2em;
+    grid-template-columns: auto auto;
+}
+
+.event-card__text {
+    display: flex;
+    overflow-wrap: anywhere;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-event__paragraph {
+    text-align: justify;
+}
+
+.event-card__datetime--large {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.event-card__datetime--upcoming .event-card__date {
+    color: var(--color-primary);
+}
+
+.event-card__datetime--past:hover .event-card__date {
+    color: var(--color-primary);
+}
+
+.event-card__datetime--odd {
+    text-align: right;
+}
+
+.event-card__body--even .event-card__text {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+}
+
+
 
 .event-card--small {
     text-transform: uppercase;
@@ -68,19 +145,73 @@
 }
 
 .event-card__image {
-    --size: 23em;
+    --size: 18vw;
     height: var(--size);
     object-fit: cover;
+}
+
+.event-card__body--large .event-card__image {
+    width: var(--size);
 }
 
 .event-card--small .event-card__image {
     width: 100%;
 }
 
-.event-card--large .event-card__image {
-    width: var(--size);
+
+.event-card__body--large .event-card__heading,
+.event-card__body--large .event-card__paragraph {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
+.event_card__datetime__cont {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;*/
+}
+
+/*
+.event-card__datetime__cont::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -70%;
+    width: 60%;
+    height: 1px;
+    background-color: var(--color-gray-light);
+
+}*/
+
+/*.event-card__datetime--even .event-card__datetime__cont::before {
+    left: -70%;
+}*/
+
+
+.event-card__datetime--odd::after,
+.event-card__datetime--even::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: var(--color-gray-dark);
+}
+
+.event-card__datetime--odd::after {
+    grid-column: 3;
+    float: right;
+}
+
+.event-card__datetime--odd .event-card__datetime__cont {
+    grid-column: 2;
+}
+
+.event-card__datetime--even::before {
+    float: left;
+}
 
 
 img {
@@ -92,10 +223,44 @@ img {
 
 }
 
-.past:hover {
+.upcoming {
     filter: grayscale(0%);
 }
 
-.upcoming {
-    filter: grayscale(0%);
+@media (max-width: 1387px) {
+    .event-card__body--large .event-card__paragraph {
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media (max-width: 1280px) {
+    .event-card__body--large .event-card__image {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%
+    }
+
+    .event-card__body--large .event-card__text {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .event-card__body--even .event-card__text {
+        grid-row: 2;
+    }
+
+    .event-card__body--even .event-card__image {
+        grid-row: 1;
+    }
+
+    .event-card__body--large .event-card__paragraph {
+        -webkit-line-clamp: 3;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .event-card__body--large .event-card__paragraph {
+        -webkit-line-clamp: 4;
+    }
 }

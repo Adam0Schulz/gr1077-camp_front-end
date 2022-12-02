@@ -1,0 +1,37 @@
+.event-timeline {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 5em 0;
+    position: relative;
+}
+
+.event-timeline::before,
+.event-timeline::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.event-timeline::before {
+    height: 100%;
+    width: 4px;
+    background-color: var(--color-black);
+
+}
+
+.event-timeline::after {
+    height: 80%;
+    width: 15em;
+    top: 10%;
+    background-color: #D9D9D9;
+    /* remember to change to variable */
+    z-index: -1;
+}
+
+.filter-select {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
