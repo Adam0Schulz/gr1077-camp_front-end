@@ -1,7 +1,3 @@
-.event-card {
-    height: 400px;
-    background-color: lightblue;
-}
 
 .splide__arrow {
     background: none !important;
@@ -26,4 +22,9 @@
     background: darkgray;
     z-index: -100;
     position: absolute;
+}
+
+.splide__track {
+    border-top: 4px var(--color-black);
+    height: 50%;
 }

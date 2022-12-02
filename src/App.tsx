@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Events from 'pages/Events';
 import Navbar from "./components/Navbar/Navbar";
+import Slider from "./features/Event/EventSlider/EventSlider";
 
 
 
@@ -24,7 +25,7 @@ function App() {
                 <Route  path="/blog" element={<><Navbar/><Footer/></>}/>
           </Routes>
 
-
+        <Slider/>
           <ToastContainer/>
       </BrowserRouter>
   );
