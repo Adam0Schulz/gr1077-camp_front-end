@@ -28,11 +28,11 @@ import {Select} from "react-query/types/devtools/styledComponents";
                     <div>
                         <div key={event.id}>
                             <h6 className="text-center when">WHEN</h6>
-                            <p className="text-center">{event.date.toString()}, {event.startTime.toString().slice(0,5)}-{event.endTime.toString().slice(0,5)}</p>
+                            <p className="text-center date">{event.date.toString()}, {event.startTime.toString().slice(0,5)}-{event.endTime.toString().slice(0,5)}</p>
                             <h6 className="text-center wear">WEAR</h6>
-                            <p className="text-center">{event.room.name}</p>
-                            <div className="text-center who">
-                            <h6 className="text-center  ">WHO</h6>
+                            <p className="text-center location">{event.room.name}</p>
+                            <div className="text-center">
+                            <h6 className="text-center who">WHO</h6>
                                 {/*//show only if researcher or external-researcher exists and show each one by one*/}
                                 <section className="text-start" >{event.researcherSet.length > 0 && (
                                     <div>

@@ -1,16 +1,27 @@
 .when {
   color: #901A1E;
+  font-size: 18px;
 }
 .wear {
   color: #901A1E;
+  font-size: 18px;
 }
-.who {
+.who{
   color: #901A1E;
+  font-size: 18px;
+}
+.date{
+  color: #262526;
+  font-size: 21px;
 }
 .researchersTitle {
   color: #901A1E;
   font-size: 18px;
 
+}
+.location{
+  color: #262526;
+  font-size: 21px;
 }
 .externalTitle{
   color: #901A1E;
@@ -92,12 +103,12 @@
   padding: 10%;
 }
 .resercherName{
-  color: #000;
+  color: #262526;
   font-size: 21px;
   margin-top: 0;
 }
 .externalresercherName{
-  color: #000;
+  color: #262526;
   font-size: 21px;
   margin-top: 0;
 }
