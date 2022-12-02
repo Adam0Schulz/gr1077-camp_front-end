@@ -157,9 +157,9 @@ const Footer = () => {
                 <div className="watermark">
                     <img src= {window.location.origin+/Photos/+"watermark.svg"} alt="footer" className="footer"/>
 
-                    <a href="" className="text-light d-inline-block text-center m-4 mb-6 "><p className="privacy" >Privacy Policy</p></a>
+                    {/*<a href="" className="text-light d-inline-block text-center m-4 mb-6 "><p className="privacy" >Privacy Policy</p></a>
                     <a href="" className="text-light d-inline-block text-center m-4 mb-6"><p className="privacy">Terms of service</p></a>
-                    <a href="" className="text-light d-inline-block text-center m-4 mb-6"><p className="privacy">Cookies settings</p></a>
+                    <a href="" className="text-light d-inline-block text-center m-4 mb-6"><p className="privacy">Cookies settings</p></a>*/}
 
                 </div>
                     </section>

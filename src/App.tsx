@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Events from 'pages/Events';
 import Navbar from "./components/Navbar/Navbar";
+import {Presenters} from "./features/Event/components/Presenters/Presenters";
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
 
           <Routes>
               <Route  path="/" element={<><Navbar/><Footer/></>}/>
-              <Route  path="/home" element={<><Navbar/><Footer/></>}/>
+              <Route  path="/home" element={<><Navbar/><Presenters/><Footer/></>}/>
                 <Route  path="/events" element={<><Navbar/><Events/><Footer/></>}/>
+              <Route  path="/events/{id}" element={<><Navbar/><Presenters/><Footer/></>}/>
+
                 <Route  path="/about" element={<><Navbar/><Footer/></>}/>
                 <Route  path="/researchers" element={<><Navbar/><Footer/></>}/>
                 <Route  path="/contact" element={<><Navbar/><Footer/></>}/>

@@ -1,0 +1,52 @@
+.when {
+  color: #901A1E;
+}
+.wear {
+  color: #901A1E;
+}
+.who {
+  color: #901A1E;
+}
+.researchersTitle {
+  color: #901A1E;
+
+}
+.externalTitle{
+  color: #901A1E;
+
+}
+.line{
+  border-bottom: 2px solid #CCCBCC;
+  border-top: 2px solid #CCCBCC;
+  width: 80%;
+  margin-left: 10%;
+}
+.researchersTell{
+  color: #747681;
+  padding-top: 10%;
+
+}
+.externalEmail{
+  color: #747681;
+  padding-top: 10%;
+
+}
+.researchersEmail{
+  color: #747681;
+
+}
+.imgResearcher{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.imgResearch{
+  float: right;
+  width: 30%;
+  height: 30%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
