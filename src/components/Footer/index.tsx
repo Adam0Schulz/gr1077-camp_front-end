@@ -33,7 +33,7 @@ const Footer = () => {
                 </div>
 
                         <div className="col-lg-2 col-md-6 ">
-                            <h6 className="text mb-0">Camp Research Group</h6>
+                            <h6 className="textHeading mb-0">Camp Research Group</h6>
 
                             <ul className="list-unstyled mb-0">
                                 <li>
@@ -56,7 +56,7 @@ const Footer = () => {
                         </div>
 
                         <div className="col-lg-2 col-md-6">
-                            <h6 className="text">For Employees</h6>
+                            <h6 className="textHeading">For Employees</h6>
 
                             <ul className="list-unstyled mb-0">
                                 <li>
@@ -74,7 +74,7 @@ const Footer = () => {
 
 
                 <div className="col-lg-2 col-md-6">
-                            <h6 className="text mb-0">Follow Us</h6>
+                            <h6 className="textHeading mb-0">Follow Us</h6>
 
                             <ul className="list-unstyled mb-0">
                                 <li>
@@ -116,7 +116,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-lg-2 col-md-6">
-                            <h6 className="text mb-0">Contact</h6>
+                            <h6 className="textHeading mb-0">Contact</h6>
 
                             <ul className="list-unstyled mb-0">
                                 <li>

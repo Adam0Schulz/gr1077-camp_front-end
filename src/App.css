@@ -96,3 +96,11 @@ a:hover {
 .page-cont {
     margin: 0 5vw;
 }
+
+.img_cont {
+    overflow: hidden;
+}
+
+img {
+    transition: all 0.25s ease-out;
+}

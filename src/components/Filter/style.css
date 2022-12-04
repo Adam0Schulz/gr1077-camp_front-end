@@ -6,6 +6,7 @@
     font-weight: 700;
     line-height: 175%;
     text-transform: uppercase;
+    z-index: 100;
 }
 
 .filter-select option {

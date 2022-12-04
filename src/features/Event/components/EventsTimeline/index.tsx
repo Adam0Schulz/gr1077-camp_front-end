@@ -28,6 +28,7 @@ const EventsTimeline = () => {
     return (
         <div className="event-timeline">
             <Filter options={[EventState.UPCOMING, EventState.PAST]} action={setState} />
+            {/* not very nice way to do this - if there are more states this will break down */}
             {(state == EventState.UPCOMING) ? upcomingEvents?.map(event => {
                 row += 1
                 return (<EventCard key={event.id} size='large' event={event} state={state} row={row} />)
