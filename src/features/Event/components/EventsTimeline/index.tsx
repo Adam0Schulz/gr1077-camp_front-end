@@ -1,32 +1,43 @@
-import { get } from 'api/calls/Events'
-import { Event } from "api/models";
 import Filter from 'components/Filter';
 import { EventCard } from 'features/Event';
-import { useState, useEffect } from 'react'
-import { urlToHttpOptions } from 'url';
+import { useState } from 'react'
+import { useEventsByState } from 'features/Event/hooks/UseAllEvents';
 import './style.css'
+import { EventState } from 'api/enums';
 
 const EventsTimeline = () => {
 
-    const [ events, setEvents ] = useState<Event[] | null>(null)
-    const [ state, setState ] = useState<'upcoming' | 'past'>('upcoming')
+    const { data: pastEvents,
+        isLoading: isPastLoading,
+        isError: isPastError } = useEventsByState(EventState.PAST)
+
+    const { data: upcomingEvents,
+        isLoading: isUpcomingLoading,
+        isError: isUpcomingError } = useEventsByState(EventState.UPCOMING)
+
+
+    const [state, setState] = useState<EventState>(EventState.UPCOMING)
     let row = 0
-    useEffect(() => {
-        async function getThingy() {
-            setEvents(await get());
-        }
-        getThingy()
-        
-    }, [])
+
+    if (isPastLoading || isUpcomingLoading) return <>Loading...</>
+
+    if (isPastError || isUpcomingError) return <>Oopsie! Something went wrong!</>
+
+    console.log(state)
 
     return (
         <div className="event-timeline">
-        <Filter options={['upcoming', 'past']} action={setState}/>
-        { events && events.map(event => {
-            row += 1
-            return (<EventCard key={event.id} size='large' event={event} state={state} row={row}/>)
-        }                
-        )}
+            <Filter options={[EventState.UPCOMING, EventState.PAST]} action={setState} />
+            {(state == EventState.UPCOMING) ? upcomingEvents?.map(event => {
+                row += 1
+                return (<EventCard key={event.id} size='large' event={event} state={state} row={row} />)
+            }
+            ) : pastEvents?.map(event => {
+                row += 1
+                return (<EventCard key={event.id} size='large' event={event} state={state} row={row} />)
+            }
+            )
+            }
         </div>
     )
 }

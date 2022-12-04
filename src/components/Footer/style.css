@@ -12,7 +12,8 @@
 }
 .row {
   BACKGROUND-COLOR: #646464;
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 0px;
 
     margin: 0;
 
@@ -25,13 +26,17 @@
 .list-unstyled {
   position: relative;
 }
+.watermarked {
+  position: relative;
+}
 
 
-.watermark{
+.watermark:after{
+  content: "";
   position: absolute;
-  left: -24px;
-  bottom: -200px;
-  z-index: 0;
+  display: block;
+    width: 100%;
+
 }
 .fa {
   color: #ff5900;
@@ -45,8 +50,5 @@
 }
 .privacy{
   color: #fff;
-  padding-left: 850px;
-  padding-top: 125px;
   font-size: 12px;
-
 }

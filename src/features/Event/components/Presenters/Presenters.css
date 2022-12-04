@@ -1,0 +1,114 @@
+.when {
+  color: #901A1E;
+  font-size: 18px;
+}
+.wear {
+  color: #901A1E;
+  font-size: 18px;
+}
+.who{
+  color: #901A1E;
+  font-size: 18px;
+}
+.date{
+  color: #262526;
+  font-size: 21px;
+}
+.researchersTitle {
+  color: #901A1E;
+  font-size: 18px;
+
+}
+.location{
+  color: #262526;
+  font-size: 21px;
+}
+.externalTitle{
+  color: #901A1E;
+  font-size: 18px;
+
+}
+.line{
+  border-bottom: 2px solid #CCCBCC;
+  border-top: 2px solid #CCCBCC;
+  width: 80%;
+  margin-left: 10%;
+}
+.researchersTell{
+  color: #747681;
+  padding-top: 10%;
+  font-size: 14px;
+
+}
+.externalEmail{
+  color: #747681;
+  padding-top: 10%;
+  font-size: 14px;
+
+}
+.researchersEmail{
+  color: #747681;
+  font-size: 14px;
+
+}
+.imgResearcher{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.imgResearch{
+  float: right;
+  width: 70%;
+  height: 70%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  outline: 1px solid #f1f1f1;
+
+}
+.externalResearch{
+  float: right;
+  width: 70%;
+  height: 70%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+    outline: 1px solid #f1f1f1;
+}
+
+.Researchers{
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 5%;
+  padding: 5%;
+}
+.externalResearchers{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 5%;
+  padding: 5%;
+}
+.tableResercher{
+  width: 25%;
+  height: 25%;
+  margin-left: 60%;
+  margin-bottom: -15%;
+  margin-top: 0;
+  padding: 10%;
+}
+.resercherName{
+  color: #262526;
+  font-size: 21px;
+  margin-top: 0;
+}
+.externalresercherName{
+  color: #262526;
+  font-size: 21px;
+  margin-top: 0;
+}

@@ -7,21 +7,22 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Events from 'pages/Events';
 import Navbar from "./components/Navbar";
+import {Presenters} from "./features/Event/components/Presenters/Presenters";
+
 
 function App() {
   return (
     <BrowserRouter>
-
       <Routes>
         <Route path="/" element={<><Navbar activePage='home'/><Footer /></>} />
         <Route path="/home" element={<><Navbar activePage='home'/><Footer /></>} />
         <Route path="/events" element={<Events />} />
+        <Route  path="/events/{id}" element={<><Navbar activePage='events'/><Presenters/><Footer/></>}/>
         <Route path="/about" element={<><Navbar activePage='about'/><Footer /></>} />
-        <Route path="/researchers" element={<><Navbar activePage='researchers'/><Footer /></>} />
+        <Route path="/researchers" element={<><Navbar activePage='researchers'/><Presenters/><Footer /></>} />
         <Route path="/contact" element={<><Navbar activePage='contact'/><Footer /></>} />
         <Route path="/blog" element={<><Navbar activePage='blog'/><Footer /></>} />
       </Routes>
-
       <ToastContainer />
     </BrowserRouter>
   );

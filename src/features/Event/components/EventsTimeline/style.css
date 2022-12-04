@@ -22,9 +22,9 @@
 }
 
 .event-timeline::after {
-    height: 80%;
     width: 15em;
-    top: 10%;
+    top: 5em;
+    bottom: 5em;
     background-color: #D9D9D9;
     /* remember to change to variable */
     z-index: -1;

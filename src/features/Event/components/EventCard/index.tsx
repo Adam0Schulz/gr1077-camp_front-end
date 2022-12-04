@@ -3,15 +3,16 @@ import "./style.css"
 import calendarLightIcon from 'assets/icons/calendar.svg'
 import calendarDarkIcon from 'assets/icons/calendar-darkbg.svg'
 import { Link } from 'react-router-dom'
+import { EventState } from 'api/enums'
 
 interface Props {
   size: 'large' | 'small',
   event: Event,
-  state?: 'past' | 'upcoming',
+  state?: EventState,
   row?: number,
 }
 
-const EventCard = ({ size, event, state = 'upcoming', row }: Props) => {
+const EventCard = ({ size, event, state = EventState.UPCOMING, row }: Props) => {
 
   /* Getting the paragraph preview */
   /* potencial use of useMemo */
@@ -58,7 +59,7 @@ const EventCard = ({ size, event, state = 'upcoming', row }: Props) => {
 
         <>
           <Link to={'/home'}
-            className={'event-card__datetime event-card__datetime--large event-card__datetime--' + state + ' event-card__datetime--' + (event.id % 2 == 0 ? 'even' : 'odd')}
+            className={'event-card__datetime event-card__datetime--large event-card__datetime--' + state.toLocaleLowerCase() + ' event-card__datetime--' + (event.id % 2 == 0 ? 'even' : 'odd')}
             style={{ gridRow: row }}>
             <div className='event-card__datetime__cont'>
               {/* there should be something to make the heading black if it's a past event*/}
@@ -68,12 +69,12 @@ const EventCard = ({ size, event, state = 'upcoming', row }: Props) => {
           </Link>
 
           <Link to={'/home'}
-            className={'event-card__body event-card__body--large event-card__body--' + state + ' event-card__body--' + (event.id % 2 == 0 ? 'even' : 'odd')}
+            className={'event-card__body event-card__body--large event-card__body--' + state.toLocaleLowerCase() + ' event-card__body--' + (event.id % 2 == 0 ? 'even' : 'odd')}
             style={{ gridRow: row }}>
 
             <img className='event-card__icon' src={calendarDarkIcon} />
             <div className='event-card__textarea'>
-              <img className={'event-card__image ' + state} src={event.image.url} alt={event.image.caption} />
+              <img className={'event-card__image ' + state.toLocaleLowerCase()} src={event.image.url} alt={event.image.caption} />
               <div className='event-card__text'>
                 <h3 className='event-card__heading'>{event.name}</h3>
                 <p className='event-card__paragraph'>{paragraphText}</p>
