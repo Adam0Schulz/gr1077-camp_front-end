@@ -64,6 +64,9 @@ export interface Location extends DBObject {
 export interface Participant extends DBObject, Person {
     affiliation: string,
 }
+export interface NewParticipant extends Person{
+    affiliation : string,
+}
 
 export interface Room extends DBObject {
     name: string,

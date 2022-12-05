@@ -1,0 +1,28 @@
+.moreArrowBox{
+    display: flex;
+    height: 30px;
+    width: 60px;
+    align-items: center;
+}
+.moreArrowText{
+    font-weight: 600;
+}
+.arrowBox{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    height: 30px;
+    width: auto;
+
+}
+.arrowLine{
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.arrow{
+    display: flex;
+    align-items: center;
+}
+
+
