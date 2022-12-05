@@ -37,22 +37,25 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row }: Props) => 
     <>
 
       {size == 'small' &&
-        <Link to={'/home'}>
+        
           <div className='event-card event-card--small'>
             <div className='event-card__datetime'>
               <h4 className='event-card__date'>{event.date.toString()}</h4>
               <h5 className='event-card__time'>{time}</h5>
+              <div className='event-card__icon'>
+                <img src={calendarLightIcon} />
+              </div>
             </div>
-            <div>
-              <img className='event-card__icon event-card__scaleHover' src={calendarLightIcon} />
-            </div>
-            <div className='event-card__body'>
+              
+            <Link to={'/events/' + event.id}>
+              <div className='event-card__body'>
               {/* Maybe we should limit the number of characters displayed in here like we did with the paragraph preview in large card */}
-              <h4 className='event-card__heading'>{event.name}</h4>
-              <img className='event-card__image' src={event.image.url} alt={event.image.caption} />
-            </div>
+                <h4 className='event-card__heading'>{event.name}</h4>
+                <img className='event-card__image' src={event.image.url} alt={event.image.caption} />
+              </div>
+            </Link>
           </div>
-        </Link>
+        
       }
 
 
@@ -81,7 +84,6 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row }: Props) => 
               <div className='event-card__text'>
                 <h3 className='event-card__heading'>{event.name}</h3>
                 <p className='event-card__paragraph'>{paragraphText}</p>
-                {/* <MoreBtn link={something/something}/> */}
                 <Link to={'/events/' + event.id} >
                   <button className='event-card__scaleHover'>More {'>'}</button>
                 </Link>

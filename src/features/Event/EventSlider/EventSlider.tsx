@@ -30,7 +30,7 @@ const Slider = () => {
                 perPage: 3.5,
                 perMove: 1,
                 type: "loop",
-                gap: "3rem",
+                gap: "1rem",
                 rewind: true,
                 arrows: true,
                 drag: true,
