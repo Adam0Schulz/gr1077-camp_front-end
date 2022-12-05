@@ -5,6 +5,7 @@ import {get} from "api/calls/Events";
 import {Event} from "../../../api/models";
 import {EventCard} from "features/Event";
 import {useEffect, useState} from "react";
+import Separator from "../../../components/Separator/Separator";
 
 
 const Slider = () => {
@@ -21,10 +22,12 @@ const Slider = () => {
 
 
     return (
+
         <div className='wrapper'>
+         <Separator/>
             <h3>Upcoming events</h3>
             <div className='background-rectangle'></div>
-            <div className='timeline'></div>
+
 
             <Splide hasTrack={false} options={{
                 perPage: 3.5,
