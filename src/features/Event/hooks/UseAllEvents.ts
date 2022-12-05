@@ -3,13 +3,15 @@ import {
     getById,
     update,
     del,
-    create
+    create,
+    getByParams
 }from "../../../api/calls/Events";
 import {useQuery, useMutation, useQueryClient} from "react-query";
 import {toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Event} from "api/models";
+import { EventState } from "api/enums";
 
 
 export const useAllEvents = () => {
@@ -25,8 +27,16 @@ export const useAllEvents = () => {
 }
 export const useEventById = (id: number) => {
     return useQuery<Event,Error>(
-        ["eventBYId", id],// query key
+        ["eventById", id],// query key
         () => getById(id),
+        // fetching function
+    )
+}
+
+export const useEventsByState = (state: EventState) => {
+    return useQuery<Event[],Error>(
+        ["eventByParams", state],// query key
+        () => getByParams({name: 'state', value: state}),
         // fetching function
     )
 }
