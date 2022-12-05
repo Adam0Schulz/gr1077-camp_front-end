@@ -14,7 +14,6 @@ import Slider from "./features/Event/EventSlider/EventSlider";
 function App() {
   return (
       <BrowserRouter>
-
           <Routes>
               <Route  path="/" element={<><Navbar/><Footer/></>}/>
               <Route  path="/home" element={<><Navbar/><Footer/></>}/>
@@ -25,7 +24,7 @@ function App() {
                 <Route  path="/blog" element={<><Navbar/><Footer/></>}/>
           </Routes>
 
-        <Slider/>
+
           <ToastContainer/>
       </BrowserRouter>
   );

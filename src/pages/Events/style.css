@@ -1,9 +1,9 @@
-.splidetrack {
+/*.splidetrack {
     border-top: 2px solid black;
     display: flex;
     width: fit-content;
     margin-top: 10em;
-}
+}*/
 
 .grid {
     display: grid;

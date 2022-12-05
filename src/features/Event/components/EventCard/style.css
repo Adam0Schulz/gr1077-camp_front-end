@@ -28,10 +28,10 @@
 }
 
 .event-card--small .event-card__datetime {
-    position: absolute;
+/*    position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -8rem);
+    transform: translate(-50%, -8rem);*/
     text-align: center;
 }
 
@@ -41,13 +41,14 @@
 
 .event-card--small .event-card__icon {
     position: absolute;
-    top: 0;
+    left: 40%;
+/*    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 .event-card--small .event-card__body {
-    width: 27em;
+    width: 22em;
     padding: 3em 1em 1em 1em;
     position: relative;
 }
@@ -77,10 +78,10 @@
     width: 100%;
 }
 
+
 .event-card--large .event-card__image {
     width: var(--size);
 }
-
 
 
 img {
@@ -98,4 +99,8 @@ img {
 
 .upcoming {
     filter: grayscale(0%);
+}
+
+h4 {
+    margin-top: 50px;
 }
