@@ -1,25 +1,21 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import './EventSlider.css';
-import { get } from "api/calls/Events";
-import { Event } from "../../../../api/models";
 import { EventCard } from "features/Event";
-import { useEffect, useState } from "react";
-import Separator from "../../../../components/Separator/Separator";
+import Separator from "components/Separator/Separator";
+import { useEventsByState } from "features/Event/hooks/UseAllEvents";
+import { EventState } from "api/enums";
 
 
 const Slider = () => {
     // remember to add key for SplideSlide <SplideSlide key={event.id}>
 
-    const [events, setEvents] = useState<Event[] | null>(null)
+    const { data: events,
+        isLoading: isLoading,
+        isError: isError } = useEventsByState(EventState.UPCOMING)
 
-    useEffect(() => {
-        async function getEvents() {
-            setEvents(await get());
-        }
-        getEvents()
-    }, []);
-
+    if(isLoading) <>Loading...</>
+    if(isError) <>Oops! Something went wrong!</>
 
     return (
 
