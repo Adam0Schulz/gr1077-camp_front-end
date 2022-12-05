@@ -137,10 +137,10 @@
 
 .event-card--small .event-card__datetime {
     position: absolute;
-    top: 0;
+/*    top: 0;
     left: 50%;
     transform: translate(-50%, -8rem);
-    text-align: center;
+    text-align: center;*/
 }
 
 .event-card--small .event-card__date {
@@ -149,9 +149,9 @@
 
 .event-card--small .event-card__icon {
     position: absolute;
-    top: 0;
+/*    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 .event-card--small .event-card__body {
