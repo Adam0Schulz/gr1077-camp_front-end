@@ -1,4 +1,6 @@
-
+.wrapper {
+    margin: 0 4em;
+}
 .splide__arrow {
     background: none !important;
 }
@@ -9,7 +11,7 @@
 }
 
 .splide__arrow--prev {
-    left: -2em !important;
+    left: -4em !important;
 }
 
 
@@ -25,6 +27,8 @@
     position: absolute;
     top: 30%;
 }
+
+
 
 
 
