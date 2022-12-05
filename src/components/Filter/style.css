@@ -1,0 +1,20 @@
+.filter-select {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--color-gray-light);
+    padding: .6em 2em;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 175%;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.filter-select option {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.filter-select option:hover {
+    background-color: var(--color-gray-dark);
+    color: white;
+}

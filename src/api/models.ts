@@ -33,8 +33,11 @@ interface Person {
 // We have a problem in the back-end
 /* We should have sections for profile, cv and publication
  but now we just have sections for the researcher and profile, cv and publications separately */
-export interface Researcher extends Page, DBObject, Person { 
+export interface Researcher extends Page, DBObject, Person {
+    profileImage: any,
     telephone: string,
+    email: string,
+
     /* finish this when you figure out the database*/
 }
 
@@ -53,6 +56,8 @@ export interface Image extends DBObject {
 }
 
 export interface Location extends DBObject {
+    address: string,
+    room:Room[],
 
 }
 
@@ -62,7 +67,9 @@ export interface Participant extends DBObject, Person {
 
 export interface Room extends DBObject {
     name: string,
-    capacity: number, // could be a string
+    capacity: number,
+
+    // could be a string
 }
 
 
