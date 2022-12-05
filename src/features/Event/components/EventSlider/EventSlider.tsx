@@ -1,15 +1,15 @@
-import {Splide, SplideSlide, SplideTrack} from "@splidejs/react-splide";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import './EventSlider.css';
-import {get} from "api/calls/Events";
-import {Event} from "../../../api/models";
-import {EventCard} from "features/Event";
-import {useEffect, useState} from "react";
-import Separator from "../../../components/Separator/Separator";
+import { get } from "api/calls/Events";
+import { Event } from "../../../../api/models";
+import { EventCard } from "features/Event";
+import { useEffect, useState } from "react";
+import Separator from "../../../../components/Separator/Separator";
 
 
 const Slider = () => {
-// remember to add key for SplideSlide <SplideSlide key={event.id}>
+    // remember to add key for SplideSlide <SplideSlide key={event.id}>
 
     const [events, setEvents] = useState<Event[] | null>(null)
 
@@ -24,7 +24,7 @@ const Slider = () => {
     return (
 
         <div className='wrapper'>
-         <Separator/>
+            <Separator />
             <h3>Upcoming events</h3>
             <div className='background-rectangle'></div>
 
@@ -42,12 +42,12 @@ const Slider = () => {
                 <SplideTrack>
 
                     {events ? events.map((event) => {
-                        return(
+                        return (
                             <SplideSlide key={event.id}>
-                                <EventCard size={'small'} event={event}/>
+                                <EventCard size={'small'} event={event} />
                             </SplideSlide>
                         );
-                    }):<div></div>}
+                    }) : <div></div>}
                 </SplideTrack>
 
             </Splide>
