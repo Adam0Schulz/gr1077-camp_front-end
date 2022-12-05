@@ -13,7 +13,7 @@ interface Props {
   row?: number,
 }
 
-const EventCard = ({ size, event, state = EventState.UPCOMING, row }: Props) => {
+const EventCard = ({ size, event, state = EventState.UPCOMING, row = 1 }: Props) => {
 
   /* Getting the paragraph preview */
   /* potencial use of useMemo */
@@ -63,7 +63,7 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row }: Props) => 
 
         <div
           style={{ gridRow: row }}
-          className={'event-card event-card--large event-card--' + state.toLocaleLowerCase() + ' event-card--' + (event.id % 2 == 0 ? 'even' : 'odd')}>
+          className={'event-card event-card--large event-card--' + state.toLocaleLowerCase() + ' event-card--' + (row % 2 == 0 ? 'even' : 'odd')}>
           <div className='event-card__datetime'>
             <div className='event-card__datetime__cont'>
               <h2 className='event-card__date'>{event.date.toString()}</h2>
