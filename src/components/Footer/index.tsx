@@ -13,7 +13,7 @@ const Footer = () => {
                             <p className="textJoin">Join Our newsletter to stay up to date with our blog</p>
 
                             <div className="input-group form-outline form-white mb-3 ">
-                                <input type="email" id="form5Example21" className="form-control mb-6 m-2"/>
+                                <input type="email" id="form5Example21" className="form-control mb-6 m-2" placeholder='Enter your e-mail'/>
                                 <div className="col-auto">
                                     <button type="submit" className="btn btn-outline-light mb-6 m-2 ">
                                         Subscribe

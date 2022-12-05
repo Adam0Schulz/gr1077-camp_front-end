@@ -11,16 +11,15 @@
   background-color: #646464 !important;
 }
 .row {
-  BACKGROUND-COLOR: #646464;
-  padding-top: 100px;
-  padding-bottom: 0px;
-
-    margin: 0;
+  background-color: #646464;
+  margin: 0;
+  padding: 5vw;
+  font-size: 14px;
 
 }
 .paragraph2{
   color: #fff;
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .list-unstyled {
@@ -31,11 +30,9 @@
 }
 
 
-.watermark:after{
-  content: "";
-  position: absolute;
-  display: block;
-    width: 100%;
+.watermark{
+  height: 10em;
+  transform: translateX(-10%);
 
 }
 .fa {
@@ -51,4 +48,9 @@
 .privacy{
   color: #fff;
   font-size: 12px;
+}
+
+.form-control {
+  border-radius: .375rem !important;
+  margin-left: 0 !important;
 }

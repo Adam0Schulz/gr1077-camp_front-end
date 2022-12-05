@@ -14,6 +14,8 @@ root {
     --color-gray-light: #CCCBCC;
     --color-gray-dark: #747681;
     --color-white: #ffffff;
+
+    --page-margin: 5vw;
     /* the last one's maybe redundant but you never know */
 
 }
@@ -90,7 +92,7 @@ a:hover {
 .page-heading {
     display: flex;
     justify-content: space-between;
-    margin: 5.6rem 0 5.6rem 15vw;
+    margin: 5.6rem 0 5.6rem calc(var(--page-margin) * 3) ;
 }
 
 .page-cont {
