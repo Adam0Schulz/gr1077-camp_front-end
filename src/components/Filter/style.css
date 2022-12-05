@@ -6,6 +6,7 @@
     font-weight: 700;
     line-height: 175%;
     text-transform: uppercase;
+    cursor: pointer;
     z-index: 100;
 }
 

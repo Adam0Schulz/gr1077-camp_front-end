@@ -85,6 +85,12 @@
     transform: translate(calc(-50% - var(--padding)), -50%);
 }
 
+.event-card--even .event-card__text {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+}
+
 .event-card__textarea {
     display: grid;
     gap: 2em;

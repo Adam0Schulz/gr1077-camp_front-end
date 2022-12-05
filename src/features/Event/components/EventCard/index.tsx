@@ -58,14 +58,13 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row }: Props) => 
 
       {size == 'large' &&
 
-        <Link
-          to={'/events/' + event.id}
+        <div
           style={{ gridRow: row }}
           className={'event-card event-card--large event-card--' + state.toLocaleLowerCase() + ' event-card--' + (event.id % 2 == 0 ? 'even' : 'odd')}>
           <div className='event-card__datetime'>
             <div className='event-card__datetime__cont'>
-              <h2 className='event-card__date event-card__scaleHover'>{event.date.toString()}</h2>
-              <h4 className='event-card__time event-card__scaleHover'>{time}</h4>
+              <h2 className='event-card__date'>{event.date.toString()}</h2>
+              <h4 className='event-card__time'>{time}</h4>
             </div>
           </div>
 
@@ -73,20 +72,24 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row }: Props) => 
 
             <img className='event-card__icon' src={calendarDarkIcon} />
             <div className='event-card__textarea'>
-              <div className='img_cont event-card__image-cont'>
-                <img className={'event-card__image ' + state.toLocaleLowerCase() + ' event-card__scaleHover'} src={event.image.url} alt={event.image.caption} />
-              </div>
+              <Link to={'/events/' + event.id} >
+                <div className='img_cont event-card__image-cont'>
+                  <img className={'event-card__image ' + state.toLocaleLowerCase() + ' event-card__scaleHover'} src={event.image.url} alt={event.image.caption} />
+                </div>
+              </Link>
 
               <div className='event-card__text'>
                 <h3 className='event-card__heading'>{event.name}</h3>
                 <p className='event-card__paragraph'>{paragraphText}</p>
                 {/* <MoreBtn link={something/something}/> */}
-                <button className='event-card__scaleHover'>More {'>'}</button>
+                <Link to={'/events/' + event.id} >
+                  <button className='event-card__scaleHover'>More {'>'}</button>
+                </Link>
               </div>
             </div>
 
           </div>
-        </Link>
+        </div>
 
       }
     </>
