@@ -26,7 +26,6 @@ const Slider = () => {
         <div className='wrapper'>
             <Separator />
             <h3>Upcoming events</h3>
-            <div className='background-rectangle'></div>
 
 
             <Splide hasTrack={false} options={{
