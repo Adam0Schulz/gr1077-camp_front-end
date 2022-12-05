@@ -4,9 +4,9 @@ import './App.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Footer from "./components/Footer/index";
+import Footer from "components/Footer/Footer";
 import Events from 'pages/Events';
-import Navbar from "./components/Navbar/index";
+import Navbar from "components/Navbar/Navbar";
 import {Presenters} from "./features/Event/components/Presenters/Presenters";
 import Event from "./pages/Event/Event";
 
