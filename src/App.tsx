@@ -8,19 +8,20 @@ import Footer from "./components/Footer";
 import Events from 'pages/Events';
 import Navbar from "./components/Navbar";
 import {Presenters} from "./features/Event/components/Presenters/Presenters";
-import Event from "./pages/Event/Event";
+import Home from "./pages/Home/Home";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<><Navbar activePage='home'/><Footer /></>} />
-        <Route path="/home" element={<><Navbar activePage='home'/><Footer /></>} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/home" element={<Home/>} />
         <Route path="/events" element={<Events />} />
-        <Route  path="/events/:id" element={<><Navbar activePage='events'/><Presenters/><Footer/></>}/>
+        <Route  path="/events/{id}" element={<><Navbar activePage='events'/><Presenters/><Footer/></>}/>
         <Route path="/about" element={<><Navbar activePage='about'/><Footer /></>} />
         <Route path="/researchers" element={<><Navbar activePage='researchers'/><Presenters/><Footer /></>} />
-        <Route path="/contact" element={<><Navbar activePage='contact'/><Event/><Footer /></>} />
+        <Route path="/contact" element={<><Navbar activePage='contact'/><Footer /></>} />
         <Route path="/blog" element={<><Navbar activePage='blog'/><Footer /></>} />
       </Routes>
       <ToastContainer />
