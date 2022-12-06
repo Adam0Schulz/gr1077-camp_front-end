@@ -1,0 +1,7 @@
+.image-section--odd {
+    grid-column: 1 / span 2;
+}
+
+.image-section--even {
+    grid-column: 2 / span 2;
+}

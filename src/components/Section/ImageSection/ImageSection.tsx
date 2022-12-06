@@ -1,8 +1,14 @@
-import React from 'react'
+import { ImageSection as Image } from 'api/models'
+import './ImageSection.css'
 
-const ImageSection = () => {
+interface Props {
+  image: Image,
+  row: number,
+}
+
+const ImageSection = ({image, row}: Props) => {
   return (
-    <div>ImageSection</div>
+    <div style={{gridRow: row}} className={'section-cont image-section image-section--' + (row % 2 == 0 ? 'even' : 'odd')}>{image.altText}</div>
   )
 }
 

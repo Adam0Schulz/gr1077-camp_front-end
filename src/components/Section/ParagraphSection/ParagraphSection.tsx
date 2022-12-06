@@ -1,8 +1,16 @@
-import React from 'react'
+import { ParagraphSection as Paragraph } from 'api/models'
+import './ParagraphSection.css'
 
-const ParagraphSection = () => {
+interface Props {
+  paragraph: Paragraph,
+  row: number,
+}
+
+const ParagraphSection = ({paragraph, row}: Props) => {
   return (
-    <div>ParagraphSection</div>
+    <div style={{gridRow: row}} className={'section-cont paragraph-section'}>
+      <p>{paragraph.text}</p>
+    </div>
   )
 }
 
