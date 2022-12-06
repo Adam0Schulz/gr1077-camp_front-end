@@ -7,8 +7,6 @@ import {FormEvent, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
-
     const HeroEvent = () => {
         //READ event name
         const  eventId =Number (useParams().id);
@@ -19,12 +17,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
             setId(id);
         }
 
-
-
-
-
-
-
         return (
             <div>
                 <div className="rowEventHero">
@@ -34,9 +26,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
                     </div>
                     <div className="rightEventHero">
                         <div className="EventHero" >Event:</div>
-                        <form onSubmit={handleSubmit}>
-                            <input className="form-control" type="number" value={id} onChange={(e) => setId(parseInt(e.target.value))}/>
-                        </form>
                         {isLoading && <div>Loading...</div>}
                         {error && <div>Error: {error.message}</div>}
                         {event && (
