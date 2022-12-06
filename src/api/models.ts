@@ -83,7 +83,7 @@ export interface ImageSection extends Section, DBObject {
 }
 
 export interface ParagraphSection extends Section, DBObject {
-    heading: string,
+    heading?: string,
     text: string,
 }
 
