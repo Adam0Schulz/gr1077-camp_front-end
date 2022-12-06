@@ -1,0 +1,28 @@
+.registerForm{
+    width: 73%;
+    height: auto;
+    justify-content: center;
+    background-color: #EFEFEF ;
+    color: black;
+}
+.registerButton{
+    background: #901A1E !important;
+    border: #901A1E !important;
+    color: white !important;
+    margin-left: 1%;
+    margin-right: 5%;
+
+}
+.cancelButton {
+    background: #CCCBCC !important;
+    border: #CCCBCC !important;
+    color: black !important;
+}
+.col-md-6{
+    display: flex ;
+    justify-content: center ;
+}
+.row-cols-md-6 {
+    display: flex !important;
+    justify-content: flex-end !important;
+}

@@ -1,0 +1,23 @@
+.scrollDownBox {
+    position: absolute;
+    left: 1%;
+    top: 73%;
+    z-index: 999;
+}
+
+.scrollDownText {
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    font-size: 1.1vw;
+    position: relative;
+    left: -16%;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.scrollDownArrow {
+    position: inherit;
+    margin-top: 28%;
+    height: 1.3vw;
+    width: auto;
+    fill: rgba(133, 25, 28);
+}
