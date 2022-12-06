@@ -6,20 +6,18 @@ import {useParams} from "react-router-dom";
 
 //get all reserchers and reserachers by id
  const Presenters = () => {
-     const  eventId =Number (useParams().id);
-    const [id, setId] =useState<number|"">(eventId);
-    const{data:event, isLoading, error} = useEventById(id as number);
-    const handleSubmit = (e: FormEvent) => {
-        e.preventDefault();
-        setId(id);
-    }
-    // @ts-ignore
-     // @ts-ignore
+        const  eventId =Number (useParams().id);
+        const [id, setId] =useState<number|"">(eventId);
+     //staleTime: Infinity - to prevent fetching
+        const{data:event, isLoading, error,isFetching} = useEventById(id as number);
+
      return (
         <div className="form-row">
             <div className="col-md-8 mb-3">
                 {isLoading && <div>Loading...</div>}
                 {error && <div>Error: {error.message}</div>}
+                {isFetching && <div>Updating...</div>}
+
                 {event && (
                     <section className="line ">
                     <div>
@@ -33,6 +31,7 @@ import {useParams} from "react-router-dom";
                                 {/*//show only if researcher or external-researcher exists and show each one by one*/}
                                 <section className="text-start" >{event.researcherSet.length > 0 && (
                                     <div>
+
                                         {event.researcherSet.map((researcher) => (
                                             <div className="Researchers" key={researcher.id}>
                                                 <table className= "tableResercher">

@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/events" element={<Events />} />
-        <Route  path="/events/:id" element={<><Navbar activePage='events'/><Event/><Footer/></>}/>
+        <Route  path="/events/:id" element={<><Navbar activePage='events'/><Event/></>}/>
         <Route path="/about" element={<><Navbar activePage='about'/><Footer /></>} />
         <Route path="/researchers" element={<><Navbar activePage='researchers'/><Footer /></>} />
         <Route path="/contact" element={<><Navbar activePage='contact'/><Footer /></>} />
