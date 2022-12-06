@@ -1,19 +1,18 @@
 import React, {FormEvent, useState} from 'react';
-import "./Presenters.css";
+import "./EventSideBar.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEventById} from "features/Event/hooks/UseAllEvents";
 import {useParams} from "react-router-dom";
 
 //get all reserchers and reserachers by id
- const Presenters = () => {
-        const  eventId =Number (useParams().id);
-        const [id, setId] =useState<number|"">(eventId);
+ const EventSideBar = () => {
+        const  eventId = Number (useParams().id);
      //staleTime: Infinity - to prevent fetching
-        const{data:event, isLoading, error,isFetching} = useEventById(id as number);
+        const{data:event, isLoading, error,isFetching} = useEventById(eventId as number);
 
      return (
         <div className="form-row">
-            <div className="col-md-8 mb-3">
+            
                 {isLoading && <div>Loading...</div>}
                 {error && <div>Error: {error.message}</div>}
                 {isFetching && <div>Updating...</div>}
@@ -22,10 +21,14 @@ import {useParams} from "react-router-dom";
                     <section className="line ">
                     <div>
                         <div key={event.id}>
-                            <h6 className="text-center when">WHEN</h6>
-                            <p className="text-center date">{event.date.toString()}, {event.startTime.toString().slice(0,5)}-{event.endTime.toString().slice(0,5)}</p>
-                            <h6 className="text-center wear">WHERE</h6>
-                            <p className="text-center location">{event.room.name}</p>
+                            <div>
+                                <h6 className="text-center when">WHEN</h6>
+                                <p className="text-center date">{event.date.toString()}, {event.startTime.toString().slice(0,5)}-{event.endTime.toString().slice(0,5)}</p>
+                            </div>
+                            <div>
+                                <h6 className="text-center wear">WHERE</h6>
+                                <p className="text-center location">{event.room.name}</p>
+                            </div>
                             <div className="text-center">
                             <h6 className="text-center who">WHO</h6>
                                 {/*//show only if researcher or external-researcher exists and show each one by one*/}
@@ -92,10 +95,10 @@ import {useParams} from "react-router-dom";
                     </div>
                 </section>
                 )}
-            </div>
+            
         </div>
     );
 };
 
 
-export {Presenters}
+export {EventSideBar}

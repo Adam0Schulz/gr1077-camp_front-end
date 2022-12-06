@@ -2,7 +2,8 @@
 
 .event-grid {
     display: grid;
-    grid-template-columns: 73% 27%
+    grid-template-columns: 73% 21.2%;
+    column-gap: var(--page-margin);
 }
 
 
@@ -24,23 +25,19 @@
 }
 .event-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 30rem;
     position: relative;
-    z-index: -1;
 }
 .event-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: relative;
-    z-index: -1;
 
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .leftEvent, .rightEvent {
-        width: 100%;
+    .event-grid {
+        grid-template-columns: auto;
     }
 }
