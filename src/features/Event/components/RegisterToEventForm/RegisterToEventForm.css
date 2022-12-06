@@ -5,6 +5,9 @@
     background-color: #EFEFEF ;
     color: black;
 }
+.registerForm .row {
+    background-color: #EFEFEF ;
+}
 .registerButton{
     background: #901A1E !important;
     border: #901A1E !important;

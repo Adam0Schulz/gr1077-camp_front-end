@@ -4,6 +4,7 @@ import Navbar from "components/Navbar";
 import Slider from "../../features/Event/components/EventSlider/EventSlider";
 import HeroSlider from "../../features/Home/components/HeroSlider";
 
+
 const Home = () => {
     return (
         <>
@@ -16,8 +17,6 @@ const Home = () => {
             </div>
             <Footer/>
         </>
-
-
     )
 }
 

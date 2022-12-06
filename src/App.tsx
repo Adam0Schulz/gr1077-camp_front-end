@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import {Presenters} from "./features/Event/components/Presenters/Presenters";
 import Home from "./pages/Home/Home";
 import {RegisterToEventPage} from "./pages/RegisterToEvent/RegisterToEventPage";
+import HeroSlider from "./features/Home/components/HeroSlider";
 
 
 function App() {

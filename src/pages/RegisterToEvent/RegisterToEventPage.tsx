@@ -8,8 +8,8 @@ export const RegisterToEventPage = () => {
 
     return (
         <div>
-            <Navbar activePage={'events'}/>
             <div className={"page-cont"}>
+                <Navbar activePage={'events'}/>
                 <RegisterToEventForm/>
             </div>
             <Footer/>
