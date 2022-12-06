@@ -5,9 +5,10 @@ import HeroSlider from "../../features/Home/components/HeroSlider";
 export const HomePage = () => {
     return(
         <>
-            <div className={"pageContainer"}>
-                <Navbar activePage={"home"}/>
-                <HeroSlider/>
+            <Navbar activePage={"home"}/>
+            <HeroSlider/>
+            <div className={"page-cont"}>
+
             </div>
             <Footer/>
         </>

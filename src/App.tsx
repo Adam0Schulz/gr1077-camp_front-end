@@ -9,6 +9,7 @@ import Events from 'pages/Events';
 import Navbar from "./components/Navbar";
 import {Presenters} from "./features/Event/components/Presenters/Presenters";
 import {HomePage} from "./pages/Home/HomePage";
+import {RegisterToEventPage} from "./pages/RegisterToEvent/RegisterToEventPage";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/researchers" element={<><Navbar activePage='researchers'/><Presenters/><Footer /></>} />
         <Route path="/contact" element={<><Navbar activePage='contact'/><Footer /></>} />
         <Route path="/blog" element={<><Navbar activePage='blog'/><Footer /></>} />
+        <Route path="/registerToEvent" element={<RegisterToEventPage/>} />
       </Routes>
       <ToastContainer />
     </BrowserRouter>

@@ -1,6 +1,7 @@
 import React from 'react';
 import '@splidejs/react-splide/css';
 import './HeroSlider.css'
+import 'App.css'
 import {Splide, SplideSlide} from '@splidejs/react-splide';
 import {ScrollDownArrow} from "components/ScrollDownArrow/ScrollDownArrow";
 import heroText from 'data/heroText.json'
@@ -18,8 +19,8 @@ function HeroSlider() {
                 <SplideSlide>
                     <div className="img-gradient">
                         <div className="sliderTextContainer">
-                            <h1 className="sliderTextContainerHeader">{heroText[0].header}</h1>
-                            <h5 className="sliderTextContainerBody">{heroText[0].body}</h5>
+                            <h2 className="sliderTextContainerHeader">{heroText[0].header}</h2>
+                            <h6 className="sliderTextContainerBody">{heroText[0].body}</h6>
                         </div>
                         <img src={heroText[0].image} alt="photo1" className="mySplideImage"/>
                     </div>
@@ -27,8 +28,8 @@ function HeroSlider() {
                 <SplideSlide>
                     <div className="img-gradient">
                         <div className="sliderTextContainer">
-                            <h1 className="sliderTextContainerHeader">{heroText[1].header}</h1>
-                            <h5 className="sliderTextContainerBody">{heroText[1].body}</h5>
+                            <h2 className="sliderTextContainerHeader">{heroText[1].header}</h2>
+                            <h6 className="sliderTextContainerBody">{heroText[1].body}</h6>
                         </div>
                         <img src={heroText[1].image} alt="photo2" className="mySplideImage"/>
                     </div>
@@ -36,8 +37,8 @@ function HeroSlider() {
                 <SplideSlide>
                     <div className="img-gradient">
                         <div className="sliderTextContainer">
-                            <h1 className="sliderTextContainerHeader">{heroText[2].header}</h1>
-                            <h5 className="sliderTextContainerBody">{heroText[2].body}</h5>
+                            <h2 className="sliderTextContainerHeader">{heroText[2].header}</h2>
+                            <h6 className="sliderTextContainerBody">{heroText[2].body}</h6>
                         </div>
                         <img src={heroText[2].image} alt="photo3" className="mySplideImage"/>
                     </div>
