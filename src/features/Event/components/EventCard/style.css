@@ -130,17 +130,47 @@
 }
 
 
-
 .event-card--small {
     text-transform: uppercase;
+    width: 23.5vw;
+    max-width: 27em;
+    --timeline-weight: 4px;
+    --timeline-color: black;
+
 }
 
 .event-card--small .event-card__datetime {
-    position: absolute;
+    /*position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, -8rem);
+    text-align: center;*/
+    position: relative;
     text-align: center;
+    height: 8em;
+
+    margin: 2em 0;
+}
+
+.event-card--small .event-card__heading {
+    color: var(--color-black);
+    height: 5em;
+    line-height: 160%;
+    
+}
+
+.event-card--small .event-card__heading:hover {
+    color: var(--color-black);
+}
+
+.event-card--small .event-card__datetime::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 150%;
+    height: var(--timeline-weight);
+    background-color: var(--timeline-color);
 }
 
 .event-card--small .event-card__date {
@@ -149,30 +179,30 @@
 
 .event-card--small .event-card__icon {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(50% - var(--timeline-weight)));
+    z-index: 100;
 }
 
 .event-card--small .event-card__body {
-    width: 27em;
-    padding: 3em 1em 1em 1em;
+    /*width: 27em;*/
+    padding: 1rem;
     position: relative;
+    margin-top: 3rem;
 }
 
 .event-card--small .event-card__body::after {
+    
     content: '';
     display: block;
     position: absolute;
-    right: 0;
-    width: 1px;
-    background-color: var(--color-gray-light);
-    top: 3em;
-    bottom: 3em;
-}
-
-.event-card--small .event-card__heading {
-    height: 5em;
+    background: #D9D9D9;
+    z-index: -100;
+    top: 0;
+    height: 50%;
+    width: 160%;
+    
 }
 
 .event-card__image {
@@ -193,8 +223,7 @@
     width: 100%;
 }
 
-
-.event-card--large .event-card__heading,
+.event-card__heading,
 .event-card--large .event-card__paragraph {
     display: -webkit-box;
     -webkit-box-orient: vertical;
