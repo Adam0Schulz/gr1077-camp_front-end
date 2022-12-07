@@ -4,7 +4,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Footer = () => {
-    //make afooter component
+    //make a footer component
+
+    const handleLogin = () => {
+        const loggedIn = localStorage.getItem('isAdmin')
+        if(loggedIn) {
+            localStorage.clear()
+        } else {
+            localStorage.setItem('isAdmin', JSON.stringify(true))
+        }
+        window.location.href = '/home'
+        
+    }
+
     return (
             <section className="row d-flex justify-content-start"  >
 
@@ -60,7 +72,7 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a  href="" className="text-light ">CAMPnet</a>
+                                    <button  onClick={handleLogin} className="text-light ">CAMPnet</button>
                                     <a href="" className=" link-secondary m-4">
                                         <i className="fab fa-login"></i>
                                         <img
