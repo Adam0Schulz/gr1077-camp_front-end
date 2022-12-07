@@ -8,6 +8,8 @@ import Navbar from "components/Navbar";
 import { isError } from "react-query";
 import {Button} from "react-bootstrap";
 import SignUpBtn from "../../features/Event/components/SignUpBtn/SignUpBtn";
+import Sections from "../../components/Section/Sections";
+import EventSlider from "../../features/Event/components/EventSlider/EventSlider";
 
 
 const Event = () => {
@@ -24,6 +26,7 @@ const Event = () => {
             <div className="page-cont">
                 <Navbar activePage='events' />
                 {event &&
+                    <>
                     <div className="event-grid">
                         <div className="left-grid" >
                             <PostHeader page={event} />
@@ -31,6 +34,8 @@ const Event = () => {
                                 <img className="event-img__img" src={event?.image.url} alt={event?.image.caption} />
                                 <label>{event?.image.caption}</label>
                             </div>
+                            <Sections page={event} />
+
                         </div>
                         <div className="right-grid">
                             {/*//creat button for register*/}
@@ -38,8 +43,11 @@ const Event = () => {
 
                             <SignUpBtn />
                             <EventSideBar />
+
                         </div>
                     </div>
+                    <EventSlider />
+                    </>
                 }
             </div>
 
