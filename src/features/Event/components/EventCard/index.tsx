@@ -18,6 +18,8 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row = 1 }: Props)
   /* Getting the paragraph preview */
   /* potencial use of useMemo */
   let paragraphText: string = 'No text to preview'
+  console.log(event)
+  if (event.paragraphSectionSet) <>oops theres something wrong</>
   if (event.paragraphSectionSet.length != 0) {
 
     const paragraphsSeq = event.paragraphSectionSet.map(paragraph => paragraph.id)

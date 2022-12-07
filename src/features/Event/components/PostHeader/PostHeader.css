@@ -12,6 +12,10 @@
     color: var(--color-gray-dark);
 }
 
+.post-header__textarea {
+    width: 100%;
+}
+
 .imgFluid {
     width: 100%;
     height: auto;

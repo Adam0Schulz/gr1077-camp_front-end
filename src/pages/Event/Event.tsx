@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import { useEventById } from "../../features/Event/hooks/UseAllEvents";
 import Navbar from "components/Navbar";
 import { isError } from "react-query";
+import {Button} from "react-bootstrap";
+import SignUpBtn from "../../features/Event/components/SignUpBtn/SignUpBtn";
 
 
 const Event = () => {
@@ -32,7 +34,9 @@ const Event = () => {
                         </div>
                         <div className="right-grid">
                             {/*//creat button for register*/}
-                            <p className="signUpEvent">INTERESTED? SIGN UP!</p>
+                            <p className="signUpEvent">INTERESTED? SIGNUP!</p>
+
+                            <SignUpBtn />
                             <EventSideBar />
                         </div>
                     </div>
