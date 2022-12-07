@@ -8,7 +8,7 @@ import heroText from 'data/heroText.json'
 function HeroSlider() {
     return (
         <div style={{position: "relative"}}>
-            <ScrollDownArrow/>
+            <ScrollDownArrow color={"white"}/>
             <Splide className={"hero-slider"}
                 options={{
                     rewind: true,

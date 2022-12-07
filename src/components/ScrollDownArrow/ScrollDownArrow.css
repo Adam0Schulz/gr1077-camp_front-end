@@ -1,8 +1,12 @@
 .scrollDownBox {
     position: absolute;
     left: 1%;
-    top: 73%;
+    top: 68%;
     z-index: 999;
+}
+
+.any-page .scrollDownBox {
+    top: 60%
 }
 
 .scrollDownText {

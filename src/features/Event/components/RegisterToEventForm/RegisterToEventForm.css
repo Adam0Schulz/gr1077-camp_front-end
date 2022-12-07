@@ -1,9 +1,35 @@
 .registerForm{
-    width: 73%;
-    height: auto;
+    /*border-top: 1px solid #CCCBCC;*/
+    /*border-right: 1px solid #CCCBCC;*/
+    /*width: 73%;*/
+    /*height: auto;*/
     justify-content: center;
     background-color: #EFEFEF ;
     color: black;
+}
+.register-form-border-top {
+    position: relative;
+    left: 5%;
+    height: 1px;
+    width: 91%;
+    background-color: var(--color-gray-light);
+}
+.wrapper {
+    width: 73%;
+    display: grid;
+    grid-template-columns: 99.9% 0.01%;
+    margin: 0;
+}
+.my-main-content {
+    width: auto;
+}
+.register-form-border-right {
+    position: relative;
+    top: 5%;
+    bottom: 5%;
+    background: #CCCBCC;
+    width: 1px;
+    height: 90%;
 }
 .registerForm .row {
     background-color: #EFEFEF ;
