@@ -1,0 +1,13 @@
+.link-section {
+    background-color: #ddd;
+    padding: 1em;
+    transition: transform .25s ease-out;
+}
+
+.link-section p {
+    margin-bottom: 0;
+}
+
+.link-section:hover {
+    transform: scale(1.05);
+}

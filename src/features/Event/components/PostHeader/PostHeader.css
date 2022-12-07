@@ -1,0 +1,29 @@
+.post-header {
+    display: grid;
+    grid-template-columns: calc(var(--page-margin) * 2) auto;
+    justify-items: center;
+    margin: 3em 0;
+    column-gap: 1em;
+    text-transform: uppercase;
+}
+
+.post-header__page {
+    
+    color: var(--color-gray-dark);
+}
+
+.post-header__textarea {
+    width: 100%;
+}
+
+.imgFluid {
+    width: 100%;
+    height: auto;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+   
+}
+
+
+

@@ -25,6 +25,8 @@ export const useAllEvents = () => {
 
     )
 }
+
+
 export const useEventById = (id: number) => {
     return useQuery<Event,Error>(
         ["eventById", id],// query key
