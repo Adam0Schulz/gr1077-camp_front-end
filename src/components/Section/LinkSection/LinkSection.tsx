@@ -1,5 +1,5 @@
 import { LinkSection as Link } from 'api/models'
-import React from 'react'
+import './LinkSection.css'
 
 interface Props {
     link: Link,
@@ -9,7 +9,9 @@ interface Props {
 
 const LinkSection = ({link, row}: Props) => {
   return (
-    <div style={{gridRow: row}} className={'section-cont link-section'}>{link.link}</div>
+    <a href={link.link} style={{gridRow: row}} className={'section-cont link-section'}>
+      <p>{link.text}</p>
+    </a>
   )
 }
 
