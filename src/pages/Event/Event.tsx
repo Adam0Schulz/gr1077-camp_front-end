@@ -20,6 +20,7 @@ const Event = () => {
     if (isError) <>Oops! Something went wrong!</>
 
 
+    // @ts-ignore
     return (
         <>
 
@@ -34,7 +35,10 @@ const Event = () => {
                                 <img className="event-img__img" src={event?.image.url} alt={event?.image.caption} />
                                 <label>{event?.image.caption}</label>
                             </div>
-                            <Sections page={event} />
+                            <br />
+                            <br />
+
+                            <Sections page={event}/>
 
                         </div>
                         <div className="right-grid">
