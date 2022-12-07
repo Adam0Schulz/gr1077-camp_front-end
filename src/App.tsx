@@ -24,7 +24,7 @@ function App() {
         <Route path="/researchers" element={<><Navbar activePage='researchers' /><Footer /></>} />
         <Route path="/contact" element={<><Navbar activePage='contact' /><Footer /></>} />
         <Route path="/blog" element={<><Navbar activePage='blog' /><Footer /></>} />
-        <Route path="/register-to-event" element={<RegisterToEventPage />} />
+        <Route path="/events/:id/register-to-event" element={<RegisterToEventPage />} />
       </Routes>
       <ToastContainer />
     </BrowserRouter>

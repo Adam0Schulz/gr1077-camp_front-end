@@ -1,10 +1,12 @@
 import {useState} from "react";
-import {Form, Button} from "react-bootstrap";
+import {Form, Button, FormCheck} from "react-bootstrap";
 import {useParams} from "react-router-dom";
 import {NewParticipant, Participant} from "api/models";
 import "./RegisterToEventForm.css"
 import {createParticipant} from "api/calls/Participants";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import FormCheckInput from "react-bootstrap/FormCheckInput";
+import FormCheckLabel from "react-bootstrap/FormCheckLabel";
 
 export const RegisterToEventForm = () => {
     const emptyParticipant: NewParticipant = {
@@ -16,14 +18,14 @@ export const RegisterToEventForm = () => {
     }
     const [participant, setParticipant] = useState<NewParticipant>(emptyParticipant)
     // //const { mutate: addMutation } = useRegister()
-    // // const eventId = Number(useParams().id)
+    const eventId = Number(useParams().id)
     const handleSubmit = () => {
-        createParticipant(participant, 5).then(result => console.log(result))
+        createParticipant(participant, eventId).then(result => console.log(result))
         //addMutation(participant)
         setParticipant(emptyParticipant)
     }
     return (
-        <div className={"wrapper"}>
+        <div className={"r-wrapper"}>
             <div className={"my-main-content"}>
                 <div className={"register-form-border-top"}>
                 </div>
@@ -86,14 +88,21 @@ export const RegisterToEventForm = () => {
                             </label>
                         </div>
                         <div className={"col-md-6"}>
-                            <Form.Check label="I have read and agree to the terms and conditions."/>
+                            <div className={"checkR"}>
+                                <FormCheck >
+                                    <FormCheckInput type={"checkbox"} className={"mb-3"}/>
+                                    <FormCheckLabel>
+                                        I have read and agree to the terms and conditions.
+                                    </FormCheckLabel>
+                                </FormCheck>
+                            </div>
                         </div>
                         <div className={"row-cols-md-6"}>
-                            <Button variant="primary" className="cancelButton"
+                            <Button className="cancelButtonR" variant="primary"
                                     onClick={() => handleSubmit()}>
                                 Cancel
                             </Button>
-                            <Button variant="primary" className="registerButton"
+                            <Button className="registerButtonR" variant="primary"
                                     onClick={() => handleSubmit()}>
                                 Register
                             </Button>
