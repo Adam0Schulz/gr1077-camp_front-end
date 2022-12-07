@@ -7,8 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Events from 'pages/Events';
 import Navbar from "./components/Navbar";
-import {Presenters} from "./features/Event/components/Presenters/Presenters";
-import Test from 'pages/testPage/Test';
+import { Presenters } from 'features/Event/components/Presenters/Presenters';
 
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
         <Route path="/" element={<><Navbar activePage='home'/><Footer /></>} />
         <Route path="/home" element={<><Navbar activePage='home'/><Footer /></>} />
         <Route path="/events" element={<Events />} />
-        <Route  path="/events/:id" element={<><Navbar activePage='events'/><Test/><Footer/></>}/>
+        <Route  path="/events/:id" element={<><Navbar activePage='events'/><Footer/></>}/>
         <Route path="/about" element={<><Navbar activePage='about'/><Footer /></>} />
         <Route path="/researchers" element={<><Navbar activePage='researchers'/><Presenters/><Footer /></>} />
         <Route path="/contact" element={<><Navbar activePage='contact'/><Footer /></>} />
