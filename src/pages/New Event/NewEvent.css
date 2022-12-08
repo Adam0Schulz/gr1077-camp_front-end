@@ -1,0 +1,28 @@
+.new-event-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.new-event-header h4 {
+    margin: 0;
+}
+
+.basic-info__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.basic-info__header-info, .basic-info__sidebar {
+    margin: 2em;
+}
+
+.basic-info__sidebar > * {
+    margin-bottom: 2rem;
+}
+
+.basic-info__datetime {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}

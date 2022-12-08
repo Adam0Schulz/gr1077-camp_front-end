@@ -97,6 +97,7 @@ a:hover {
 
 .page-cont {
     margin: 0 5vw;
+    min-height: 100vh;
 }
 
 .img_cont {
