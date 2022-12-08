@@ -1,12 +1,12 @@
 import {useState} from "react";
 import {Form, Button, FormCheck} from "react-bootstrap";
 import {useParams} from "react-router-dom";
-import {NewParticipant, Participant} from "api/models";
+import {NewParticipant} from "api/models";
 import "./RegisterToEventForm.css"
-import {createParticipant} from "api/calls/Participants";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import FormCheckInput from "react-bootstrap/FormCheckInput";
 import FormCheckLabel from "react-bootstrap/FormCheckLabel";
+import {useRegister} from "features/Event/hooks/useParticipants";
 
 export const RegisterToEventForm = () => {
     const emptyParticipant: NewParticipant = {
@@ -16,13 +16,17 @@ export const RegisterToEventForm = () => {
         affiliation: "",
         title: ""
     }
-    const [participant, setParticipant] = useState<NewParticipant>(emptyParticipant)
-    // //const { mutate: addMutation } = useRegister()
     const eventId = Number(useParams().id)
+    const [participant, setParticipant] = useState<NewParticipant>(emptyParticipant)
+    const [agreement, setAgreement] = useState<boolean>(false)
+    const {mutate: addMutation} = useRegister(eventId)
     const handleSubmit = () => {
-        createParticipant(participant, eventId).then(result => console.log(result))
-        //addMutation(participant)
-        setParticipant(emptyParticipant)
+        if (agreement) {
+            addMutation(participant)
+            setParticipant(emptyParticipant)
+            setAgreement(false)
+        }
+        else {alert("Please accept the terms and conditions to proceed!")}
     }
     return (
         <div className={"r-wrapper"}>
@@ -89,8 +93,11 @@ export const RegisterToEventForm = () => {
                         </div>
                         <div className={"col-md-6"}>
                             <div className={"checkR"}>
-                                <FormCheck >
-                                    <FormCheckInput type={"checkbox"} className={"mb-3"}/>
+                                <FormCheck>
+                                    <FormCheckInput type={"checkbox"}
+                                                    className={"mb-3"}
+                                                    checked={agreement}
+                                                    onChange={(e)=> setAgreement(!agreement)}/>
                                     <FormCheckLabel>
                                         I have read and agree to the terms and conditions.
                                     </FormCheckLabel>
