@@ -57,7 +57,7 @@ export interface Image extends DBObject {
 
 export interface Location extends DBObject {
     address: string,
-    room:Room[],
+    roomSet:Room[],
 
 }
 
@@ -74,7 +74,6 @@ export interface Room extends DBObject {
 
     // could be a string
 }
-
 
 export interface Section extends DBObject {
     seq: number,

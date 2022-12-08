@@ -7,6 +7,7 @@ import {ScrollDownArrow} from "../../components/ScrollDownArrow/ScrollDownArrow"
 import PostHeader from "../../features/Event/components/PostHeader/PostHeader";
 import {useParams} from "react-router-dom";
 import {useEventById} from "../../features/Event/hooks/UseAllEvents";
+import {EventDescription} from "../../features/Event/components/EventDescription/EventDescription";
 
 
 export const RegisterToEventPage = () => {
@@ -15,12 +16,10 @@ export const RegisterToEventPage = () => {
 
     return (
         <div>
-            <div className={"any-page"}>
-                <ScrollDownArrow color={"black"} />
-            </div>
             <div className={"page-cont"}>
                 <Navbar activePage={'events'}/>
                 {event && <PostHeader page={event}/>}
+                {event && <EventDescription event={event}/>}
                 <RegisterToEventForm/>
             </div>
             <Footer/>
