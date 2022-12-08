@@ -2,13 +2,16 @@
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
 import { EventsTimeline } from "features/Event";
+import { useState } from "react";
 import './style.css'
 
 const Events = () => {
+
     return (
         <>
         <div className="page-cont">
             <Navbar activePage='events' />
+            {/*localStorage.getItem('isAdmin') ? <>yes Admin bar</> : <>no Admin bar</>*/}
             <div className="page-heading">
                 <h2>Events</h2>
                 {/* input component here */}
