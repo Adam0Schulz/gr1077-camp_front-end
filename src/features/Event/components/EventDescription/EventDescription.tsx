@@ -9,7 +9,8 @@ interface Props {
 
 export const EventDescription = ({event}: Props) => {
     const {data: location, isLoading, isError} = useLocationByRoomId(event.room.id)
-
+    //const date: Date = event.date;
+    //toDateString?
     return (
         <div style={{margin: "1em 9.5em"}}>
             <div className={"event-description-line"}>
