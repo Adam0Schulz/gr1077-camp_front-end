@@ -41,7 +41,7 @@ const Event = () => {
                             {/*//creat button for register*/}
                             <p className="signUpEvent">INTERESTED? SIGNUP!</p>
 
-                            <SignUpBtn />
+                            <SignUpBtn eventId={eventId} />
                             <EventSideBar />
 
                         </div>

@@ -15,7 +15,7 @@ const PostHeader = ({page}: Props) => {
         return (
             <div className="post-header">
                     <div className="post-header__arrow-btn" >
-                        <ArrowButton link={'events'} text={'All Events'} />
+                        <ArrowButton direction="left" color="red" link={'events'} text={'All Events'} />
                     </div>
                     <div className="post-header__textarea">
                         {'room' in page && 

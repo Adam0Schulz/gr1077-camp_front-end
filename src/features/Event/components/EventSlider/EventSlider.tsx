@@ -24,7 +24,7 @@ const Slider = () => {
             <h3>Upcoming events</h3>
 
 
-            <Splide hasTrack={false} options={{
+            <Splide  className={"event-slider"} hasTrack={false} options={{
                 perPage: 3.5,
                 perMove: 1,
                 type: "loop",

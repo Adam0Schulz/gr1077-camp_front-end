@@ -21,23 +21,27 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.192) 0%, rgba(0, 0, 0, 0.8) 56.25%);
 }
 
-.splide__arrow svg {
+.hero-slider .splide__arrow svg {
     fill: white !important;
     height: 1.7vw !important;
     width: 1.7vw !important;
 }
 
-.splide__arrow {
+.hero-slider .splide__arrow {
     background: none;
 }
 
 .sliderTextContainer {
     position: absolute;
-    text-align: left;
+    /*text-align: left;*/
     color: white;
     left: 5%;
-    bottom: 13%;
+    bottom: 17%;
     z-index: 1;
+}
+
+@media screen {
+
 }
 
 .sliderTextContainerHeader {
