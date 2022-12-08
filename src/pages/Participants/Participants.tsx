@@ -28,20 +28,20 @@ const id = Number(useParams().id);
         <>
         <div className="page-cont">
             <Navbar activePage='events' />
-            <div className='flex-box'>
-                <div className='buttons'>
+            <div className='participants-flex-box'>
+                <div className='participants-buttons'>
                     <ArrowButton text={'Back to event'} link={'events/' + event?.id} color={'red'} direction={'left'} />
                     <ArrowButton text={'All events'} link={'events'} color={'grey'} direction={'left'} />
                 </div>
                 <div>
-                    <h4 className='heading'>Participants:</h4>
+                    <h4 className='participants-heading'>Participants:</h4>
                     <div className='participants-number'>
-                        <p>Number of participants:</p>
+                        <p className='participants-subheading'>Number of participants:</p>
                         <h4>{event?.participantSet.length}</h4>
                     </div>
 
                     <div className='table-div'>
-                    <table>
+                    <table className='participants-table'>
                         <tr>
                             <th>#</th>
                             <th>First Name</th>

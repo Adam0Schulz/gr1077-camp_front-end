@@ -1,4 +1,4 @@
-table {
+.participants-table {
     width: 80vw;
     border-collapse: collapse;
     border-radius: 0.5em;
@@ -10,7 +10,7 @@ table {
     border-radius: 0.6em;
 }
 
-th {
+.participants-table > tr > th {
     background: #E1E1E1;
     font-style: normal;
     font-weight: 600;
@@ -21,7 +21,7 @@ th {
     padding: 0 1rem;
 }
 
-td {
+.participants-table > tr > td {
     height: 60px;
     font-style: normal;
     font-weight: 400;
@@ -31,15 +31,15 @@ td {
     padding: 0 1rem;
 }
 
-tr {
+.participants-table > tr {
     border-bottom: 1px solid #CCCBCC;
 }
 
-table :last-child, :first-child {
+.participants-table :last-child, :first-child {
     border: none;
 }
 
-.heading {
+.participants-heading {
     text-transform: uppercase;
     color: #737477;
     font-weight: 500;
@@ -53,7 +53,7 @@ table :last-child, :first-child {
 
 }
 
-p {
+.participants-subheading {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -61,13 +61,13 @@ p {
     letter-spacing: 0.003em;
 }
 
-.flex-box {
+.participants-flex-box {
     display: flex;
     justify-content: space-between;
     margin: 4rem 0 5.625rem 0;
 }
 
-.buttons {
+.participants-buttons {
     display: flex;
     flex-direction: column;
     gap: 2rem;
