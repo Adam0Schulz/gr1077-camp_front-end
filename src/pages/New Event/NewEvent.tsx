@@ -4,7 +4,9 @@ import { ScrollDownArrow } from "components/ScrollDownArrow/ScrollDownArrow"
 import calendarIcon from 'assets/icons/calendar.svg'
 import './NewEvent.css'
 import Separator from "components/Separator/Separator"
-import Form from 'react-bootstrap/Form';
+import Form from 'react-bootstrap/Form'
+import TextInput from "components/Inputs/TextInput/TextInput"
+import ImageInput from "components/Inputs/ImageInput/ImageInput"
 
 
 const NewEvent = () => {
@@ -32,16 +34,10 @@ const NewEvent = () => {
                 </div>
                 <div className="basic-info__body">
                     <div className="basic-info__header-info">
-                        <Form>
-                            <Form.Group className="mb-3">
-                                <Form.Label>Title</Form.Label>
-                                <Form.Control type="text" placeholder="Title" />
-                            </Form.Group>
-                            <Form.Group className="mb-3">
-                                <Form.Label>Image</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
-                            </Form.Group>
-                        </Form>
+                        
+                            <TextInput label="Title" />
+                            <ImageInput />
+                        
                     </div>
                     <div className="basic-info__sidebar">
                         <div className="basic-info__datetime">
@@ -53,18 +49,15 @@ const NewEvent = () => {
                                 <Form.Label>Start time</Form.Label>
                                 <Form.Control type="time" />
                             </Form.Group>
-                            <Form.Group className="mb-3">
-                                <Form.Label>End Time</Form.Label>
-                                <Form.Control type="time" />
-                            </Form.Group>
+                            
                         </div>
                         <Form.Group className="mb-3">
-                            <Form.Label>Room</Form.Label>
-                            <Form.Select aria-label="Select a room" disabled>
-                                <option>Select a room</option>
+                            <Form.Label>Researcher</Form.Label>
+                            <Form.Select aria-label="Select a researcher">
+                                <option>Select a researcher</option>
                                 <option value="3">Three</option>
                                 <option value="3">Three</option>
-                        </Form.Select>
+                            </Form.Select>
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Researcher</Form.Label>
