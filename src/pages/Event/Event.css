@@ -8,13 +8,12 @@
 
 
 /*.left-grid {
-    width: 73%;
-}
+    border-right: 2px solid #CCCBCC;
+}*/
 
 .right-grid {
-    width: 27%;
-
-}*/
+    border-left: 2px solid #CCCBCC;
+}
 .signUpEvent{
     font-size: 18px;
     color : #262526;
