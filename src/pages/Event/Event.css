@@ -1,24 +1,45 @@
 
 
-.rowEvent:after {
-    content: "";
-    display: table;
-    clear: both;
+.event-grid {
+    display: grid;
+    grid-template-columns: 73% 21.2%;
+    column-gap: var(--page-margin);
 }
 
 
-.leftEvent {
-    float: left;
+/*.left-grid {
     width: 73%;
 }
 
-.rightEvent {
-    float: right;
+.right-grid {
     width: 27%;
+
+}*/
+.signUpEvent{
+    font-size: 18px;
+    color : #262526;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
+.event-img {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+}
+.event-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .leftEvent, .rightEvent {
-        width: 100%;
+    .event-grid {
+        grid-template-columns: auto;
     }
 }

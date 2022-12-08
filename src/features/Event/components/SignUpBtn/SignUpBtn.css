@@ -1,0 +1,17 @@
+.registerButton{
+    background: #901A1E !important;
+    border: #901A1E !important;
+    color: white !important;
+    font-size: 10px;
+    line-height: 120%;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1rem 4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}

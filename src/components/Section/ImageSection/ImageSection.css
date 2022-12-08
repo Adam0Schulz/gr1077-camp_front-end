@@ -1,0 +1,22 @@
+.image-section--odd {
+    grid-column: 1 / span 2;
+}
+
+.image-section--even {
+    grid-column: 2 / span 2;
+}
+
+.image-section {
+    height: 25em;
+}
+
+.image-section .img_cont {
+    height: 100%;
+    width: 100%;
+}
+
+.image-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
