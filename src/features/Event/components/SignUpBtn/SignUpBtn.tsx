@@ -1,14 +1,17 @@
 import {useState} from "react";
 import {Button} from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./SignUpBtn.css";
 
 
-
-const SignUpBtn = () => {
+interface Props {
+    eventId: number;
+}
+const SignUpBtn = ({eventId}:Props) => {
 
     return (
         <div>
-            <a href={"http://localhost:3000/register-to-event"}>
+            <Link to= {"/events/"+ eventId +"/register-to-event"}>
             <Button  className="registerButton" variant="primary" size="lg" >
                 SIGN UP
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -17,8 +20,8 @@ const SignUpBtn = () => {
                           d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                 </svg>
             </Button>
+            </Link>
 
-            </a>
 
         </div>
     )
