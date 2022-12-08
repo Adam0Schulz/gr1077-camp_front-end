@@ -93,3 +93,8 @@ export interface LinkSection extends Section, DBObject {
     text: string,
     link: string,
 }
+
+export interface ApiParameter {
+    name: string,
+    value: string,
+}

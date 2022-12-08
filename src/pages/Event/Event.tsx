@@ -10,6 +10,7 @@ import {Button} from "react-bootstrap";
 import SignUpBtn from "../../features/Event/components/SignUpBtn/SignUpBtn";
 import Sections from "../../components/Section/Sections";
 import EventSlider from "../../features/Event/components/EventSlider/EventSlider";
+import {ScrollDownArrow} from "../../components/ScrollDownArrow/ScrollDownArrow";
 
 
 const Event = () => {
@@ -20,6 +21,7 @@ const Event = () => {
     if (isError) <>Oops! Something went wrong!</>
 
 
+    // @ts-ignore
     return (
         <>
 
@@ -29,12 +31,19 @@ const Event = () => {
                     <>
                     <div className="event-grid">
                         <div className="left-grid" >
+
                             <PostHeader page={event} />
                             <div className="event-img">
                                 <img className="event-img__img" src={event?.image.url} alt={event?.image.caption} />
                                 <label>{event?.image.caption}</label>
                             </div>
-                            <Sections page={event} />
+                            <div className={"any-page"}>
+                                <ScrollDownArrow color={"black"} />
+                            </div>
+                            <br />
+                            <br />
+
+                            <Sections page={event}/>
 
                         </div>
                         <div className="right-grid">

@@ -18,7 +18,7 @@ import {useParams} from "react-router-dom";
                 {isFetching && <div>Updating...</div>}
 
                 {event && (
-                    <section className="line ">
+                    <section className="line">
                     <div>
                         <div key={event.id}>
                             <div>
