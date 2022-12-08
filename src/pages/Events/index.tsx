@@ -3,8 +3,13 @@ import Footer from "components/Footer";
 import Navbar from "components/Navbar";
 import { EventsTimeline } from "features/Event";
 import './style.css'
+import {useState} from "react";
+
 
 const Events = () => {
+
+    const [searchKeyword, setSearchKeyword] = useState<string>("")
+
     return (
         <>
         <div className="page-cont">
@@ -13,25 +18,20 @@ const Events = () => {
                 <h2>Events</h2>
                 {/* input component here */}
                 <div>
-                    <input type={'text'} />
+             {/*//search and map in events by keyword input*/}
+                    <input type={"text"} onChange={e => setSearchKeyword(e.target.value)}/>
                 </div>
-
             </div>
             {/*<div className="splidetrack">
                 { events && events.map(event => 
                 <EventCard key={event.id} size='small' event={event} /> 
                 )}
                 </div>*/}
-            <EventsTimeline />
+            <EventsTimeline searchKeyword={searchKeyword}/>
         </div>
         <Footer />
         </>
 
-
-
-
-
-        
     )
 }
 
