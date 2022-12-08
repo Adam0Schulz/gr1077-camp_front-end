@@ -1,8 +1,18 @@
-.arrow-circle {
+.arrow-circle_red {
     background: #901A1E;
     border-radius: 35px;
-    width: 68px;
-    height: 68px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-circle_grey {
+    background: #747681;
+    border-radius: 35px;
+    width: 52px;
+    height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +29,10 @@
 
 .arrow-button {
     color: white;
+}
+
+.arrow_left {
+    transform: rotate(-100deg);
 }
 
 .arrow-button-text {

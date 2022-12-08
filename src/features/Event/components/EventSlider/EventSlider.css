@@ -10,11 +10,11 @@
     width: 3em !important;
 }
 
-.splide__arrow--prev {
+.event-slider .splide__arrow--prev {
     left: -4em !important;
 }
 
-.splide__arrow--next {
+.event-slider .splide__arrow--next {
     right: -4em !important;
 }
 

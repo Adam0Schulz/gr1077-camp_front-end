@@ -1,14 +1,16 @@
 import React from "react";
 import './ScrollDownArrow.css'
 import {motion} from "framer-motion";
-
-export const ScrollDownArrow = () => {
+interface Props {
+    color: 'black' | 'white',
+}
+export const ScrollDownArrow = ({color}: Props) => {
     return (
         <motion.div
             animate={{y: [0, -4, 10, 0]}}
-            transition={{repeat: Infinity, repeatDelay: 7}}
+            transition={{repeat: Infinity, repeatDelay: 10}}
             className="scrollDownBox">
-            <div className="scrollDownText">SCROLL DOWN</div>
+            <div className="scrollDownText" style={{color: color}}>SCROLL DOWN</div>
             <svg className="scrollDownArrow" width="16" height="20" viewBox="0 0 16 20"
                  xmlns="http://www.w3.org/2000/svg">
                 <path
