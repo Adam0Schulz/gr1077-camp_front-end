@@ -14,6 +14,7 @@ root {
     --color-gray-light: #CCCBCC;
     --color-gray-dark: #747681;
     --color-white: #ffffff;
+    --color-gray-inputBorder: #ced4da;
 
     --page-margin: 5vw;
     /* the last one's maybe redundant but you never know */

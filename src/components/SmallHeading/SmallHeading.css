@@ -1,0 +1,9 @@
+.small-heading__heading{
+    text-transform: uppercase;
+    color: var(--color-gray-dark);
+    font-weight: 400;
+}
+
+.small-heading .separator {
+    margin-top: 0;
+}

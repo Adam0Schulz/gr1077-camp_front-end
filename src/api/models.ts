@@ -55,6 +55,11 @@ export interface Image extends DBObject {
     caption: string,
 }
 
+export interface NewImage {
+    url: string,
+    caption: string,
+}
+
 export interface Location extends DBObject {
     address: string,
     room:Room[],
@@ -80,8 +85,17 @@ export interface Section extends DBObject {
     seq: number,
 }
 
+export interface NewSection {
+    seq: number;
+}
+
 export interface ImageSection extends Section, DBObject {
     image: Image,
+    altText: string,
+}
+
+export interface NewImageSection extends NewSection {
+    image: NewImage,
     altText: string,
 }
 
@@ -90,7 +104,17 @@ export interface ParagraphSection extends Section, DBObject {
     text: string,
 }
 
+export interface NewParagraphSection extends NewSection {
+    heading?: string,
+    text: string,
+}
+
 export interface LinkSection extends Section, DBObject {
+    text: string,
+    link: string,
+}
+
+export interface NewLinkSection extends NewSection {
     text: string,
     link: string,
 }
