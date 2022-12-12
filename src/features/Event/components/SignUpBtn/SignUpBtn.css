@@ -2,16 +2,18 @@
     background: #901A1E !important;
     border: #901A1E !important;
     color: white !important;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 120%;
     font-weight: 400;
     position: relative;
     display: inline-block;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 1rem 4rem;
-    text-decoration: none;
     text-transform: uppercase;
+    left: 50%;
+    transform: translate(-60%, -60%);
+
 }
