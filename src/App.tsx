@@ -11,6 +11,7 @@ import Home from "./pages/Home/Home";
 import { RegisterToEventPage } from "./pages/RegisterToEvent/RegisterToEventPage";
 import Event from "./pages/Event/Event";
 import Participants from "./pages/Participants/Participants";
+import Researchers from "./pages/Reseachers/Researchers";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<><Event /></>} />
         <Route path="/about" element={<><Navbar activePage='about' /><Footer /></>} />
-        <Route path="/researchers" element={<><Navbar activePage='researchers' /><Footer /></>} />
+        <Route path="/researchers" element={<Researchers/>} />
         <Route path="/contact" element={<><Navbar activePage='contact' /><Footer /></>} />
         <Route path="/blog" element={<><Navbar activePage='blog' /><Footer /></>} />
         <Route path="/events/:id/register-to-event" element={<RegisterToEventPage />} />

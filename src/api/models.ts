@@ -30,6 +30,7 @@ interface Person {
     email: string,
 }
 
+
 // We have a problem in the back-end
 /* We should have sections for profile, cv and publication
  but now we just have sections for the researcher and profile, cv and publications separately */
@@ -37,6 +38,7 @@ export interface Researcher extends Page, DBObject, Person {
     profileImage: any,
     telephone: string,
     email: string,
+    profile: string,
 
     /* finish this when you figure out the database*/
 }

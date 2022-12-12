@@ -1,0 +1,49 @@
+.researcher-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.researcher-profile-img {
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+    border-radius: 50%;
+    height: 13rem;
+    width: 13rem;
+    object-fit: cover;
+}
+
+.researcher-name > h5 {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 150%;
+    margin: 0;
+}
+
+.researcher-name > p {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+}
+
+.researcher-contact {
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--color-gray-dark);
+}
+
+.researcher-contact > p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.researcher-profile {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+

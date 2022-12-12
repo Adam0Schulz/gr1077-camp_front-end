@@ -1,0 +1,22 @@
+.researchers-flex-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.75rem;
+    padding-top: 3rem;
+
+}
+
+.researchers-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.researchers-background-rectangle {
+    width: 100.5vw;
+    height: 13rem;
+    background: var(--color-gray-light);
+    position: absolute;
+    margin-left: -5rem;
+    z-index: -10;
+}
