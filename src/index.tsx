@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 import{QueryClientProvider,QueryClient} from "react-query";
 import {ReactQueryDevtools} from "react-query/devtools";
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import App from "./App";
+
 
 const queryClient = new QueryClient();
 

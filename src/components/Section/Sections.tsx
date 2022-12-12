@@ -1,4 +1,4 @@
-import { Page } from 'api/models'
+import { Page } from '../../api/models'
 import './Sections.css'
 import ImageSection from './ImageSection/ImageSection'
 import LinkSection from './LinkSection/LinkSection'

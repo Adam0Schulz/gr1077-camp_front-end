@@ -1,4 +1,4 @@
-import { LinkSection as Link } from 'api/models'
+import { LinkSection as Link } from '../../../api/models'
 import './LinkSection.css'
 
 interface Props {

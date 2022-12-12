@@ -1,9 +1,11 @@
 import React from 'react';
-import '@splidejs/react-splide/css';
 import './HeroSlider.css'
-import {Splide, SplideSlide} from '@splidejs/react-splide';
-import {ScrollDownArrow} from "components/ScrollDownArrow/ScrollDownArrow";
-import heroText from 'data/heroText.json'
+
+
+import heroText from "../../../data/heroText.json";
+import {ScrollDownArrow} from "../../../components/ScrollDownArrow/ScrollDownArrow";
+import {Splide, SplideSlide} from "@splidejs/react-splide";
+import '@splidejs/react-splide/css';
 
 function HeroSlider() {
     return (

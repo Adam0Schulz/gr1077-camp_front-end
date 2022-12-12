@@ -1,8 +1,8 @@
 import {RegisterToEventForm} from "../../features/Event/components/RegisterToEventForm/ResigterToEventForm";
-import 'App.css'
+import "./../../App.css";
 import './RegisterToEventPage.css'
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import {ScrollDownArrow} from "../../components/ScrollDownArrow/ScrollDownArrow";
 import PostHeader from "../../features/Event/components/PostHeader/PostHeader";
 import {useParams} from "react-router-dom";

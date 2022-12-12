@@ -1,9 +1,13 @@
-import Filter from 'components/Filter';
-import { EventCard } from 'features/Event';
+
+
 import { useState } from 'react'
-import {useEventsByParams} from 'features/Event/hooks/UseAllEvents';
+
 import './style.css'
-import { EventState } from 'api/enums';
+
+import EventCard from "../EventCard";
+import {EventState} from "../../../../api/enums";
+import {useEventsByParams} from "../../hooks/UseAllEvents";
+import Filter from "../../../../components/Filter";
 
 interface Props {
     searchKeyword: string;

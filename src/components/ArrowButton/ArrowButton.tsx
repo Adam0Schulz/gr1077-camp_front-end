@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import './ArrowButton.css';
+import './../ArrowButton/ArrowButton.css';
 import {motion} from 'framer-motion';
 
 
@@ -15,9 +15,9 @@ const ArrowButton = ({text, link, color, direction} : Props) => {
     return (
         <Link to={'/' + link} className='arrow'>
             <motion.div
-                className={color == 'red'?'arrow-circle_red' : 'arrow-circle_grey'}
+                className={color === 'red'?'arrow-circle_red' : 'arrow-circle_grey'}
                 whileTap={{scale: 0.9, transition: {duration: 0.1}}}
-                whileHover={direction == 'left'? {rotate: -40,
+                whileHover={direction === 'left'? {rotate: -40,
                         transition: {duration: 0.4}} : {rotate: 40, transition: {duration: 0.4}}
                 }>
                 <svg  className={direction == 'left'?'arrow-button arrow_left' : 'arrow-button'} width="25" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">

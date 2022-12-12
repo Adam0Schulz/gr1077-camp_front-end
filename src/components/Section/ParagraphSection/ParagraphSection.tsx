@@ -1,4 +1,4 @@
-import { ParagraphSection as Paragraph } from 'api/models'
+import { ParagraphSection as Paragraph } from '../../../api/models'
 import { ReactNode } from 'react'
 import './ParagraphSection.css'
 

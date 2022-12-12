@@ -1,4 +1,4 @@
-import { ImageSection as Image } from 'api/models'
+import { ImageSection as Image } from '../../../api/models'
 import './ImageSection.css'
 
 interface Props {

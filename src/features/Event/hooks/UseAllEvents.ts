@@ -11,9 +11,9 @@ import {
 import {useQuery, useMutation, useQueryClient} from "react-query";
 import {toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {ApiParameter, Event} from "api/models";
-import { EventState } from "api/enums";
+import {ApiParameter, Event} from "../../../api/models";
+import {EventState} from "../../../api/enums";
+
 
 
 export const useAllEvents = () => {

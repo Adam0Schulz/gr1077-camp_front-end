@@ -1,12 +1,13 @@
 import {useState} from "react";
 import {Form, Button, FormCheck} from "react-bootstrap";
 import {useParams} from "react-router-dom";
-import {NewParticipant} from "api/models";
+import {NewParticipant} from "../../../../api/models";
 import "./RegisterToEventForm.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import FormCheckInput from "react-bootstrap/FormCheckInput";
 import FormCheckLabel from "react-bootstrap/FormCheckLabel";
-import {useRegister} from "features/Event/hooks/useParticipants";
+import {useRegister} from "../../hooks/useParticipants";
+
 
 export const RegisterToEventForm = () => {
     const emptyParticipant: NewParticipant = {
@@ -19,10 +20,10 @@ export const RegisterToEventForm = () => {
     const eventId = Number(useParams().id)
     const [participant, setParticipant] = useState<NewParticipant>(emptyParticipant)
     const [agreement, setAgreement] = useState<boolean>(false)
-    const {mutate: addMutation} = useRegister(eventId)
+    // const {mutate: addMutation} = useRegister(eventId)
     const handleSubmit = () => {
         if (agreement) {
-            addMutation(participant)
+            // addMutation(participant)
             setParticipant(emptyParticipant)
             setAgreement(false)
         }

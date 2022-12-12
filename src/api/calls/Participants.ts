@@ -1,5 +1,5 @@
-import axios from 'lib/axios.config'
-import {NewParticipant, Participant} from 'api/models'
+import axios from '../../lib/axios.config'
+import {NewParticipant, Participant} from "../models";
 
 export const getParticipant = async (id: number): Promise<Participant> => {
     return axios.get("/participants/" + id).then(res => res.data).catch(err => console.log("Origin: API calls", err))

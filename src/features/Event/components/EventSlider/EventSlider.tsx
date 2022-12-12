@@ -1,10 +1,15 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import '@splidejs/react-splide/css';
 import './EventSlider.css';
-import { EventCard } from "features/Event";
-import Separator from "components/Separator/Separator";
-import { useEventsByState } from "features/Event/hooks/UseAllEvents";
-import { EventState } from "api/enums";
+//import slide css
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+
+
+
+import {EventState} from "../../../../api/enums";
+import {useEventsByState} from "../../hooks/UseAllEvents";
+import {EventCard} from "../../index";
+import Separator from "../../../../components/Separator/Separator";
+
 
 
 const Slider = () => {

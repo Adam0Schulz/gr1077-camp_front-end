@@ -1,10 +1,7 @@
 import "./PostHeader.css";
-import {useEventById} from "features/Event/hooks/UseAllEvents";
-import {useParams} from "react-router-dom";
-import {FormEvent, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ArrowButton from "components/ArrowButton/ArrowButton"
-import { BlogPost, Event } from "api/models";
+import ArrowButton from "../../../../components/ArrowButton/ArrowButton"
+import { BlogPost, Event } from "../../../../api/models";
 
 interface Props {
     page: Event | BlogPost,

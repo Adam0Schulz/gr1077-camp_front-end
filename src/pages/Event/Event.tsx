@@ -1,21 +1,20 @@
-import { EventSideBar } from "../../features/Event/components/EventSideBar/EventSideBar";
+
 import "./Event.css"
 import PostHeader from "../../features/Event/components/PostHeader/PostHeader";
 import Footer from "../../components/Footer";
 import { useParams } from "react-router-dom";
 import { useEventById } from "../../features/Event/hooks/UseAllEvents";
-import Navbar from "components/Navbar";
-import { isError } from "react-query";
-import {Button} from "react-bootstrap";
+import Navbar from "../../components/Navbar";
 import SignUpBtn from "../../features/Event/components/SignUpBtn/SignUpBtn";
 import Sections from "../../components/Section/Sections";
 import EventSlider from "../../features/Event/components/EventSlider/EventSlider";
-import {ScrollDownArrow} from "../../components/ScrollDownArrow/ScrollDownArrow";
+import {ScrollDownArrow} from "components/ScrollDownArrow/ScrollDownArrow";
+import { EventSideBar } from "features/Event/components/EventSideBar/EventSideBar";
 
 
 const Event = () => {
     const eventId = Number(useParams().id);
-    const { data: event, isLoading, isError, error, isFetching } = useEventById(eventId as number);
+    const { data: event, isLoading, isError} = useEventById(eventId as number);
 
     if (isLoading) <>Loading...</>
     if (isError) <>Oops! Something went wrong!</>

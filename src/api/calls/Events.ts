@@ -1,5 +1,5 @@
-import { Event } from 'api/models'
-import axios from 'lib/axios.config'
+import { Event } from "../models";
+import axios from '../../lib/axios.config'
 
 const get = async (): Promise<Event[]> => {
     return axios.get("/events").then(res => res.data).catch(err => { throw err })
