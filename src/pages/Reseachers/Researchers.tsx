@@ -24,15 +24,18 @@ const Researchers = () => {
                 <Navbar activePage={'researchers'}/>
                 <h2 className='page-heading researchers-heading' >Researchers</h2>
                 <Separator/>
-                <div className='researchers-background-rectangle'></div>
-                <div className='researchers-flex-box'>
+                <div className='researchers-background-rectangle'>
+                    <div className='researchers-flex-box'>
 
-                    {researcher?.map((researcher) => {
-                        return (
-                            <ResearcherCard researcher={researcher}/>
-                        )
-                    })}
+                        {researcher?.map((researcher) => {
+                            return (
+                                <ResearcherCard researcher={researcher}/>
+                            )
+                        })}
+                    </div>
                 </div>
+
+
             </div>
             <Footer/>
         </>

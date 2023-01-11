@@ -1,22 +1,24 @@
 .researchers-flex-box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 3.75rem;
     padding-top: 3rem;
-
+    flex-wrap: wrap;
+/*    background: linear-gradient(0deg, #FFC0CB 50%, #00FFFF 50%);*/
 }
+
 
 .researchers-heading {
     text-transform: uppercase;
     font-weight: 500;
 }
 
+
 .researchers-background-rectangle {
-    width: 100.5vw;
-    height: 13rem;
+ /*   width: 100.5vw;
     background: var(--color-gray-light);
-    position: absolute;
-    margin-left: -5rem;
-    z-index: -10;
+    overflow: visible;*/
+/*    margin-left: -5rem;*/
+/*    background: linear-gradient(0deg, #FFC0CB 50%, #00FFFF 50%);*/
+
 }
+

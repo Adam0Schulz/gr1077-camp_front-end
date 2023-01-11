@@ -4,6 +4,8 @@
     align-items: center;
     text-align: center;
     gap: 1rem;
+    width: 20%;
+    padding: 2rem;
 }
 
 .researcher-profile-img {
