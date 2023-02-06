@@ -4,7 +4,7 @@ import {UseResearcherById} from "../../features/Event/hooks/UseAllReserchers";
 const GroupCoordinators  = () => {
 
     const { data: researcher, isLoading, isError, error, isFetching } = UseResearcherById(7);
-    const{data:researcher2} = UseResearcherById(5);
+    const{data:researcher2} = UseResearcherById(2);
     return(
         <>
             <div className="grid-item-grid-container-3-2 pt-4">

@@ -1,6 +1,10 @@
+
 .grid-container {
     display: grid;
     grid-template-columns: 36.5% 36.5% 21.2%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
 
 }
 .grid-item-grid-container-3-2 {
