@@ -12,6 +12,7 @@ import { RegisterToEventPage } from "./pages/RegisterToEvent/RegisterToEventPage
 import Event from "./pages/Event/Event";
 import Participants from "./pages/Participants/Participants";
 import {Contact} from "./pages/Contact/Contact";
+import {AboutPage} from "./pages/About/About";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<><Event /></>} />
-        <Route path="/about" element={<><Navbar activePage='about' /><Footer /></>} />
+        <Route path="/about" element={<> <AboutPage/></>} />
         <Route path="/researchers" element={<><Navbar activePage='researchers' /><Footer /></>} />
         <Route path="/contact" element={<><Contact/></>} />
         <Route path="/blog" element={<><Navbar activePage='blog' /><Footer /></>} />
