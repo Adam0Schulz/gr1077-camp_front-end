@@ -1,0 +1,24 @@
+.group-photo-grid{
+    margin-top: 6%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+}
+.highlight-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    justify-items: center;
+    background-color: #E4E4E4;
+    margin-top: -7%;
+}
+.style-line {
+    height: 116%;
+    border-bottom: var(--color-gray-light) solid;
+}
+.style-line-box {
+    width: 90%;
+    height: 50%;
+}

@@ -9,8 +9,8 @@ const Home = () => {
         <>
             <div className="page-cont">
                 <Navbar activePage='home'/>
-                <HeroSlider/>
             </div>
+            <HeroSlider/>
             <div className="page-cont">
                 <Slider/>
             </div>
