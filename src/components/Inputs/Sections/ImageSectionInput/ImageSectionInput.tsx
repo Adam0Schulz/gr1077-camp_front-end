@@ -1,16 +1,15 @@
 import ImageInput from 'components/Inputs/Basic/ImageInput/ImageInput'
 import { Image, NewImage } from 'api/models'
-import TextInput from 'components/Inputs/Basic/TextInput/TextInput'
 
 interface Props {
   image?: Image | NewImage,
+  onChange?: (image: NewImage | Image) => void
 }
 
-const ImageSectionInput = ({image}: Props) => {
+const ImageSectionInput = ({image, onChange}: Props) => {
   return (
     <div className='section-input image-section-input'>
-      <TextInput label='Image Caption' def={image?.caption}/>
-      <ImageInput defaultImg={image?.url}/>
+      <ImageInput image={image} onChange={onChange}/>
     </div>
   )
 }

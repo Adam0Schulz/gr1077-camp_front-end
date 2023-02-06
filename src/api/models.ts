@@ -1,5 +1,11 @@
-interface DBObject {
+export type Time = `${number}:${number}:${number}`
+
+export interface DBObject {
     id: number,
+}
+
+export interface NewObject {
+    id?: number,
 }
 
 export interface Page {
@@ -7,16 +13,36 @@ export interface Page {
     imageSectionSet: ImageSection[],
     linkSectionSet: LinkSection[],
 }
+
+export interface NewPage {
+    paragraphSectionSet: NewParagraphSection[],
+    imageSectionSet: NewImageSection[],
+    linkSectionSet: NewLinkSection[],
+}
+
+
 export interface Event extends Page, DBObject {
     name: string,
     room: Room,
     date: Date, // not sure about this type
-    startTime: `${number}:${number}:${number}`, // not sure about this one either
-    endTime: `${number}:${number}:${number}`,
+    startTime: Time, // not sure about this one either
+    endTime: Time,
     image: Image,
     researcherSet: Researcher[],
     externalResearcherSet: ExternalResearcher[],
     participantSet: Participant[],
+}
+
+export interface NewEvent extends NewPage, NewObject {
+    name: string,
+    room: Room,
+    date: Date | null, // not sure about this type
+    startTime: Time | null, // not sure about this one either
+    endTime: Time | null,
+    image: NewImage,
+    researcherSet: Researcher[],
+    externalResearcherSet: NewExternalResearcher[],
+    participantSet: Participant[] | [],
 }
 
 export interface BlogPost extends Page, DBObject {
@@ -50,12 +76,17 @@ export interface ExternalResearcher extends DBObject, Person {
     profileImage: Image,
 }
 
+export interface NewExternalResearcher extends NewObject, Person {
+    profileLink: string,
+    profileImage: Image,
+}
+
 export interface Image extends DBObject {
     url: string,
     caption: string,
 }
 
-export interface NewImage {
+export interface NewImage extends NewObject {
     url: string,
     caption: string,
 }
@@ -69,7 +100,7 @@ export interface Location extends DBObject {
 export interface Participant extends DBObject, Person {
     affiliation: string,
 }
-export interface NewParticipant extends Person{
+export interface NewParticipant extends NewObject, Person {
     affiliation : string,
 }
 
@@ -85,7 +116,7 @@ export interface Section extends DBObject {
     seq: number,
 }
 
-export interface NewSection {
+export interface NewSection extends NewObject {
     seq: number;
 }
 

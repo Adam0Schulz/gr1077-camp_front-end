@@ -8,7 +8,7 @@
     transition: border 0.25 ease-out;
 }
 
-.select-group__more-btn:hover {
+.select-group__more-btn:enabled:hover {
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
     font-weight: 600;

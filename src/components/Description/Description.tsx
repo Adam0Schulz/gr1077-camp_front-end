@@ -1,4 +1,4 @@
-import { BlogPost, ImageSection, LinkSection, NewImageSection, NewLinkSection, NewParagraphSection, Page, ParagraphSection } from 'api/models'
+import { ImageSection, LinkSection, NewImageSection, NewLinkSection, NewParagraphSection, Page, ParagraphSection } from 'api/models'
 import ImageSectionInput from 'components/Inputs/Sections/ImageSectionInput/ImageSectionInput'
 import LinkSectionInput from 'components/Inputs/Sections/LinkSectionInput/LinkSectionInput'
 import ParagraphSectionInput from 'components/Inputs/Sections/ParagraphSectionInput/ParagraphSectionInput'
@@ -8,6 +8,8 @@ import './Description.css'
 import { DragDropContext, Droppable, Draggable, DroppableProvided, DraggableProvided, DropResult } from 'react-beautiful-dnd'
 import dragIcon from 'assets/icons/drag_gray.svg'
 import trashIcon from 'assets/icons/trash.svg'
+import { useAtom } from 'jotai'
+import { newEvent } from 'lib/atomStore'
 
 interface Props {
     page?: Page
@@ -21,30 +23,34 @@ NewImageSection |
 NewParagraphSection | 
 NewLinkSection
 
+const emptyImageSection: NewImageSection = {
+    seq: 0,
+    image: {
+        url: '',
+        caption: ''
+    },
+    altText: ''
+}
+const emptyParagraphSection: NewParagraphSection = {
+    seq: 0,
+    heading: '',
+    text: ''
+}
+const emptyLinkSection: NewLinkSection = {
+    seq: 0,
+    text: '',
+    link: ''
+}
+
 const Description = ({page}: Props) => {
 
-    const emptyImageSection: NewImageSection = {
-        seq: 0,
-        image: {
-            url: '',
-            caption: ''
-        },
-        altText: ''
-    }
-    const emptyParagraphSection: NewParagraphSection = {
-        seq: 0,
-        heading: '',
-        text: ''
-    }
-    const emptyLinkSection: NewLinkSection = {
-        seq: 0,
-        text: '',
-        link: ''
-    }
+   
 
     const defaultSections = page ? [...(page.imageSectionSet), ...(page.linkSectionSet), ...(page.paragraphSectionSet)] : []
-    const [sections, setSections] = useState<SectionItem[]>(defaultSections)
+    const [sections, setSections] = useState<SectionItem[]>(defaultSections) // could be an atom
     const [count, setCount] = useState(0)
+    console.log('sections', sections)
+    const [event, setEvent] = useAtom(newEvent)
 
     const getCount = (): number => {
         setCount(count + 1)
@@ -52,9 +58,9 @@ const Description = ({page}: Props) => {
         return count
     }
     
-    const renderSectionInput = (section: SectionItem) => {
+    const renderSectionInput = (section: SectionItem, index: number) => {
         if ('image' in section) {
-            return <ImageSectionInput image={section.image} />
+            return <ImageSectionInput /* onChange={} */ image={section.image} />
         } else if ('link' in section) {
             return <LinkSectionInput text={section.text} link={section.link} />
         } else if ('text' in section) {
@@ -100,7 +106,7 @@ const Description = ({page}: Props) => {
                                         {(provided: DraggableProvided) => (
                                             <li className='description__draggable-li' {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
                                                 <img className='description__icon description__section-input__drag-icon' src={dragIcon} />
-                                                {renderSectionInput(section)}
+                                                {renderSectionInput(section, index)}
                                                 <img className='description__icon description__section-input__x-icon' src={trashIcon} onClick={e => deleteSection(index)} />
                                             </li>
                                         )}

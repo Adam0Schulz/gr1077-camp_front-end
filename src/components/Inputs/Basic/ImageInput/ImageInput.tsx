@@ -4,35 +4,43 @@ import uploadImageLight from 'assets/icons/upload_light.svg'
 import { useState } from 'react'
 import axios from 'axios'
 import Form from 'react-bootstrap/Form'
-import imagdz from 'assets/images/culture-girl.jpg'
+import TextInput from '../TextInput/TextInput'
+import { Image, NewImage } from 'api/models'
 
 interface Props {
-  defaultImg?: string
+  image?: Image | NewImage,
+  onChange?: (image: NewImage | Image) => void
 }
 
 
-const ImageInput = ({defaultImg}: Props) => {
-  const [image, setImage] = useState({ base64: '', imgSrc: defaultImg ? defaultImg : '' })
+const ImageInput = ({ image, onChange }: Props) => {
+  const [img, setImg] = useState<Image | NewImage>((image ? image : {url: '', caption: ''}) as Image)
 
   const handleUpload = (files: FileList | null) => {
-    var base64String = "";
+
     if (files != null && files.length > 0) {
+      var base64String = "";
       var file = files[0];
       var reader = new FileReader();
 
       reader.onload = function () {
         base64String = (reader?.result as string)?.replace("data:", "")
           .replace(/^.+,/, "");
-        setImage({ base64: base64String, imgSrc: (reader?.result as string) })
+        uploadImage(base64String)
+        if(onChange) {
+          onChange({ url: img.url, caption: img.caption})
+        }
+        
       }
       reader.readAsDataURL(file);
+
     }
   }
 
 
-  const uploadImage = () => {
+  const uploadImage = (base64: string) => {
     const data = new FormData()
-    data.append('image', image.base64);
+    data.append('image', base64);
 
     const config = {
       method: 'post',
@@ -43,34 +51,28 @@ const ImageInput = ({defaultImg}: Props) => {
       data: data
     };
 
-    axios(config)
-      .then(function (response: any) {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch(function (error: any) {
-        console.log(error);
-      });
+    return (axios(config)
+      .then((response: any) => setImg({caption: img.caption, url: response.data.data.link}) )
+      .catch((error: any) => console.log(error)))
   }
 
   return (
     <>
+      
       <Form.Label>Image</Form.Label>
-      <div className='image-input' style={image.imgSrc != '' ? { backgroundColor: 'rgba(0,0,0,0.5)' } : {}} >
-        {image.imgSrc != '' &&
-          <img className='image-input__preview' src={image.imgSrc} />
+      <div className='image-input' style={img.url != '' ? { backgroundColor: 'rgba(0,0,0,0.5)' } : {}} >
+        {img.url != '' &&
+          <img className='image-input__preview' src={img.url} />
         }
         <input className='image-input__input' onChange={e => handleUpload(e.target.files)} type={'file'} />
-        <div className='image-input__hint' style={image.imgSrc == '' ? { color: 'var(--color-gray-dark)' } : { color: 'white' }}>
-          <img src={image.imgSrc == '' ? uploadImageDark : uploadImageLight} />
+        <div className='image-input__hint' style={img.url == '' ? { color: 'var(--color-gray-dark)' } : { color: 'white' }}>
+          <img src={img.url == '' ? uploadImageDark : uploadImageLight} />
           <h5>Drag & drop an image here</h5>
           <h5>or</h5>
           <button>Choose file</button>
         </div>
-
-
-
       </div>
-      <button disabled onClick={uploadImage}>upload</button>
+      <TextInput label='Image Caption' def={image?.caption} onChange={(text) => {setImg({...img, caption: text}); onChange && onChange({url: img.url, caption: text})}}/>
     </>
   )
 }

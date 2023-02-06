@@ -34,7 +34,7 @@
 }
 
 @media (min-width: 1280px) {
-    .basic-info__sidebar .select-group {
+    .basic-info__sidebar .select-group, .basic-info__sidebar > .select-input {
         max-width: calc(64% + 1rem);
     }
 }
