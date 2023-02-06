@@ -1,26 +1,36 @@
 .moreArrowBox{
     display: flex;
     height: 30px;
-    width: 60px;
+    width: 90px;
     align-items: center;
 }
 .moreArrowText{
-    font-weight: 600;
+font-weight: 600;
+    display: table-cell;
+    vertical-align: middle;
+
 }
-.arrowBox{
+.more-arrow-text-box{
+height: 30px;
+    width: auto;
+    display: table;
+    text-align: center;
+}
+
+.r-arrowBox{
     display: flex;
     align-items: center;
     margin-left: 5px;
-    height: 30px;
+    height: 24px;
     width: auto;
 
 }
-.arrowLine{
+.r-arrowLine{
     display: flex;
     align-items: center;
     position: absolute;
 }
-.arrow{
+.r-arrow{
     display: flex;
     align-items: center;
 }

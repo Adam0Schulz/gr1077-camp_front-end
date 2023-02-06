@@ -6,7 +6,7 @@ import "./RegisterToEventForm.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import FormCheckInput from "react-bootstrap/FormCheckInput";
 import FormCheckLabel from "react-bootstrap/FormCheckLabel";
-import {useRegister} from "features/Event/hooks/useParticipants";
+import {useRegister} from 'features/Event/hooks/UseParticipants';
 
 export const RegisterToEventForm = () => {
     const emptyParticipant: NewParticipant = {

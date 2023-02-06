@@ -5,11 +5,11 @@ import {motion} from "framer-motion";
 export const MoreArrow = () => {
     return (
         <motion.div className="moreArrowBox" initial="rest" whileHover="hover" animate="rest">
-            <div>
-                <h4 className="moreArrowText">MORE</h4>
+            <div className={"more-arrow-text-box"}>
+                <h6 className="moreArrowText">MORE</h6>
             </div>
-            <div className="arrowBox">
-                <div className="arrowLine">
+            <div className="r-arrowBox">
+                <div className="r-arrowLine">
                     <svg viewBox="0 0 200 180" width="20" height="18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M 170 102.1 L 170 77.6 L 0 77.6 L 0 102.1"/>
                     </svg>
@@ -34,7 +34,7 @@ export const MoreArrow = () => {
 
                         }
                     }}
-                    className="arrow"
+                    className="r-arrow"
                 >
                     <svg viewBox="0 0 200 180" width="20" height="18" xmlns="http://www.w3.org/2000/svg">
                         <path
