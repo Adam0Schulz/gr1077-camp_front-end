@@ -49,7 +49,11 @@ export const AboutPage = () => {
                             perPage: 3,
                             height : '10rem',
                             autoplay : true,
+                            speed: 1000,
                             gap    : '0.1rem',
+                            arrows: false,
+                            pagination: false,
+                            padding: '1rem, 1rem, 8rem, 8rem',
                         } }
                     >
                         <SplideSlide>
