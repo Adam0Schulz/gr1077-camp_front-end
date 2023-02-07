@@ -16,7 +16,7 @@ const NewEvent = () => {
 
     return (
         <>
-            <ScrollDownArrow />
+            <ScrollDownArrow color="black"/>
             <div className="page-cont">
                 <Navbar activePage="events" />
                 <div className="page-heading new-event-header">
