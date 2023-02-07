@@ -1,38 +1,66 @@
 .when {
   color: #901A1E;
   font-size: 18px;
+  font-family: "open sans";
+  weight: 600;
+  align: center;
+  letter:0.3px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .wear {
   color: #901A1E;
   font-size: 18px;
+  font-family: "open sans";
+  weight: 600;
+  align: center;
+  letter:0.3px;
+    text-align: center;
+  font-weight: bold;
 }
 
 .who {
   color: #901A1E;
   font-size: 18px;
+  font-family: "open sans";
+  weight: 600;
+  align: center;
+  letter:0.3px;
+  text-align: center;
+  font-weight: bold;
 
 }
 
 .date {
   color: #262526;
   font-size: 18px;
+  font-family: "open sans";
+  weight: 600;
+  align: center;
+  letter:0.3px;
+  font-weight: bold;
 }
 
 .researchersTitle {
   color: #901A1E;
   font-size: 12px;
+  font-family: "open sans";
+  font-weight: bold;
 
 }
 
 .location {
   color: #262526;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .externalTitle {
   color: #901A1E;
   font-size: 12px;
+  font-family: "open sans";
+  font-weight: bold;
 
 }
 
@@ -43,19 +71,19 @@
   margin-left: 10%;
   margin-top: 30%;
   margin-bottom: 30%;
+  padding-top: 10%;
 
 }
 
 .researchersTell {
   color: #747681;
-  padding-top: 10%;
+  padding-top: 0%;
   font-size: 12px;
 
 }
 
 .externalEmail {
   color: #747681;
-  padding-top: 10%;
   font-size: 12px;
 
 }
@@ -63,6 +91,7 @@
 .researchersEmail {
   color: #747681;
   font-size: 12px;
+
 
 }
 
@@ -77,8 +106,8 @@
   height: 70%;
   object-fit: cover;
   margin-left: 0;
-  margin-right: 50%;
-  margin-top: 20%;
+  margin-right: 20%;
+  margin-top: 50%;
   margin-bottom: -30%;
   outline: 1px solid #f1f1f1;
 
@@ -125,7 +154,7 @@
 .tableResercher {
   width: 50%;
   height: 50%;
-  margin-left: 100%;
+  margin-left: 70%;
   margin-bottom: -30%;
   margin-top: 0;
   padding: 10%;
@@ -133,12 +162,14 @@
 
 .resercherName {
   color: #262526;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
   margin-top: 0;
 }
 
 .externalresercherName {
   color: #262526;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
   margin-top: 0;
 }

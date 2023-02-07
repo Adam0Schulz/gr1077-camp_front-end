@@ -15,12 +15,16 @@
     border-left: 2px solid #CCCBCC;
 }
 .signUpEvent{
-    font-size: 18px;
+    font-size: 16px;
     color : #262526;
-    margin-left: 20%;
-    margin-right: 20%;
+    /*make it bold*/
+
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
+    /*make it centre*/
+    text-align: center;
 }
 .event-img {
     width: 100%;

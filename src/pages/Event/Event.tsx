@@ -49,8 +49,8 @@ const Event = () => {
                         <div className="right-grid">
                             {/*//creat button for register*/}
                             <p className="signUpEvent">INTERESTED? SIGNUP!</p>
+                            <SignUpBtn eventId={eventId}  />
 
-                            <SignUpBtn eventId={eventId} />
                             <EventSideBar />
 
                         </div>
