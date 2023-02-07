@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home/Home";
 import { RegisterToEventPage } from "./pages/RegisterToEvent/RegisterToEventPage";
 import Event from "./pages/Event/Event";
+import NewEvent from 'pages/New Event/NewEvent';
 import Participants from "./pages/Participants/Participants";
 import {Contact} from "./pages/Contact/Contact";
 import {AboutPage} from "./pages/About/About";
@@ -22,13 +23,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/events" element={<Events />} />
+        <Route path='/events/new' element={<NewEvent />} />
         <Route path="/events/:id" element={<><Event /></>} />
+        <Route path="/events/:id/participants" element={<Participants/>}/>
+        <Route path="/events/:id/register-to-event" element={<RegisterToEventPage />} />
         <Route path="/about" element={<> <AboutPage/></>} />
         <Route path="/researchers" element={<><Navbar activePage='researchers' /><Footer /></>} />
         <Route path="/contact" element={<><Contact/></>} />
         <Route path="/blog" element={<><Navbar activePage='blog' /><Footer /></>} />
-        <Route path="/events/:id/register-to-event" element={<RegisterToEventPage />} />
-        <Route path="/events/:id/participants" element={<Participants/>}/>
       </Routes>
       <ToastContainer />
     </BrowserRouter>
