@@ -1,28 +1,70 @@
 .registerForm{
-    width: 73%;
-    height: auto;
     justify-content: center;
     background-color: #EFEFEF ;
     color: black;
 }
-.registerButton{
+.register-form-border-top {
+    position: relative;
+    left: 5%;
+    height: 1px;
+    width: 91%;
+    background-color: var(--color-gray-light);
+}
+.r-wrapper {
+    width: 73%;
+    display: grid;
+    grid-template-columns: 99.9% 0.01%;
+    margin: 0;
+}
+.my-main-content {
+    width: auto;
+}
+.register-form-border-right {
+    position: relative;
+    top: 5%;
+    bottom: 5%;
+    background: #CCCBCC;
+    width: 1px;
+    height: 90%;
+}
+.registerForm .row {
+    background-color: #EFEFEF ;
+}
+.registerButtonR {
     background: #901A1E !important;
     border: #901A1E !important;
     color: white !important;
     margin-left: 1%;
     margin-right: 5%;
-
+    text-transform: uppercase;
+    font-size: 13px;
 }
-.cancelButton {
+
+.cancelButtonR {
     background: #CCCBCC !important;
     border: #CCCBCC !important;
     color: black !important;
+    text-transform: uppercase;
+    font-size: 13px;
 }
-.col-md-6{
+ .r-wrapper .col-md-6{
     display: flex ;
     justify-content: center ;
 }
-.row-cols-md-6 {
+.r-wrapper .row-cols-md-6 {
     display: flex !important;
     justify-content: flex-end !important;
+}
+.checkR {
+    display: flex;
+    align-items: center;
+    margin-right: 19%;
+    margin-left: 19%;
+}
+.conditions-label {
+    left: 5%;
+}
+.checkR .form-check-input:checked {
+    background-color: #901A1E;
+    border-color: #901A1E;
 }

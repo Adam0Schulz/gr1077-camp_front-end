@@ -97,7 +97,7 @@ export interface NewImage extends NewObject {
 
 export interface Location extends DBObject {
     address: string,
-    room:Room[],
+    roomSet:Room[],
 
 }
 
@@ -114,7 +114,6 @@ export interface Room extends DBObject {
 
     // could be a string
 }
-
 
 export interface Section extends DBObject {
     seq: number,
@@ -210,4 +209,9 @@ export const emptyLinkSection: NewLinkSection = {
     seq: 0,
     text: '',
     link: ''
+}
+
+export interface ApiParameter {
+    name: string,
+    value: string,
 }

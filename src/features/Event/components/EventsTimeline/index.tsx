@@ -1,27 +1,28 @@
 import Filter from 'components/Filter';
 import { EventCard } from 'features/Event';
 import { useState } from 'react'
-import { useEventsByState } from 'features/Event/hooks/UseAllEvents';
+import {useEventsByParams} from 'features/Event/hooks/UseAllEvents';
 import './style.css'
 import { EventState } from 'api/enums';
 
-const EventsTimeline = () => {
+interface Props {
+    searchKeyword: string;
+}
 
-    const { data: pastEvents,
-        isLoading: isPastLoading,
-        isError: isPastError } = useEventsByState(EventState.PAST)
-
-    const { data: upcomingEvents,
-        isLoading: isUpcomingLoading,
-        isError: isUpcomingError } = useEventsByState(EventState.UPCOMING)
-
-
+const EventsTimeline = ({searchKeyword}: Props) => {
     const [state, setState] = useState<EventState>(EventState.UPCOMING)
+
+    const { data: events,
+        isLoading,
+        isError } = useEventsByParams([{name: 'state', value: state}, {name: "keyword", value: searchKeyword}])
+
+
+
     let row = 0
 
-    if (isPastLoading || isUpcomingLoading) return <>Loading...</>
+    if (isLoading) return <>Loading...</>
 
-    if (isPastError || isUpcomingError) return <>Oopsie! Something went wrong!</>
+    if (isError) return <>Oopsie! Something went wrong!</>
 
     console.log(state)
 
@@ -29,11 +30,7 @@ const EventsTimeline = () => {
         <div className="event-timeline">
             <Filter options={[EventState.UPCOMING, EventState.PAST]} action={setState} />
             {/* not very nice way to do this - if there are more states this will break down */}
-            {(state == EventState.UPCOMING) ? upcomingEvents?.map(event => {
-                row += 1
-                return (<EventCard key={event.id} size='large' event={event} state={state} row={row} />)
-            }
-            ) : pastEvents?.map(event => {
+            {events?.map(event => {
                 row += 1
                 return (<EventCard key={event.id} size='large' event={event} state={state} row={row} />)
             }
