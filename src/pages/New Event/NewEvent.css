@@ -1,0 +1,9 @@
+.new-event-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.new-event-header h4 {
+    margin: 0;
+}
