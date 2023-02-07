@@ -3,19 +3,11 @@ import Navbar from "components/Navbar"
 import { ScrollDownArrow } from "components/ScrollDownArrow/ScrollDownArrow"
 import calendarIcon from 'assets/icons/calendar_color.svg'
 import './NewEvent.css'
-import BasicInfo from "components/BasicInfo/BasicInfo"
-import Description from "components/Description/Description"
-import { newEvent } from "lib/atomStore"
-import { useAtom } from "jotai"
-import { useCreateEvent } from "features/Event/hooks/UseAllEvents"
+import UpsertForm from "components/UpsertForm/UpsertForm"
 
 
 
 const NewEvent = () => {
-
-    const [event, setEvent] = useAtom(newEvent)
-
-    const {mutate} = useCreateEvent()
 
     // this could redirect to a 404 page
     if (!(localStorage.getItem('isAdmin'))) {
@@ -33,12 +25,8 @@ const NewEvent = () => {
                     </div>
                     <h4>New Event</h4>
                 </div>
-                <BasicInfo />
-                <Description />
-                <div>
-                    <button>Cancel</button>
-                    <button onClick={e => mutate(event)}>Save</button>
-                </div>
+                <UpsertForm type="event" />
+
             </div>
             <Footer />
         </>

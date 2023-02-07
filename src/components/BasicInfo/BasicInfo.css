@@ -15,26 +15,11 @@
     transform: translateX(-50%);
 }
 
-.basic-info__header-info, .basic-info__sidebar {
+.basic-info__body > * {
     margin: 2em;
 }
 
-.basic-info__sidebar {
-    
-}
-
-.basic-info__sidebar > * {
-    margin-bottom: 2rem;
-}
-
-.basic-info__datetime {
+.basic-info__body .inline {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-}
-
-@media (min-width: 1280px) {
-    .basic-info__sidebar .select-group, .basic-info__sidebar > .select-input {
-        max-width: calc(64% + 1rem);
-    }
+    grid-template-columns: repeat(3, 1fr);
 }

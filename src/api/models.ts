@@ -36,9 +36,9 @@ export interface Event extends Page, DBObject {
 export interface NewEvent extends NewPage, NewObject {
     name: string,
     room: Room,
-    date: Date | null, // not sure about this type
-    startTime: Time | null, // not sure about this one either
-    endTime: Time | null,
+    date: Date, // not sure about this type
+    startTime: Time, // not sure about this one either
+    endTime: Time,
     image: NewImage,
     researcherSet: Researcher[],
     externalResearcherSet: NewExternalResearcher[],
@@ -46,6 +46,10 @@ export interface NewEvent extends NewPage, NewObject {
 }
 
 export interface BlogPost extends Page, DBObject {
+    
+}
+
+export interface NewBlogPost extends NewPage, NewObject {
     
 }
 
@@ -148,4 +152,62 @@ export interface LinkSection extends Section, DBObject {
 export interface NewLinkSection extends NewSection {
     text: string,
     link: string,
+}
+
+export const NewEventObj: NewEvent = {
+    name: '',
+    room: {
+        id: 0,
+        name: '',
+        capacity: 0
+    },
+    date: new Date(),
+    startTime: '100:00:00', // could be improved
+    endTime: '100:00:00', // could be improved
+    image: {
+        url: '',
+        caption: ''
+    },
+    researcherSet: [],
+    externalResearcherSet: [],
+    participantSet: [],
+    paragraphSectionSet: [],
+    imageSectionSet: [],
+    linkSectionSet: [],
+}
+
+export const NewBlogPostObj: NewBlogPost = {
+    paragraphSectionSet: [],
+    imageSectionSet: [],
+    linkSectionSet: [],
+}
+
+
+
+export type SectionItem = 
+ImageSection | 
+ParagraphSection | 
+LinkSection | 
+NewImageSection | 
+NewParagraphSection | 
+NewLinkSection
+
+
+export const emptyImageSection: NewImageSection = {
+    seq: 0,
+    image: {
+        url: '',
+        caption: ''
+    },
+    altText: ''
+}
+export const emptyParagraphSection: NewParagraphSection = {
+    seq: 0,
+    heading: '',
+    text: ''
+}
+export const emptyLinkSection: NewLinkSection = {
+    seq: 0,
+    text: '',
+    link: ''
 }

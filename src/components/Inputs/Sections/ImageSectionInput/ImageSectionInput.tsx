@@ -1,15 +1,19 @@
-import ImageInput from 'components/Inputs/Basic/ImageInput/ImageInput'
-import { Image, NewImage } from 'api/models'
+import ImageInput from 'components/Inputs/ImageInput/ImageInput'
+import { Image, ImageSection, NewImage, NewImageSection } from 'api/models'
 
 interface Props {
   image?: Image | NewImage,
-  onChange?: (image: NewImage | Image) => void
+  onChange: (image: NewImageSection | ImageSection) => void
 }
 
 const ImageSectionInput = ({image, onChange}: Props) => {
   return (
     <div className='section-input image-section-input'>
-      <ImageInput image={image} onChange={onChange}/>
+      <ImageInput image={image} onChange={(img) => onChange({
+        image: img,
+        altText: img.caption,
+        seq: 0
+      })}/>
     </div>
   )
 }

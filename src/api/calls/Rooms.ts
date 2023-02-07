@@ -29,7 +29,7 @@ const getByParams = async (...param: { name: string, value: string }[]): Promise
 const getAvailableByParams = async (...param: { name: string, value: string }[]): Promise<Room[]> => {
     const params = param.map(item => item.name + '=' + item.value + '&')
     console.log(params)
-    return axios.get("/rooms/available?" + params).then(res => res.data).catch(err => { throw err })
+    return axios.get("/rooms/available?" + params.join('')).then(res => res.data).catch(err => { throw err })
 }
 
 export {
