@@ -14,6 +14,7 @@ interface Props {
 
 
 const ImageInput = ({ image, onChange }: Props) => {
+  
   const [img, setImg] = useState<Image | NewImage>((image ? image : { url: '', caption: '' }) as Image)
 
   const handleUpload = (files: FileList | null) => {
@@ -36,7 +37,6 @@ const ImageInput = ({ image, onChange }: Props) => {
 
     }
   }
-
 
   const uploadImage = (base64: string) => {
     const data = new FormData()

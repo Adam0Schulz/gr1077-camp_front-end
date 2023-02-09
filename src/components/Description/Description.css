@@ -32,7 +32,7 @@
 .description__draggable-li {
     margin: 3em 0;
     display: grid;
-    grid-template-columns: 1fr 90% 1fr;
+    grid-template-columns: 90% 1fr;
     align-items: center;
     gap: 1rem;
 }
