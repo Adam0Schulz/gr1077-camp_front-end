@@ -31,7 +31,7 @@ const Events = () => {
                 </div>*/}
 
             {localStorage.getItem('isAdmin') ?  <AdminBar>
-                <AdminButton text={'New event'} link={'/'} color={'red'}/>
+                <AdminButton text={'New event'} link={'/events/new'} color={'red'}/>
             </AdminBar> : <div/>}
 
             <EventsTimeline searchKeyword={searchKeyword}/>
