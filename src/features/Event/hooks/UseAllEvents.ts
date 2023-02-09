@@ -4,13 +4,17 @@ import {
     update,
     del,
     create,
-    getByParams
-}from "../../../api/calls/Events";
+    getByParams,
+    getByKeyword, getByKeywordAndState
+}
+    from "../../../api/calls/Events";
 import {useQuery, useMutation, useQueryClient} from "react-query";
 import {toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Event} from "api/models";
+
+import { NewEvent , Event, ApiParameter} from "api/models";
+
 import { EventState } from "api/enums";
 
 
@@ -25,6 +29,28 @@ export const useAllEvents = () => {
 
     )
 }
+
+//get ByKeywordAndState
+export const useEventsByKeywordAndState = (keyword: string, state: string) => {
+    return useQuery<Event[],Error>(
+        ["events", keyword, state],// query key
+        () => getByKeywordAndState(keyword, state),
+        {
+            //refetchOnWindowFocus: false means that the data will not be refetched when the window is focused
+            enabled: !!keyword && !!state,
+        }
+    )
+}
+
+export const useEventsByParams = (params: ApiParameter[]) => {
+    return useQuery<Event[], Error>(
+        ["events", params],
+        () => getByParams(...params),
+    )
+}
+
+
+
 
 
 export const useEventById = (id: number) => {
@@ -60,10 +86,11 @@ export const useDeleteEventById = (id:number) => {
         }
     )
 }
+
 //create Event and update cache after create is successful
 export const useCreateEvent = () => {
     const queryClientCreate = useQueryClient();
-    return useMutation<Event,Error, Event>(
+    return useMutation<NewEvent,Error, NewEvent>(
         create,
         {
             //refresh all activities after delete

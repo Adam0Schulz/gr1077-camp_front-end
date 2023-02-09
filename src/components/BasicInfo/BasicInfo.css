@@ -1,0 +1,25 @@
+.basic-info__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.basic-info__body::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: var(--color-gray-dark);
+    width: 1px;
+    height: 100%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.basic-info__body > * {
+    margin: 2em;
+}
+
+.basic-info__body .inline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

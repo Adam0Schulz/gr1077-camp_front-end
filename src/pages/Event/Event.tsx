@@ -12,6 +12,7 @@ import Sections from "../../components/Section/Sections";
 import EventSlider from "../../features/Event/components/EventSlider/EventSlider";
 import AdminBar from "../../components/AdminBar/AdminBar";
 import AdminButton from "../../components/AdminButton/AdminButton";
+import {ScrollDownArrow} from "../../components/ScrollDownArrow/ScrollDownArrow";
 
 
 const Event = () => {
@@ -22,6 +23,7 @@ const Event = () => {
     if (isError) <>Oops! Something went wrong!</>
 
 
+    // @ts-ignore
     return (
         <>
 
@@ -36,12 +38,19 @@ const Event = () => {
                         </AdminBar> : <div/>}
                     <div className="event-grid">
                         <div className="left-grid" >
+
                             <PostHeader page={event} />
                             <div className="event-img">
                                 <img className="event-img__img" src={event?.image.url} alt={event?.image.caption} />
                                 <label>{event?.image.caption}</label>
                             </div>
-                            <Sections page={event} />
+                            <div className={"any-page"}>
+                                <ScrollDownArrow color={"black"} />
+                            </div>
+                            <br />
+                            <br />
+
+                            <Sections page={event}/>
 
                         </div>
                         <div className="right-grid">

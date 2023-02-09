@@ -58,6 +58,8 @@
 .checkR {
     display: flex;
     align-items: center;
+    margin-right: 19%;
+    margin-left: 19%;
 }
 .conditions-label {
     left: 5%;

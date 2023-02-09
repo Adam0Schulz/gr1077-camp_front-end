@@ -1,5 +1,11 @@
-interface DBObject {
+export type Time = `${number}:${number}:${number}`
+
+export interface DBObject {
     id: number,
+}
+
+export interface NewObject {
+    id?: number,
 }
 
 export interface Page {
@@ -7,19 +13,43 @@ export interface Page {
     imageSectionSet: ImageSection[],
     linkSectionSet: LinkSection[],
 }
+
+export interface NewPage {
+    paragraphSectionSet: NewParagraphSection[],
+    imageSectionSet: NewImageSection[],
+    linkSectionSet: NewLinkSection[],
+}
+
+
 export interface Event extends Page, DBObject {
     name: string,
     room: Room,
     date: Date, // not sure about this type
-    startTime: `${number}:${number}:${number}`, // not sure about this one either
-    endTime: `${number}:${number}:${number}`,
+    startTime: Time, // not sure about this one either
+    endTime: Time,
     image: Image,
     researcherSet: Researcher[],
     externalResearcherSet: ExternalResearcher[],
     participantSet: Participant[],
 }
 
+export interface NewEvent extends NewPage, NewObject {
+    name: string,
+    room: Room,
+    date: Date, // not sure about this type
+    startTime: Time, // not sure about this one either
+    endTime: Time,
+    image: NewImage,
+    researcherSet: Researcher[],
+    externalResearcherSet: NewExternalResearcher[],
+    participantSet: Participant[] | [],
+}
+
 export interface BlogPost extends Page, DBObject {
+    
+}
+
+export interface NewBlogPost extends NewPage, NewObject {
     
 }
 
@@ -50,21 +80,31 @@ export interface ExternalResearcher extends DBObject, Person {
     profileImage: Image,
 }
 
+export interface NewExternalResearcher extends NewObject, Person {
+    profileLink: string,
+    profileImage: Image,
+}
+
 export interface Image extends DBObject {
+    url: string,
+    caption: string,
+}
+
+export interface NewImage extends NewObject {
     url: string,
     caption: string,
 }
 
 export interface Location extends DBObject {
     address: string,
-    room:Room[],
+    roomSet:Room[],
 
 }
 
 export interface Participant extends DBObject, Person {
     affiliation: string,
 }
-export interface NewParticipant extends Person{
+export interface NewParticipant extends NewObject, Person {
     affiliation : string,
 }
 
@@ -75,13 +115,21 @@ export interface Room extends DBObject {
     // could be a string
 }
 
-
 export interface Section extends DBObject {
     seq: number,
 }
 
+export interface NewSection extends NewObject {
+    seq: number;
+}
+
 export interface ImageSection extends Section, DBObject {
     image: Image,
+    altText: string,
+}
+
+export interface NewImageSection extends NewSection {
+    image: NewImage,
     altText: string,
 }
 
@@ -90,7 +138,80 @@ export interface ParagraphSection extends Section, DBObject {
     text: string,
 }
 
+export interface NewParagraphSection extends NewSection {
+    heading?: string,
+    text: string,
+}
+
 export interface LinkSection extends Section, DBObject {
     text: string,
     link: string,
+}
+
+export interface NewLinkSection extends NewSection {
+    text: string,
+    link: string,
+}
+
+export const NewEventObj: NewEvent = {
+    name: '',
+    room: {
+        id: 0,
+        name: '',
+        capacity: 0
+    },
+    date: new Date(),
+    startTime: '100:00:00', // could be improved
+    endTime: '100:00:00', // could be improved
+    image: {
+        url: '',
+        caption: ''
+    },
+    researcherSet: [],
+    externalResearcherSet: [],
+    participantSet: [],
+    paragraphSectionSet: [],
+    imageSectionSet: [],
+    linkSectionSet: [],
+}
+
+export const NewBlogPostObj: NewBlogPost = {
+    paragraphSectionSet: [],
+    imageSectionSet: [],
+    linkSectionSet: [],
+}
+
+
+
+export type SectionItem = 
+ImageSection | 
+ParagraphSection | 
+LinkSection | 
+NewImageSection | 
+NewParagraphSection | 
+NewLinkSection
+
+
+export const emptyImageSection: NewImageSection = {
+    seq: 0,
+    image: {
+        url: '',
+        caption: ''
+    },
+    altText: ''
+}
+export const emptyParagraphSection: NewParagraphSection = {
+    seq: 0,
+    heading: '',
+    text: ''
+}
+export const emptyLinkSection: NewLinkSection = {
+    seq: 0,
+    text: '',
+    link: ''
+}
+
+export interface ApiParameter {
+    name: string,
+    value: string,
 }
