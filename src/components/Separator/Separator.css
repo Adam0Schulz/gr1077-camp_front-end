@@ -3,5 +3,6 @@
     height: 2px;
     width: 100%;
     background: #CCCBCC;
+    position: relative;
     margin: 2em 0;
 }

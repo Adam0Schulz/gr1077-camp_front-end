@@ -93,7 +93,7 @@ a:hover {
 .page-heading {
     display: flex;
     justify-content: space-between;
-    margin: 5.6rem 0 5.6rem calc(var(--page-margin) * 3) ;
+    margin: 4rem 0 5.6rem calc(var(--page-margin) * 3) ;
 }
 
 .page-cont {
