@@ -108,3 +108,19 @@ a:hover {
 img {
     transition: all 0.25s ease-out;
 }
+
+.btn-p,
+.btn-s {
+    padding: 1rem 3rem ;
+}
+
+.btn-p {
+    background-color: var(--color-primary) !important;
+    color: white;
+
+}
+
+.btn-s {
+    background-color: var(--color-gray-light) !important;
+    color: black;
+}
