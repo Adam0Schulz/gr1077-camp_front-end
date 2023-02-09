@@ -22,3 +22,11 @@
     width: 90%;
     height: 50%;
 }
+.splide-item-box {
+    display: flex;
+}
+.splide-item-text {
+    width: 100%;
+    text-align: center;
+    color: #737477;
+}
