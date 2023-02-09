@@ -6,6 +6,7 @@
     border-radius: 0.375rem;
     color: var(--color-gray-dark);
     overflow: hidden;
+    margin-bottom: 1em;
 }
 
 .image-input__input {

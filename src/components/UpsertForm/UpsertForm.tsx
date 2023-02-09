@@ -136,9 +136,9 @@ const UpsertForm = ({ object, type }: Props) => {
             }
 
 
-            <div>
-                <button>Cancel</button>
-                <button onClick={() => object ? edit((upsertEvent as Event)) : create(upsertEvent)}>Save</button>
+            <div className='upsert-form__btn-cont'>
+                <button className='btn btn-s'>Cancel</button>
+                <button className='btn btn-p' onClick={() => object ? edit((upsertEvent as Event)) : create(upsertEvent)}>Save</button>
             </div>
         </>
     )
