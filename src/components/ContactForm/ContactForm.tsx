@@ -28,6 +28,8 @@ const ContactForm  = () => {
                     .then((result) => {
                         console.log(result.text);
                         toast.success("Your message has been sent successfully");
+                        //send email to the user
+
                     }, (error) => {
                         console.log(error.text);
                         toast.error("Your message has not been sent");
@@ -36,6 +38,7 @@ const ContactForm  = () => {
                     );
                 e.target.reset();
             }
+
 
 
 

@@ -126,15 +126,20 @@
 
 .Researchers {
   display: grid;
+  /*//give the size to each grid item*/
+
   grid-template-columns: 1fr;
+  /*grid space between each grid item size*/
   justify-items: left;
   gap: 0.25%;
+    /*//gap between each grid item*/
   position: relative;
   width: 100%;
   height: 100%;
   margin-bottom: 5%;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-right: 70%;
+
 }
 
 .researcher_img_cont {
@@ -172,4 +177,25 @@
   font-size: 16px;
   font-weight: bold;
   margin-top: 0;
+}
+.researchersTell {
+  padding-top: -5%;
+}
+.researchersTitle{
+  margin-top: -7%;
+}
+.researchersEmail{
+  margin-top: -7%;
+}
+.externalEmail {
+  padding-top: 5%;
+}
+.externalresercherName {
+  padding-top: 5%;
+}
+.externalTitle {
+  margin-top: -7%;
+}
+.externalEmail {
+  margin-top: -7%;
 }

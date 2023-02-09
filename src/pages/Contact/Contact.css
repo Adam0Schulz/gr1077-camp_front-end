@@ -123,13 +123,7 @@
     font-size: 12px;
     text-decoration: underline;
     margin-bottom: 5%;
-
 }
-
-
-
-
-
 
 /*for different screen size*/
 @media screen and (max-width: 600px) {
