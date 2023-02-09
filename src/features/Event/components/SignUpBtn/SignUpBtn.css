@@ -1,19 +1,32 @@
-.registerButton{
+.registerButton {
     background: #901A1E !important;
     border: #901A1E !important;
     color: white !important;
-    font-size: 14px;
-    line-height: 120%;
-    font-weight: 400;
-    position: relative;
+    font-size: 12px;
+    line-height: 0.1rem;
+    font-weight: 600;
     display: inline-block;
-    margin-top: 15%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 1rem 4rem;
+    padding: 1rem 4.7rem;
     text-transform: uppercase;
+    margin-left: 1.2rem;
+    text-align: center;
     left: 50%;
-    transform: translate(-60%, -60%);
-
+    position: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .registerButton {
+        font-size: 8px;
+        padding: 0.5rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .registerButton {
+        font-size: 6px;
+        padding: 0.25rem 1rem;
+    }
+}
+
+
+
