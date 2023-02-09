@@ -1,0 +1,47 @@
+.description {
+    margin: 5em 0;
+    min-height: 30rem;
+}
+
+.description__btns button {
+    background-color: var(--color-gray-dark);
+    color: white;
+    border-radius: 0.375rem;
+    border: none;
+    padding: .25em 1em;
+    margin-right: 2em;
+}
+
+.description__section-inputs, .description__btns {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.description .section-input {
+    padding: 3em;
+    border-top: 1px solid var(--color-gray-light);
+    border-bottom: 1px solid var(--color-gray-light);
+    
+}
+
+.description__section-inputs ul {
+    list-style: none;
+    padding: none;
+}
+
+.description__draggable-li {
+    margin: 3em 0;
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.description__icon{
+    cursor: pointer;
+    height: 1.2rem;
+}
+
+.description .section-input:nth-of-type(2n + 1) {
+    /* background-color: var(--color-gray-light); */
+}

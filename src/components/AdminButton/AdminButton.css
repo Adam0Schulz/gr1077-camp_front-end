@@ -1,0 +1,38 @@
+.admin-link {
+    cursor: pointer;
+}
+
+.admin-button {
+    height: 50px;
+    width: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.red-admin {
+    background: var(--color-primary);
+    color: white;
+}
+
+.red-admin:hover {
+    background: #801014;
+}
+
+.grey-admin {
+    background: var(--color-gray-light);
+    color: var(--color-black);
+}
+
+.grey-admin:hover {
+    background: #DDDDDD;
+}
+
+
+
+
+

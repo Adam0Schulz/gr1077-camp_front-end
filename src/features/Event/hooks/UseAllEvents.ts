@@ -12,7 +12,9 @@ import {useQuery, useMutation, useQueryClient} from "react-query";
 import {toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {ApiParameter, Event} from "api/models";
+
+import { NewEvent , Event, ApiParameter} from "api/models";
+
 import { EventState } from "api/enums";
 
 
@@ -88,7 +90,7 @@ export const useDeleteEventById = (id:number) => {
 //create Event and update cache after create is successful
 export const useCreateEvent = () => {
     const queryClientCreate = useQueryClient();
-    return useMutation<Event,Error, Event>(
+    return useMutation<NewEvent,Error, NewEvent>(
         create,
         {
             //refresh all activities after delete

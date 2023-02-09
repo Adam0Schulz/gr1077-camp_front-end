@@ -1,0 +1,14 @@
+.register-to-event-page .post-header{
+    margin-bottom: 1em;
+}
+.register-to-event-grid {
+    display: grid;
+    grid-template-columns: 73% 21.2%;
+
+}
+
+@media screen and (max-width: 600px) {
+    .register-to-event-grid {
+        grid-template-columns: auto;
+    }
+}

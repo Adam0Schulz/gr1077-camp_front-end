@@ -42,6 +42,24 @@ function HeroSlider() {
                         <img src={heroText[2].image} alt="photo3" className="mySplideImage"/>
                     </div>
                 </SplideSlide>
+                <SplideSlide>
+                    <div className="img-gradient">
+                        <div className="sliderTextContainer">
+                            <h2 className="sliderTextContainerHeader">{heroText[3].header}</h2>
+                            <h6 className="sliderTextContainerBody">{heroText[3].body}</h6>
+                        </div>
+                        <img src={heroText[3].image} alt="photo4" className="mySplideImage"/>
+                    </div>
+                </SplideSlide>
+                <SplideSlide>
+                    <div className="img-gradient">
+                        <div className="sliderTextContainer">
+                            <h2 className="sliderTextContainerHeader">{heroText[4].header}</h2>
+                            <h6 className="sliderTextContainerBody">{heroText[4].body}</h6>
+                        </div>
+                        <img src={heroText[4].image} alt="photo5" className="mySplideImage"/>
+                    </div>
+                </SplideSlide>
             </Splide>
         </div>
     );
