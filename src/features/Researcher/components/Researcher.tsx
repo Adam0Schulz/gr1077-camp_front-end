@@ -1,5 +1,5 @@
-import {MoreArrow} from "../../../components/MoreArrow/MoreArrow";
-import {Researcher} from "../../../api/models";
+import {MoreArrow} from "components/MoreArrow/MoreArrow";
+import {Researcher} from "api/models";
 import './Researcher.css'
 
 interface Props {

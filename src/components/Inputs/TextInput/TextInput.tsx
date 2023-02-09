@@ -8,8 +8,8 @@ interface Props {
 
 const TextInput = ({label, def, onChange}: Props) => {
   return (
-    <Form.Group className="mb-3">
-        <Form.Label>{label}</Form.Label>
+    <Form.Group className="mb-3 text-input">
+        {label == '' || !(label) ? <></> : <Form.Label>{label}</Form.Label>}
         <Form.Control type="text" placeholder={label} defaultValue={def} onChange={e => onChange && onChange(e.target.value)}/>
     </Form.Group>
   )
