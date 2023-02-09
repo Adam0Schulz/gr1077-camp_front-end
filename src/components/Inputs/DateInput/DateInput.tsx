@@ -11,8 +11,7 @@ const DateInput = ({ label, onChange, def }: Props) => {
   return (
     <Form.Group className="mb-3">
       <Form.Label>{label}</Form.Label>
-      <Form.Control type="date" value={def?.toString()} onChange={e => onChange(new Date(e.target.value))} />
-      {/* <Form.Control type="date" value={def ? def.toString() : undefined} style={{ backgroundColor: "red" }}/> */}
+      <Form.Control type="date" onChange={e => onChange(new Date(e.target.value))} />
     </Form.Group>
   )
 }

@@ -10,6 +10,8 @@ import {Button} from "react-bootstrap";
 import SignUpBtn from "../../features/Event/components/SignUpBtn/SignUpBtn";
 import Sections from "../../components/Section/Sections";
 import EventSlider from "../../features/Event/components/EventSlider/EventSlider";
+import AdminBar from "../../components/AdminBar/AdminBar";
+import AdminButton from "../../components/AdminButton/AdminButton";
 import {ScrollDownArrow} from "../../components/ScrollDownArrow/ScrollDownArrow";
 
 
@@ -29,6 +31,11 @@ const Event = () => {
                 <Navbar activePage='events' />
                 {event &&
                     <>
+                    {localStorage.getItem('isAdmin') ? <AdminBar>
+                            <AdminButton text={'Edit event'} link={'/'} color={'grey'}/>
+                            <AdminButton text={'See participants'} link={'/events/' + event.id + '/participants' } color={'grey'}/>
+                            <AdminButton text={'Delete event'} link={'/'} color={'red'}/>
+                        </AdminBar> : <div/>}
                     <div className="event-grid">
                         <div className="left-grid" >
 
@@ -49,8 +56,8 @@ const Event = () => {
                         <div className="right-grid">
                             {/*//creat button for register*/}
                             <p className="signUpEvent">INTERESTED? SIGNUP!</p>
+                            <SignUpBtn eventId={eventId}  />
 
-                            <SignUpBtn eventId={eventId} />
                             <EventSideBar />
 
                         </div>

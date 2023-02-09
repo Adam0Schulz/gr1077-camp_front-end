@@ -22,13 +22,14 @@ const create = async (newEvent: NewEvent): Promise<Event> => {
 }
 
 const getByParams = async (...param: { name: string, value: string }[]): Promise<Event[]> => {
-    const params = param.map(item => item.name + '=' + item.value + '&')
-    return axios.get("/events?" + params).then(res => res.data).catch(err => { throw err })
+    const params = param.map(item => item.name + '=' + item.value)
+    return axios.get("/events?" + params.join('&')).then(res => res.data).catch(err => { throw err })
 }
 //get by keyword
 const getByKeyword = async (keyword: string): Promise<Event[]> => {
     return axios.get("/events?keyword=" + keyword).then(res => res.data).catch(err => { throw err })
 }
+
 //get by keywoord and state
 const getByKeywordAndState = async (keyword: string, state: string): Promise<Event[]> => {
     return axios.get("/events?keyword=" + keyword + "&state=" + state).then(res => res.data).catch(err => { throw err })

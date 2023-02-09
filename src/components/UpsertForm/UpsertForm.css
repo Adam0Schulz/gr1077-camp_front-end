@@ -1,0 +1,10 @@
+.upsert-form__btn-cont {
+    text-align: right;
+    max-width: 50rem;
+    margin: 0 auto 5em auto;
+
+}
+
+.upsert-form__btn-cont button:first-of-type {
+   margin-right: 1rem;
+}

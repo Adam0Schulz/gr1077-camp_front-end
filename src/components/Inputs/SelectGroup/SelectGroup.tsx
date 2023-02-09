@@ -43,7 +43,7 @@ const SelectGroup = ({ label, defaultText, displayOptions, objectOptions, onChan
   }, [selected]);
 
   return (
-    <div>
+    <div className='select-group'>
       <Form.Label>{label}</Form.Label>
       {selected.map((item, index) => (
         <SelectInput
@@ -56,7 +56,8 @@ const SelectGroup = ({ label, defaultText, displayOptions, objectOptions, onChan
         />
       ))}
       <button
-        disabled={selected.length === displayOptions.length}
+        className='select-group__btn'
+        disabled={selected.length >= displayOptions.length}
         onClick={(e) => setSelected([...selected, { id: 0 }])}
       >
         +

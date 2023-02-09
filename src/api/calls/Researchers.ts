@@ -1,5 +1,6 @@
-import { Researcher } from 'api/models'
+
 import axios from 'lib/axios.config'
+import {Researcher} from 'api/models'
 
 const get = async (): Promise<Researcher[]> => {
     return axios.get("/researchers").then(res => res.data).catch(err => { throw err })
@@ -34,3 +35,4 @@ export {
     // create,
     getByParams
 }
+
