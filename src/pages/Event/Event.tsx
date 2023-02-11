@@ -32,9 +32,9 @@ const Event = () => {
                 {event &&
                     <>
                     {localStorage.getItem('isAdmin') ? <AdminBar>
-                            <AdminButton text={'Edit event'} link={'/'} color={'grey'}/>
+                            {/* <AdminButton text={'Edit event'} link={'/'} color={'grey'}/> */}
                             <AdminButton text={'See participants'} link={'/events/' + event.id + '/participants' } color={'grey'}/>
-                            <AdminButton text={'Delete event'} link={'/'} color={'red'}/>
+                            <AdminButton text={'Delete event'} link={''} color={'red'}/>
                         </AdminBar> : <div/>}
                     <div className="event-grid">
                         <div className="left-grid" >

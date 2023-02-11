@@ -1,7 +1,7 @@
 import './ImageInput.css'
 import uploadImageDark from 'assets/icons/upload.svg'
 import uploadImageLight from 'assets/icons/upload_light.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Form from 'react-bootstrap/Form'
 import TextInput from '../TextInput/TextInput'
@@ -56,31 +56,32 @@ const ImageInput = ({ image, onChange }: Props) => {
       .catch((error: any) => console.log(error)))
   }
 
-  const imageExists = img.url != '' && !(image?.url)
+
+  useEffect(() => {
+    if(onChange) {
+      onChange(img)
+    }
+  }, [img])
+
+  
 
   return (
     <>
 
       <Form.Label>Image</Form.Label>
-      <div className='image-input' style={imageExists ? { backgroundColor: 'rgba(0,0,0,0.5)' } : {}} >
+      <div className='image-input' style={img.url ? { backgroundColor: 'rgba(0,0,0,0.5)' } : {}} >
         {img.url != '' &&
           <img className='image-input__preview' src={img.url} />
         }
-
-        {image?.url != '' && image ?
-          <img className='image-input__preview' src={image.url} />
-          :
-          <></>
-        }
         <input className='image-input__input' onChange={e => handleUpload(e.target.files)} type={'file'} />
-        <div className='image-input__hint' style={!imageExists ? { color: 'var(--color-gray-dark)' } : { color: 'white' }}>
-          <img src={!imageExists ? uploadImageDark : uploadImageLight} />
+        <div className='image-input__hint' style={!img.url ? { color: 'var(--color-gray-dark)' } : { color: 'white' }}>
+          <img src={!img.url ? uploadImageDark : uploadImageLight} />
           <h5>Drag & drop an image here</h5>
           <h5>or</h5>
           <button>Choose file</button>
         </div>
       </div>
-      <TextInput label='Image Caption' def={image?.caption} onChange={(text) => { setImg({ ...img, caption: text }); onChange && onChange({ url: img.url, caption: text }) }} />
+      <TextInput label='Image Caption' def={image?.caption} onChange={(text) => { setImg({ ...img, caption: text }) }} />
     </>
   )
 }

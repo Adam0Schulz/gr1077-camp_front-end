@@ -78,18 +78,18 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row = 1 }: Props)
 
             <img className='event-card__icon' src={calendarDarkIcon} />
             <div className='event-card__textarea'>
-              <Link to={'/events/' + event.id} >
+              <a href={'/events/' + event.id} >
                 <div className='img_cont event-card__image-cont'>
                   <img className={'event-card__image ' + state.toLocaleLowerCase() + ' event-card__scaleHover'} src={event.image.url} alt={event.image.caption} />
                 </div>
-              </Link>
+              </a>
 
               <div className='event-card__text'>
                 <h3 className='event-card__heading'>{event.name}</h3>
                 <p className='event-card__paragraph'>{paragraphText}</p>
-                <Link to={'/events/' + event.id} className={'event-card__more-btn'}>
+                <a href={'/events/' + event.id} className={'event-card__more-btn'}>
                   <MoreArrow />
-                </Link>
+                </a>
               </div>
             </div>
 

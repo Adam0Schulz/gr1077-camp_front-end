@@ -93,11 +93,12 @@ a:hover {
 .page-heading {
     display: flex;
     justify-content: space-between;
-    margin: 4rem 0 5.6rem calc(var(--page-margin) * 3) ;
+    margin: 4rem 0 5.6rem calc(var(--page-margin) * 3);
 }
 
 .page-cont {
     margin: 0 5vw;
+    min-height: 100vh;
 }
 
 .img_cont {
@@ -110,7 +111,7 @@ img {
 
 .btn-p,
 .btn-s {
-    padding: 1rem 3rem ;
+    padding: 1rem 3rem;
 }
 
 .btn-p {
