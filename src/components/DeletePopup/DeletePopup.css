@@ -1,0 +1,42 @@
+.delete-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(7px);
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.delete-popup__body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    border-radius: .7rem;
+    min-width: 20em;
+    width: 40vw;
+    max-width: 30em;
+    text-align: center;
+}
+
+.delete-popup__paragraph {
+    color: var(--color-gray-dark);
+}
+
+.delete-popup__icon-cont {
+    margin-bottom: 1rem;
+}
+
+.delete-popup__paragraph {
+    margin-bottom: 2rem;
+}
+
+.delete-popup__btn.btn-s {
+    margin-right: 2rem;
+}

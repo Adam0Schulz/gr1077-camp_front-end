@@ -13,6 +13,7 @@ import EventSlider from "../../features/Event/components/EventSlider/EventSlider
 import AdminBar from "../../components/AdminBar/AdminBar";
 import AdminButton from "../../components/AdminButton/AdminButton";
 import {ScrollDownArrow} from "../../components/ScrollDownArrow/ScrollDownArrow";
+import DeletePopup from "components/DeletePopup/DeletePopup";
 
 
 const Event = () => {
@@ -23,10 +24,10 @@ const Event = () => {
     if (isError) <>Oops! Something went wrong!</>
 
 
-    // @ts-ignore
+    
     return (
         <>
-
+            <DeletePopup type="event" />
             <div className="page-cont">
                 <Navbar activePage='events' />
                 {event &&
@@ -54,7 +55,7 @@ const Event = () => {
 
                         </div>
                         <div className="right-grid">
-                            {/*//creat button for register*/}
+                            {/*//create button for register*/}
                             <p className="signUpEvent">INTERESTED? SIGNUP!</p>
                             <SignUpBtn eventId={eventId}  />
 
