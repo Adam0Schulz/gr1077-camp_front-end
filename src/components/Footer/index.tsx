@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Footer = () => {
-    //make a footer component
+    
 
     const handleLogin = () => {
         const loggedIn = localStorage.getItem('isAdmin')
@@ -72,8 +72,8 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <button  onClick={handleLogin} className="text-light ">CAMPnet</button>
-                                    <a href="" className=" link-secondary m-4">
+                                    <a onClick={handleLogin} className="text-light camp-net-link">CAMPnet</a>
+                                    <a onClick={handleLogin} className=" link-secondary m-4 camp-net-link">
                                         <i className="fab fa-login"></i>
                                         <img
                                             src= {window.location.origin+/Photos/+"login.svg"} alt="login" className="login">
