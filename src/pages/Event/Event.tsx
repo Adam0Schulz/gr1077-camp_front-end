@@ -3,7 +3,7 @@ import "./Event.css"
 import PostHeader from "../../features/Event/components/PostHeader/PostHeader";
 import Footer from "../../components/Footer";
 import { useParams } from "react-router-dom";
-import { useEventById } from "../../features/Event/hooks/UseAllEvents";
+import { useDeleteEventById, useEventById } from "../../features/Event/hooks/UseAllEvents";
 import Navbar from "components/Navbar";
 import { isError } from "react-query";
 import {Button} from "react-bootstrap";
@@ -15,19 +15,22 @@ import AdminButton from "../../components/AdminButton/AdminButton";
 import {ScrollDownArrow} from "../../components/ScrollDownArrow/ScrollDownArrow";
 import DeletePopup from "components/DeletePopup/DeletePopup";
 
+interface Props {
+    del?: boolean
+}
 
-const Event = () => {
+
+const Event = ({del}: Props) => {
     const eventId = Number(useParams().id);
     const { data: event, isLoading, isError, error, isFetching } = useEventById(eventId as number);
+    const {mutate: deleteEvent} = useDeleteEventById(eventId)
 
     if (isLoading) <>Loading...</>
     if (isError) <>Oops! Something went wrong!</>
-
-
     
     return (
         <>
-            <DeletePopup type="event" />
+            {del ? <DeletePopup type="event" onCancelLink={"/events/" + eventId} onDeleteLink={"/events"} deleteFunc={() => deleteEvent(eventId)}/> : <></>}
             <div className="page-cont">
                 <Navbar activePage='events' />
                 {event &&
@@ -35,7 +38,7 @@ const Event = () => {
                     {localStorage.getItem('isAdmin') ? <AdminBar>
                             {/* <AdminButton text={'Edit event'} link={'/'} color={'grey'}/> */}
                             <AdminButton text={'See participants'} link={'/events/' + event.id + '/participants' } color={'grey'}/>
-                            <AdminButton text={'Delete event'} link={''} color={'red'}/>
+                            <AdminButton text={'Delete event'} link={'delete'} color={'red'}/>
                         </AdminBar> : <div/>}
                     <div className="event-grid">
                         <div className="left-grid" >

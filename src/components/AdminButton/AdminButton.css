@@ -9,9 +9,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: 13px;
+    border-radius: .5rem;
     font-size: 1.1rem;
     font-weight: 500;
+    border: none;
 }
 
 .red-admin {

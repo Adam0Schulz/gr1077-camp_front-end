@@ -114,6 +114,7 @@ img {
 .btn-p,
 .btn-s {
     padding: 1rem 3rem;
+    width: fit-content !important;
     transition: all .1s ease-in-out;
 }
 
