@@ -1,6 +1,5 @@
 .description {
     margin: 5em 0;
-    min-height: 30rem;
 }
 
 .description__btns button {
@@ -10,6 +9,10 @@
     border: none;
     padding: .25em 1em;
     margin-right: 2em;
+}
+
+.description__btns {
+    text-align: center;
 }
 
 .description__section-inputs, .description__btns {
