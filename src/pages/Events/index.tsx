@@ -6,10 +6,14 @@ import './style.css'
 import AdminButton from "../../components/AdminButton/AdminButton";
 import AdminBar from "../../components/AdminBar/AdminBar";
 import {useState} from "react";
+import TextInput from "components/Inputs/TextInput/TextInput";
+import useDebounce from "hooks/useDebounce";
 
 const Events = () => {
 
+    
     const [searchKeyword, setSearchKeyword] = useState<string>("")
+    const debouncedKeyword = useDebounce(searchKeyword, 400);
 
     return (
         <>
@@ -20,21 +24,15 @@ const Events = () => {
                 <h2>Events</h2>
                 {/* input component here */}
                 <div>
-             {/*//search and map in events by keyword input*/}
-                    <input type={"text"} onChange={e => setSearchKeyword(e.target.value)}/>
+                    <TextInput search={true} label="" placeholder="Search" onChange={(text) => setSearchKeyword(text)} />
                 </div>
             </div>
-            {/*<div className="splidetrack">
-                { events && events.map(event => 
-                <EventCard key={event.id} size='small' event={event} /> 
-                )}
-                </div>*/}
 
             {localStorage.getItem('isAdmin') ?  <AdminBar>
-                <AdminButton text={'New event'} link={'/'} color={'red'}/>
+                <AdminButton text={'New event'} link={'/events/new'} color={'red'}/>
             </AdminBar> : <div/>}
 
-            <EventsTimeline searchKeyword={searchKeyword}/>
+            <EventsTimeline searchKeyword={debouncedKeyword}/>
 
         </div>
         <Footer />

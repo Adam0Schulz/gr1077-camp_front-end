@@ -5,6 +5,7 @@ import calendarDarkIcon from 'assets/icons/calendar-darkbg.svg'
 import { Link } from 'react-router-dom'
 import { EventState } from 'api/enums'
 import { useRef } from 'react'
+import { MoreArrow } from 'components/MoreArrow/MoreArrow'
 
 interface Props {
   size: 'large' | 'small',
@@ -77,18 +78,18 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row = 1 }: Props)
 
             <img className='event-card__icon' src={calendarDarkIcon} />
             <div className='event-card__textarea'>
-              <Link to={'/events/' + event.id} >
+              <a href={'/events/' + event.id} >
                 <div className='img_cont event-card__image-cont'>
                   <img className={'event-card__image ' + state.toLocaleLowerCase() + ' event-card__scaleHover'} src={event.image.url} alt={event.image.caption} />
                 </div>
-              </Link>
+              </a>
 
               <div className='event-card__text'>
                 <h3 className='event-card__heading'>{event.name}</h3>
                 <p className='event-card__paragraph'>{paragraphText}</p>
-                <Link to={'/events/' + event.id} >
-                  <button className='event-card__scaleHover'>More {'>'}</button>
-                </Link>
+                <a href={'/events/' + event.id} className={'event-card__more-btn'}>
+                  <MoreArrow />
+                </a>
               </div>
             </div>
 

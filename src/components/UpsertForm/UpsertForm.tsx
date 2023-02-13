@@ -137,8 +137,8 @@ const UpsertForm = ({ object, type }: Props) => {
 
 
             <div className='upsert-form__btn-cont'>
-                <button className='btn btn-s'>Cancel</button>
-                <button className='btn btn-p' onClick={() => object ? edit((upsertEvent as Event)) : create(upsertEvent)}>Save</button>
+                <button className='btn btn-s' onClick={() => window.location.href = "/events"}>Cancel</button>
+                <button className='btn btn-p' onClick={() => {object ? edit((upsertEvent as Event)) : create(upsertEvent); window.location.href = "/events"}}>Save</button>
             </div>
         </>
     )

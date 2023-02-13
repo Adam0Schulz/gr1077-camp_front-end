@@ -21,7 +21,7 @@ const ResearcherCard = ({researcher} : Props) => {
                 <p>{researcher.telephone}</p>
                 <p>{researcher.email}</p>
             </div>
-            <p className='researcher-profile'>{researcher.profile}</p>
+            <a className='researcher-profile' href={researcher.profile}>Visit KU profile</a>
             <MoreArrow/>
         </div>
     )
