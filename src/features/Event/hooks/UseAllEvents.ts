@@ -70,14 +70,14 @@ export const useEventsByState = (state: EventState) => {
 }
 
 //delete by id and update cache after delete is successful
-export const useDeleteEventById = (id:number) => {
+export const useDeleteEventById = (id: number) => {
     const queryClientDelete = useQueryClient();
     return useMutation<Event,Error, number>(
         del,
         {
             //refresh all activities after delete
             onSuccess: () => {
-                queryClientDelete.invalidateQueries("eventsDelete").catch(err => { throw err})
+                queryClientDelete.invalidateQueries("events")
                 toast.success("Event deleted successfully")
             },
             onError: () => {
@@ -95,7 +95,7 @@ export const useCreateEvent = () => {
         {
             //refresh all activities after delete
             onSuccess: () => {
-                queryClientCreate.invalidateQueries("eventsCreate").catch(err => { throw err})
+                queryClientCreate.invalidateQueries("events")
                 toast.success("Event created successfully")
             },
             onError: () => {

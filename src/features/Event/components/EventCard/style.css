@@ -287,6 +287,10 @@
     filter: grayscale(0%);
 }
 
+.event-card__more-btn {
+    color: black;
+}
+
 @media (max-width: 1387px) {
     .event-card--large .event-card__paragraph {
         -webkit-line-clamp: 2;

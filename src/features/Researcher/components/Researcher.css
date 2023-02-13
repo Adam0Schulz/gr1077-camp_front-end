@@ -7,6 +7,19 @@
     width: 20%;
     height: 20%;
     padding: 2rem;
+    position: relative;
+}
+
+.researcher-card::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -30%;
+    width: 158%;
+    height: 38%;
+    background-color: #D9D9D9;
+    z-index: -100;
 }
 
 .researcher-profile-img {

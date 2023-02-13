@@ -3,6 +3,7 @@
     height: 30px;
     width: 90px;
     align-items: center;
+    cursor: pointer;
 }
 .moreArrowText{
 font-weight: 600;

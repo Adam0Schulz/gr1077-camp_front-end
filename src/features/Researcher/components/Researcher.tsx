@@ -7,11 +7,11 @@ interface Props {
 }
 
 
-const ResearcherCard = ({researcher}: Props) => {
+const ResearcherCard = ({researcher} : Props) => {
     return (
         <div className='researcher-card'>
 
-            <img src={researcher.profileImage.url} className='researcher-profile-img'/>
+                <img src={researcher.profileImage.url} className='researcher-profile-img' />
 
             <div className='researcher-name'>
                 <h5>{researcher.firstName} {researcher.lastName}</h5>
@@ -21,9 +21,7 @@ const ResearcherCard = ({researcher}: Props) => {
                 <p>{researcher.telephone}</p>
                 <p>{researcher.email}</p>
             </div>
-            <a className='researcher-profile' href={`${researcher.profile}`}>
-                <p >Profile</p>
-            </a>
+            <a className='researcher-profile' href={researcher.profile}>Visit KU profile</a>
             <MoreArrow/>
         </div>
     )

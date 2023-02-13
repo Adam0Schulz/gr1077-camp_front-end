@@ -9,9 +9,11 @@ root {
 
     /******* Variables *******/
     --color-primary: #901A1E;
+    --color-primary-hover: #801014;
     --color-bg: #EFEFEF;
     --color-black: #262526;
     --color-gray-light: #CCCBCC;
+    --color-gray-light-hover: #DDDDDD;
     --color-gray-dark: #747681;
     --color-white: #ffffff;
     --color-gray-inputBorder: #ced4da;
@@ -97,11 +99,12 @@ a:hover {
 .page-heading {
     display: flex;
     justify-content: space-between;
-    margin: 4rem 0 5.6rem calc(var(--page-margin) * 3) ;
+    margin: 4rem 0 5.6rem calc(var(--page-margin) * 3);
 }
 
 .page-cont {
     margin: 0 5vw;
+    min-height: 100vh;
 }
 
 .img_cont {
@@ -114,16 +117,36 @@ img {
 
 .btn-p,
 .btn-s {
-    padding: 1rem 3rem ;
+    padding: 1rem 3rem;
+    width: fit-content !important;
+    transition: all .1s ease-in-out;
+}
+
+.btn-p:active,
+.btn-s:active {
+    transform: scale(0.95);
 }
 
 .btn-p {
     background-color: var(--color-primary) !important;
     color: white;
+    
+}
 
+.btn-p:hover {
+    background-color: var(--color-primary-hover) !important;
+    color: white;
+}
+
+.btn-p:active, .btn-p:focus-visible {
+    color: white !important;
 }
 
 .btn-s {
     background-color: var(--color-gray-light) !important;
     color: black;
+}
+
+.btn-s:hover {
+    background-color: var(--color-gray-light-hover) !important;
 }
