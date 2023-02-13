@@ -16,7 +16,7 @@ const Contact  = () => {
                 <div className="grid-container">
                     <div className="grid-item1">
                         {/*//make form for contact us bootstrap*/}
-                        <h3>CONTACT US</h3>
+                        <h2>CONTACT US</h2>
                         <ContactForm/>
                     </div>
                     <div className="grid-item2">
