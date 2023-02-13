@@ -1,7 +1,6 @@
 .when {
   color: #901A1E;
   font-size: 18px;
-  font-family: "open sans";
   weight: 600;
   align: center;
   letter:0.3px;
@@ -12,7 +11,6 @@
 .wear {
   color: #901A1E;
   font-size: 18px;
-  font-family: "open sans";
   weight: 600;
   align: center;
   letter:0.3px;
@@ -23,7 +21,7 @@
 .who {
   color: #901A1E;
   font-size: 18px;
-  font-family: "open sans";
+
   weight: 600;
   align: center;
   letter:0.3px;
@@ -35,7 +33,6 @@
 .date {
   color: #262526;
   font-size: 18px;
-  font-family: "open sans";
   weight: 600;
   align: center;
   letter:0.3px;
@@ -45,7 +42,7 @@
 .researchersTitle {
   color: #901A1E;
   font-size: 12px;
-  font-family: "open sans";
+
   font-weight: bold;
 
 }
@@ -59,13 +56,17 @@
 .externalTitle {
   color: #901A1E;
   font-size: 12px;
-  font-family: "open sans";
+
   font-weight: bold;
 
 }
 
 .line {
   border-bottom: 2px solid #CCCBCC !important;
+  /*border bottem margin 10%*/
+
+
+
   border-top: 2px solid #CCCBCC !important;
   width: 80%;
   margin-left: 10%;
@@ -85,12 +86,14 @@
 .externalEmail {
   color: #747681;
   font-size: 12px;
+  margin-bottom: 5%;
 
 }
 
 .researchersEmail {
   color: #747681;
   font-size: 12px;
+  margin-bottom: 5%;
 
 
 }
@@ -186,6 +189,7 @@
 }
 .researchersEmail{
   margin-top: -7%;
+
 }
 .externalEmail {
   padding-top: 5%;

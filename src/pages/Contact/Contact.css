@@ -13,8 +13,6 @@
 }
 .grid-item1 {
     margin-right: 10%;
-
-
 }
 .grid-item2 {
     padding-left: 1%;
@@ -25,16 +23,21 @@
     .grid-item2 {
         padding-left: 0;
         padding-right: 20%;
-
     }
 }
-/*for between 600px and 800px*/
+/*for between 600px and 800px make a small size*/
 @media screen and (min-width: 600px) and (max-width: 800px) {
     .grid-item2 {
         padding-left: 0;
-        padding-right: 10%;
-
+        padding-right: 20%;
+        z-index: 0;
     }
+    .grid-item3 {
+        padding-left: 0;
+        padding-right: 20%;
+        z-index: 0;
+    }
+
 }
 .grid-item3{
     color: #901A1E!important;
@@ -85,6 +88,7 @@
 
 .address{
     color: #901A1E!important;
+
 }
 .address2{
     font-size: 16px;

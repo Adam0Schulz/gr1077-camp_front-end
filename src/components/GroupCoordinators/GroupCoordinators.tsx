@@ -59,7 +59,8 @@ const GroupCoordinators  = () => {
                             </thead>
                             <tbody>
                             <tr>
-                                <td><td className="group3-title"> {researcher2?.title}</td></td>
+
+                                <td><td className="group3-title "> {researcher2?.title}</td></td>
                             </tr>
                             <tr>
                                 <td><td className="group3-email"> {researcher2?.email}</td></td>
