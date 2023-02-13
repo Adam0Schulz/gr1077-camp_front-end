@@ -113,6 +113,7 @@ export interface NewParticipant extends NewObject, Person {
 export interface Room extends DBObject {
     name: string,
     capacity: number,
+    location: Location
 
     // could be a string
 }
@@ -155,12 +156,19 @@ export interface NewLinkSection extends NewSection {
     link: string,
 }
 
+export const NewLocationObj: Location = {
+    id: 1,
+    address: "Øster Farimagsgade 5 DK-1353 Copenhagen K",
+    roomSet: [],
+}
+
 export const NewEventObj: NewEvent = {
     name: '',
     room: {
         id: 0,
         name: '',
-        capacity: 0
+        capacity: 0,
+        location: NewLocationObj
     },
     date: new Date(),
     startTime: '100:00:00', // could be improved
