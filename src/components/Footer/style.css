@@ -17,6 +17,12 @@
   font-size: 14px;
 
 }
+
+.camp-net-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .paragraph2{
   color: #fff;
   font-size: 12px;

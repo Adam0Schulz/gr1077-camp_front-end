@@ -1,6 +1,6 @@
 .filter-select {
     background-color: rgba(0, 0, 0, 0);
-    border: 1px solid var(--color-gray-light);
+    border: 1px solid var(--color-gray-light) !important;
     padding: .6em 2em;
     font-size: 18px;
     font-weight: 700;

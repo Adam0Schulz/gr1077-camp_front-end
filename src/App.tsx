@@ -26,6 +26,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path='/events/new' element={<NewEvent />} />
         <Route path="/events/:id" element={<><Event /></>} />
+        <Route path="/events/:id/delete" element={<><Event del={true}/></>} />
         <Route path="/events/:id/participants" element={<Participants/>}/>
         <Route path="/events/:id/register-to-event" element={<RegisterToEventPage />} />
         <Route path="/about" element={<> <AboutPage/></>} />
