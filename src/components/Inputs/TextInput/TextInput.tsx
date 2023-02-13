@@ -15,7 +15,7 @@ const TextInput = ({ label, def, onChange, placeholder, search }: Props) => {
     <Form.Group className="mb-3 text-input">
       {label == '' || !(label) ? <></> : <Form.Label>{label}</Form.Label>}
       {search ? <img className='text-input__search-icon' src={searchIcon} /> : <></>}
-      <Form.Control className='text-input__form-control' type="text" placeholder={placeholder ? placeholder : label} defaultValue={def} onChange={e => onChange && onChange(e.target.value)} />
+      <Form.Control className={search ? 'text-input__form-control' : ''} type="text" placeholder={placeholder ? placeholder : label} defaultValue={def} onChange={e => onChange && onChange(e.target.value)} />
     </Form.Group>
   )
 }
