@@ -17,13 +17,16 @@ export const EventDescription = ({event}: Props) => {
                 {eventDescriptionText.time}
             </div>
             <h5>
-                {event.date + " " + "from " + event.startTime + " until " + event.endTime}
+                {event.date + " " + "from " + event.startTime.toString().slice(0,5) + " until " + event.endTime.toString().slice(0,5)}
             </h5>
             <div className={"event-description-line"}>
                 {eventDescriptionText.place}
             </div>
             <h5>
-                {"room " + event.room.name + " at " + location?.address}
+                {event.room.name + " at:"}
+            </h5>
+            <h5>
+                {event.room.location?.address}
             </h5>
             <div className={"event-description-line"}>
                 {eventDescriptionText.contact}

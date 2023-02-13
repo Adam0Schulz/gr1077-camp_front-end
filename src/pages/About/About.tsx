@@ -104,6 +104,9 @@ export const AboutPage = () => {
                     imageSectionSet: [],
                     linkSectionSet: []}
                 }/>
+                <div style={{marginTop: '5%'}}>
+
+                </div>
             </div>
             <Footer/>
         </>

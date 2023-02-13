@@ -105,11 +105,11 @@ export const RegisterToEventForm = () => {
                             </div>
                         </div>
                         <div className={"row-cols-md-6"}>
-                            <Button className="cancelButtonR btn-s"
+                            <Button className="cancelButtonR btn"
                                     onClick={() => handleSubmit()}>
                                 Cancel
                             </Button>
-                            <Button className="registerButtonR btn-p" 
+                            <Button className="registerButtonR btn"
                                     onClick={() => handleSubmit()}>
                                 Register
                             </Button>

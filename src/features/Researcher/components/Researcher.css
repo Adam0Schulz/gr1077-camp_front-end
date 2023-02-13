@@ -5,6 +5,7 @@
     text-align: center;
     gap: 1rem;
     width: 20%;
+    height: 20%;
     padding: 2rem;
     position: relative;
 }
@@ -34,6 +35,7 @@
     font-size: 21px;
     line-height: 150%;
     margin: 0;
+    height: 4.5vw;
 }
 
 .researcher-name > p {
@@ -42,6 +44,7 @@
     font-size: 18px;
     line-height: 150%;
     margin: 0;
+    height: 3vw;
 }
 
 .researcher-contact {
@@ -53,6 +56,7 @@
 .researcher-contact > p {
     margin: 0;
     font-size: 14px;
+    height: 1.5vw;
 }
 
 .researcher-profile {
@@ -61,4 +65,5 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
+
 
