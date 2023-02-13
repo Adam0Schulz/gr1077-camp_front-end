@@ -186,6 +186,8 @@
 }
 .researchersTitle{
   margin-top: -7%;
+  padding-left: 0%;
+  padding-right: 25%;
 }
 .researchersEmail{
   margin-top: -7%;
@@ -202,4 +204,6 @@
 }
 .externalEmail {
   margin-top: -7%;
+  padding-left: 0%;
+  padding-right: 25%;
 }
