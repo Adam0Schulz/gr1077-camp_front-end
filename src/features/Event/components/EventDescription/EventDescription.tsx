@@ -12,7 +12,7 @@ export const EventDescription = ({event}: Props) => {
     //const date: Date = event.date;
     //toDateString?
     return (
-        <div style={{margin: "1em 9.5em"}}>
+        <div style={{margin: "1em 9.5em 5em 9.5em"}}>
             <div className={"event-description-line"}>
                 {eventDescriptionText.time}
             </div>

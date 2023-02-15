@@ -11,7 +11,7 @@ function HeroSlider() {
             <ScrollDownArrow color={"white"}/>
             <Splide className={"hero-slider"}
                 options={{
-                    type: 'loop',
+                    type: 'fade',
                     autoplay: true,
                     speed: 2500,
                     interval: 8000,

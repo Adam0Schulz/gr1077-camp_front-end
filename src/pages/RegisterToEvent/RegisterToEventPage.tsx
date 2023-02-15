@@ -22,12 +22,13 @@ export const RegisterToEventPage = () => {
                     <div>
                         {event && <PostHeader page={event}/>}
                         {event && <EventDescription event={event}/>}
+                        <RegisterToEventForm/>
                     </div>
                     <div style={{marginTop: "3.2 em"}}>
                         <EventSideBar/>
                     </div>
                 </div>
-                <RegisterToEventForm/>
+
             </div>
             <Footer/>
         </div>
