@@ -11,7 +11,7 @@
     background-color: var(--color-gray-light);
 }
 .r-wrapper {
-    width: 73%;
+    width: 90%;
     display: grid;
     grid-template-columns: 99.9% 0.01%;
     margin: 0;

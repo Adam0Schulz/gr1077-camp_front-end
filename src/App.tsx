@@ -15,6 +15,7 @@ import Participants from "./pages/Participants/Participants";
 import Researchers from "./pages/Reseachers/Researchers";
 import {Contact} from "./pages/Contact/Contact";
 import {AboutPage} from "./pages/About/About";
+import BlogPage from "./pages/Blog/BlogPage";
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         <Route path="/about" element={<> <AboutPage/></>} />
         <Route path="/researchers" element={<Researchers/>} />
         <Route path="/contact" element={<><Contact/></>} />
-        <Route path="/blog" element={<><Navbar activePage='blog' /><Footer /></>} />
+        <Route path="/blog" element={<><BlogPage/></>} />
       </Routes>
       <ToastContainer />
     </BrowserRouter>
