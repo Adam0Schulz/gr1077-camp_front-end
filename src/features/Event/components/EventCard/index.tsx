@@ -23,13 +23,13 @@ const EventCard = ({ size, event, state = EventState.UPCOMING, row = 1 }: Props)
   if (event.paragraphSectionSet) <>oops theres something wrong</>
   if (event.paragraphSectionSet.length != 0) {
 
-    const paragraphsSeq = event.paragraphSectionSet.map(paragraph => paragraph.id)
+    const paragraphsSeq = event.paragraphSectionSet.map(paragraph => paragraph.seq)
     const paragraph =
       event
         .paragraphSectionSet
         .filter(
           item =>
-            item.id == Math.min(...paragraphsSeq)
+            item.seq == Math.min(...paragraphsSeq)
         )[0] as ParagraphSection
     paragraphText = paragraph.text
   }
