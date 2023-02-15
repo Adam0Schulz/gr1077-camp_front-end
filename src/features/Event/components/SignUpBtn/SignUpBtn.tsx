@@ -10,7 +10,7 @@ interface Props {
 const SignUpBtn = ({eventId}:Props) => {
 
     return (
-        <div>
+        <div className="sign-up-btn">
             <Link to= {"/events/"+ eventId +"/register-to-event"}>
                 <Button  className="registerButton" variant="primary" size="lg" >
                     SIGN UP
