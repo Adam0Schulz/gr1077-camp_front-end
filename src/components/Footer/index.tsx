@@ -90,40 +90,43 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="" className="me-4 link-secondary">
+                                    <a href="https://www.facebook.com/universitet" className="me-4 link-secondary">
                                         <i className="bi bi-facebook"></i>
                                         <img
                                             src= {window.location.origin+/Photos/+"facebook.svg"} alt="facebook" className="facebook">
                                         </img>
                                     </a>
-                                    <a href="components/Footer/Footer.tsx" className="text-light ">Facebook</a>
+                                    {/*<a href="components/Footer/Footer.tsx" className="text-light ">Facebook</a>*/}
+                                    {/*click on linkand going to face book page*/}
+                                    <a href="https://www.facebook.com/universitet" className="text-light ">Facebook</a>
+
                                 </li>
                                 <li>
-                                    <a href="" className="me-4 link-secondary">
+                                    <a href="https://www.instagram.com/university_of_copenhagen/" className="me-4 link-secondary">
                                         <i className="fab fa-instagram"></i>
                                         <img
                                             src= {window.location.origin+/Photos/+"instagram.svg"} alt="facebook" className="facebook">
                                         </img>
                                     </a>
-                                    <a href="components/Footer/Footer.tsx" className="text-light">Instagram</a>
+                                    <a href="https://www.instagram.com/university_of_copenhagen/" className="text-light">Instagram</a>
                                 </li>
                                 <li>
-                                    <a href="" className="me-4 link-secondary">
+                                    <a href="https://twitter.com/koebenhavns_uni" className="me-4 link-secondary">
                                         <i className="fab fa-twitter"></i>
                                         <img
                                             src= {window.location.origin+/Photos/+"twitter.svg"} alt="facebook" className="facebook">
                                         </img>
                                     </a>
-                                    <a href="components/Footer/Footer.tsx" className="text-light">Twitter</a>
+                                    <a href="https://twitter.com/koebenhavns_uni" className="text-light">Twitter</a>
                                 </li>
                                 <li>
-                                    <a href="" className="me-4 link-secondary">
+                                    <a href="https://www.linkedin.com/school/university-of-copenhagen/" className="me-4 link-secondary">
                                         <i className="fab fa-linkedin"></i>
                                         <img
                                             src= {window.location.origin+/Photos/+"linkedin.svg"} alt="facebook" className="facebook">
                                         </img>
                                     </a>
-                                    <a href="components/Footer/Footer.tsx" className="text-light">Linkedin</a>
+                                    <a href="https://www.linkedin.com/school/university-of-copenhagen/" className="text-light">Linkedin</a>
                                 </li>
                             </ul>
                         </div>
@@ -143,9 +146,11 @@ const Footer = () => {
                                 <li>
                                     <a href="" className="me-4 link-secondary">
                                         <i className="fab fa-call"></i>
+
                                         <img
                                             src= {window.location.origin+/Photos/+"call.svg"} alt="call" className="call">
                                         </img>
+
                                     </a>
                                     <a href="" className="text-light">+45 74 85 34 99</a>
                                 </li>

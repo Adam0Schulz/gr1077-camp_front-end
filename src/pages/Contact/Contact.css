@@ -4,8 +4,6 @@
     grid-template-columns: 36.5% 36.5% 21.2%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-
-
 }
 .grid-item-grid-container-3-2 {
     display: grid;
@@ -13,8 +11,6 @@
 }
 .grid-item1 {
     margin-right: 10%;
-
-
 }
 .grid-item2 {
     padding-left: 1%;
@@ -25,15 +21,49 @@
     .grid-item2 {
         padding-left: 0;
         padding-right: 20%;
-
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
     }
 }
-/*for between 600px and 800px*/
+/*for between 600px and 800px make a small size*/
 @media screen and (min-width: 600px) and (max-width: 800px) {
     .grid-item2 {
         padding-left: 0;
-        padding-right: 10%;
-
+        padding-right: 20%;
+        z-index: 0;
+    }
+    .grid-item3 {
+        padding-left: 0;
+        padding-right: 20%;
+        z-index: 0;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .grid-item2 {
+        padding-left: 0;
+        padding-right: 20%;
+        z-index: 0;
+    }
+    .grid-item3 {
+        padding-left: 0;
+        padding-right: 20%;
+        z-index: 0;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
     }
 }
 .grid-item3{
@@ -60,8 +90,6 @@
     font-size: 13px;
     padding-left: 7.5%;
     padding-right: 7.5%;
-
-
 }
 .form-group-contact{
     margin-top: 5%;
@@ -85,6 +113,7 @@
 
 .address{
     color: #901A1E!important;
+
 }
 .address2{
     font-size: 16px;
