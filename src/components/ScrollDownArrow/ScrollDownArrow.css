@@ -1,6 +1,6 @@
 .scrollDownBox {
     position: absolute;
-    left: 1%;
+    left: 2vw;
     top: 17%;
     z-index: 999;
 }
@@ -12,7 +12,7 @@
 .scrollDownText {
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
-    font-size: 1.1vw;
+    font-size: 1rem;
     position: relative;
     left: -16%;
     color: rgba(255, 255, 255, 0.85);

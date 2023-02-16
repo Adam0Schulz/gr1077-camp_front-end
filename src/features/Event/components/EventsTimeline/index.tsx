@@ -28,7 +28,7 @@ const EventsTimeline = ({searchKeyword}: Props) => {
 
     return (
         <div className="event-timeline">
-            <Filter options={[EventState.UPCOMING, EventState.PAST]} action={setState} />
+            <Filter options={[EventState.UPCOMING, EventState.PAST]} action={setState} def={state}/>
             {/* not very nice way to do this - if there are more states this will break down */}
             {events?.map(event => {
                 row += 1

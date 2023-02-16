@@ -7,13 +7,13 @@ const GroupCoordinators  = () => {
     const{data:researcher2} = UseResearcherById(2);
     return(
         <>
-            <div className="grid-item-grid-container-3-2 pt-4">
+            <div className="grid-item-grid-container-3-2">
                 <img src={researcher?.profileImage.url} alt="researcher" className="rounded-circle mt-4" width={70} height={70}/>
 
                 <div className="row-contact-3">
 
                     <div className="col">
-                        <table className="p-1 table table-borderless ">
+                        <table className="table table-borderless ">
 
                             <thead>
                             <tr>
@@ -24,7 +24,7 @@ const GroupCoordinators  = () => {
                             </thead>
                             <tbody>
                             <tr>
-                                <td><td className="group3-title "> {researcher?.title}</td></td>
+                                <td><td className="group3-title"> {researcher?.title}</td></td>
                             </tr>
                             <tr>
                                 <td><td className="group3-email"> {researcher?.email}</td></td>
@@ -60,7 +60,7 @@ const GroupCoordinators  = () => {
                             <tbody>
                             <tr>
 
-                                <td><td className="group3-title "> {researcher2?.title}</td></td>
+                                <td><td className="group3-title"> {researcher2?.title}</td></td>
                             </tr>
                             <tr>
                                 <td><td className="group3-email"> {researcher2?.email}</td></td>

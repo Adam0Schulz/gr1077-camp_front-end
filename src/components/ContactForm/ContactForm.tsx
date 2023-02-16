@@ -2,7 +2,6 @@
 
 import {toast} from "react-toastify";
 import { Button } from "react-bootstrap";
-import React from 'react';
 
 import emailjs from 'emailjs-com';
 
@@ -60,7 +59,7 @@ const ContactForm  = () => {
                     <input type="subject" name="subject" className="form-control contact__form-control" id="exampleFormControlInput1" placeholder="Subject" required/>
                     <label htmlFor="exampleFormControlTextarea1">Message</label>
                     <textarea className="form-control contact__form-control" name="message" id="exampleFormControlTextarea1" rows={4} placeholder="Message" required/>
-                    <Button className="submit" type="submit" value="Send" >Send</Button>
+                    <Button className="submit btn-p" type="submit" value="Send" >Send</Button>
 
                 </div>
             </form>

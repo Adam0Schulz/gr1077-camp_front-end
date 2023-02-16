@@ -1,27 +1,31 @@
-
 .grid-container {
     display: grid;
     grid-template-columns: 36.5% 36.5% 21.2%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
+
 .grid-item-grid-container-3-2 {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 70%;
 }
+
 .grid-item1 {
     margin-right: 10%;
 }
+
 .grid-item2 {
     padding-left: 1%;
     padding-right: 5%;
 }
+
 /*//grid-item2 for different screen size*/
 @media screen and (max-width: 600px) {
     .grid-item2 {
         padding-left: 0;
         padding-right: 20%;
     }
+
     .grid-container {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -29,6 +33,7 @@
         margin-bottom: 2.5%;
     }
 }
+
 /*for between 600px and 800px make a small size*/
 @media screen and (min-width: 600px) and (max-width: 800px) {
     .grid-item2 {
@@ -36,11 +41,13 @@
         padding-right: 20%;
         z-index: 0;
     }
+
     .grid-item3 {
         padding-left: 0;
         padding-right: 20%;
         z-index: 0;
     }
+
     .grid-container {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -48,17 +55,20 @@
         margin-bottom: 2.5%;
     }
 }
+
 @media screen and (min-width: 800px) and (max-width: 1000px) {
     .grid-item2 {
         padding-left: 0;
         padding-right: 20%;
         z-index: 0;
     }
+
     .grid-item3 {
         padding-left: 0;
         padding-right: 20%;
         z-index: 0;
     }
+
     .grid-container {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -66,20 +76,23 @@
         margin-bottom: 2.5%;
     }
 }
-.grid-item3{
-    color: #901A1E!important;
+
+.grid-item3 {
+    color: #901A1E !important;
     border-left: 2px solid #CCCBCC !important;
     padding-left: 10%;
     margin-bottom: 10%;
     font-size: 18px;
 
 }
-.grid item3-3{
+
+.grid item3-3 {
 
     font-size: 16px;
-    color: #262526!important;
+    color: #262526 !important;
 }
-.submit{
+
+.submit {
     background: #901A1E !important;
     border: #901A1E !important;
     color: white !important;
@@ -91,12 +104,14 @@
     padding-left: 7.5%;
     padding-right: 7.5%;
 }
-.form-group-contact{
+
+.form-group-contact {
     margin-top: 5%;
     margin-bottom: 5%;
 
 }
-.row-Contact{
+
+.row-Contact {
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 5%;
@@ -104,6 +119,7 @@
 
 
 }
+
 .contact__form-control {
 
     margin-top: 2.5%;
@@ -111,48 +127,57 @@
 
 }
 
-.address{
-    color: #901A1E!important;
+.address {
+    color: #901A1E !important;
 
 }
-.address2{
+
+.address2 {
     font-size: 16px;
-    color: #262526!important;
+    color: #262526 !important;
 
 }
 
-.rounded-circle{
+.rounded-circle {
 
     border: 2px solid #f1f1f1;
 }
-.group2-name{
 
-    color: #262526!important;
+.group2-name {
+
+    color: #262526 !important;
     font-size: 18px;
     font-weight: bold;
-    font-family: "open sans";
 
 
 }
-.group3-title{
-    color: #901A1E!important;
+
+.group3-title {
+    color: #901A1E !important;
     font-size: 12px;
     font-weight: bold;
-    font-family: "open sans";
 
 
 }
-.group3-email{
-    color: #747681!important;
+
+.group3-email {
+    color: #747681 !important;
     font-size: 12px;
     text-decoration: underline;
 
 }
-.group3-phone{
-    color: #737477!important;
+
+.group3-phone {
+    color: #737477 !important;
     font-size: 12px;
     text-decoration: underline;
     margin-bottom: 5%;
+}
+
+.iframe {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 /*for different screen size*/
@@ -160,6 +185,7 @@
     .grid-container {
         grid-template-columns: auto;
     }
+
     /*difference between 600px and 800px*!*/
     @media screen and (min-width: 600px) and (max-width: 800px) {
         .grid-container {
