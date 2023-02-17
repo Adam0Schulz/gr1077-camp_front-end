@@ -6,12 +6,11 @@
 .register-form-border-top {
     position: relative;
     left: 5%;
-    height: 1px;
+    height: 2px;
     width: 91%;
     background-color: var(--color-gray-light);
 }
 .r-wrapper {
-    width: 90%;
     display: grid;
     grid-template-columns: 99.9% 0.01%;
     margin: 0;
@@ -24,7 +23,7 @@
     top: 5%;
     bottom: 5%;
     background: #CCCBCC;
-    width: 1px;
+    width: 2px;
     height: 90%;
 }
 .registerForm .row {

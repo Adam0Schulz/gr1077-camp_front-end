@@ -55,4 +55,9 @@
     height: auto;
 }
 
+.scrollDownBox {
+    top: auto !important;
+    bottom: 10%;
+}
+
 

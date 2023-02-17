@@ -13,7 +13,6 @@ const root = ReactDOM.createRoot(
 root.render(
       <QueryClientProvider client={queryClient}>
         <App />
-          <ReactQueryDevtools initialIsOpen/>
       </QueryClientProvider>
 );
 reportWebVitals(console.log);
